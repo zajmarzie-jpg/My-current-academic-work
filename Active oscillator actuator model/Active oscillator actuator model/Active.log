@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.11.22)  17 OCT 2026 16:33
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.11.22)  17 OCT 2026 16:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -522,14 +522,8 @@ File: global.png Graphic file (type bmp)
 
 LaTeX Warning: There were undefined references.
 
-
-Package rerunfilecheck Warning: File `Active.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Active.out':
-(rerunfilecheck)             Before: D54A899F60DBC823172FD0203286675E;3119
-(rerunfilecheck)             After:  EE64257E382A9BCC6A9E157F4A2E33F5;3095.
+Package rerunfilecheck Info: File `Active.out' has not changed.
+(rerunfilecheck)             Checksum: EE64257E382A9BCC6A9E157F4A2E33F5;3095.
  ) 
 Here is how much of TeX's memory you used:
  12904 strings out of 476642
