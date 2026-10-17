@@ -1,0 +1,161 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{10}
+
+\bibitem{BarrioIbanezPerez2017}
+Roberto Barrio, Santiago Ib{\'a}{\~n}ez, and Luc{\'i}a P{\'e}rez,
+  \emph{{Hindmarsh--Rose} model: Close and far to the singular limit}, Physics
+  Letters A \textbf{381} (2017), no.~6, 597--603,
+  \href{https://doi.org/10.1016/j.physleta.2016.12.027}{doi:10.1016/j.physleta.2016.12.027}.
+
+\bibitem{BarrioIbanezPerez2020}
+\bysame, \emph{Homoclinic organization in the {Hindmarsh--Rose} model: A
+  three-parameter study}, Chaos \textbf{30} (2020), no.~5, 053132,
+  \href{https://doi.org/10.1063/1.5138919}{doi:10.1063/1.5138919}.
+
+\bibitem{BarrioIbanezPerez2024}
+\bysame, \emph{Exploring the geometry of the bifurcation sets in parameter
+  space}, Scientific Reports \textbf{14} (2024), 10900,
+  \href{https://doi.org/10.1038/s41598-024-61574-6}{doi:10.1038/s41598-024-61574-6}.
+
+\bibitem{BurkeDesrochesBarryKaperKramer2012}
+John Burke, Mathieu Desroches, Anna~M. Barry, Tasso~J. Kaper, and Mark~A.
+  Kramer, \emph{A showcase of torus canards in neuronal bursters}, The Journal
+  of Mathematical Neuroscience \textbf{2} (2012), 3,
+  \href{https://doi.org/10.1186/2190-8567-2-3}{doi:10.1186/2190-8567-2-3}.
+
+\bibitem{BuzziLlibreMedrado2016}
+Claudio Buzzi, Jaume Llibre, and Jo{\~a}o Medrado, \emph{Hopf and zero--hopf
+  bifurcations in the {Hindmarsh--Rose} system}, Nonlinear Dynamics \textbf{83}
+  (2016), no.~3, 1549--1556,
+  \href{https://doi.org/10.1007/s11071-015-2429-y}{doi:10.1007/s11071-015-2429-y}.
+
+\bibitem{candido2020torus}
+Murilo~R Candido and Douglas~D Novaes, \emph{On the torus bifurcation in
+  averaging theory}, Journal of Differential Equations \textbf{268} (2020),
+  no.~8, 4555--4576.
+
+\bibitem{candido2027invariant}
+Murilo~R C{\^a}ndido, Douglas~D Novaes, and Nasrin Sadri, \emph{Invariant tori
+  and periodic orbits in the fitzhugh-nagumo system}, Nonlinear Analysis: Real
+  World Applications \textbf{93} (2027), 104676.
+
+\bibitem{candido2020periodic}
+Murilo~R C{\^a}ndido, Douglas~D Novaes, and Claudia Valls, \emph{Periodic
+  solutions and invariant torus in the r{\"o}ssler system}, Nonlinearity
+  \textbf{33} (2020), no.~9, 4512--4539.
+
+\bibitem{ChenNing2025}
+Jinyi Chen and Lijuan Ning, \emph{Bifurcations and resonances in a birhythmic
+  {Hindmarsh--Rose} neuron model with different spikes}, Physical Review E
+  \textbf{111} (2025), no.~6, 064211,
+  \href{https://doi.org/10.1103/zjdf-h43s}{doi:10.1103/zjdf-h43s}.
+
+\bibitem{GinouxLlibreTchizawa2019}
+Jean-Marc Ginoux, Jaume Llibre, and Kiyoyuki Tchizawa, \emph{Canards existence
+  in the {Hindmarsh--Rose} model}, Mathematical Modelling of Natural Phenomena
+  \textbf{14} (2019), no.~4, 409,
+  \href{https://doi.org/10.1051/mmnp/2019012}{doi:10.1051/mmnp/2019012}.
+
+\bibitem{HindmarshRose1984}
+J.~L. Hindmarsh and R.~M. Rose, \emph{A model of neuronal bursting using three
+  coupled first order differential equations}, Proceedings of the Royal Society
+  of London. Series B, Biological Sciences \textbf{221} (1984), no.~1222,
+  87--102,
+  \href{https://doi.org/10.1098/rspb.1984.0024}{doi:10.1098/rspb.1984.0024}.
+
+\bibitem{InnocentiMorelliGenesioTorcini2007}
+Giacomo Innocenti, Alice Morelli, Roberto Genesio, and Alessandro Torcini,
+  \emph{Dynamical phases of the {Hindmarsh--Rose} neuronal model: Studies of
+  the transition from bursting to spiking chaos}, Chaos \textbf{17} (2007),
+  no.~4, 043128,
+  \href{https://doi.org/10.1063/1.2818153}{doi:10.1063/1.2818153}.
+
+\bibitem{Izhikevich2007}
+Eugene~M. Izhikevich, \emph{Dynamical systems in neuroscience: The geometry of
+  excitability and bursting}, MIT Press, Cambridge, MA, 2007,
+  \href{https://doi.org/10.7551/mitpress/2526.001.0001}{doi:10.7551/mitpress/2526.001.0001}.
+
+\bibitem{JuNeimanShilnikov2018}
+Huiwen Ju, Alexander~B. Neiman, and Andrey~L. Shilnikov, \emph{Bottom-up
+  approach to torus bifurcation in neuron models}, Chaos \textbf{28} (2018),
+  no.~10, 106317,
+  \href{https://doi.org/10.1063/1.5042078}{doi:10.1063/1.5042078}.
+
+\bibitem{Kuznetsov2004}
+Yuri~A. Kuznetsov, \emph{Elements of applied bifurcation theory}, 3 ed.,
+  Springer, New York, 2004,
+  \href{https://doi.org/10.1007/978-1-4757-3978-7}{doi:10.1007/978-1-4757-3978-7}.
+
+\bibitem{LinLiuLiu2026}
+Xinyi Lin, Yaru Liu, and Shenquan Liu, \emph{Torus bifurcation and homoclinic
+  chaos underlie potassium-driven epileptiform dynamics in a multi-timescale
+  neural mass model}, Chaos, Solitons \& Fractals \textbf{208} (2026), 118204,
+  \href{https://doi.org/10.1016/j.chaos.2026.118204}{doi:10.1016/j.chaos.2026.118204}.
+
+\bibitem{LinaroChampneysDesrochesStorace2012}
+Daniele Linaro, Alan Champneys, Mathieu Desroches, and Marco Storace,
+  \emph{Codimension-two homoclinic bifurcations underlying spike adding in the
+  {Hindmarsh--Rose} burster}, SIAM Journal on Applied Dynamical Systems
+  \textbf{11} (2012), no.~3, 939--962,
+  \href{https://doi.org/10.1137/110848931}{doi:10.1137/110848931}.
+
+\bibitem{LlibreDeMoraes2025}
+Jaume Llibre and Jaime~Rezende De~Moraes, \emph{Analytic study of two limit
+  cycles bifurcating from a zero--hopf equilibrium}, Boletin de la Sociedad
+  Matematica Mexicana \textbf{31} (2025), no.~2, 43,
+  \href{https://doi.org/10.1007/s40590-025-00726-8}{doi:10.1007/s40590-025-00726-8}.
+
+\bibitem{novaes2026normal}
+Douglas~D Novaes and Pedro~CCR Pereira, \emph{Normal hyperbolicity in secondary
+  hopf bifurcations}, Matem{\'a}tica Contempor{\^a}nea (2026), 1--9.
+
+\bibitem{OrtegaPiwonkaUsedSeoaneSanjuan2025}
+Ignacio Ortega-Piwonka, Javier Used, Jes{\'u}s~M. Seoane, and Miguel A.~F.
+  Sanju{\'a}n, \emph{Stochastic birhythmicity outside the coexistence region in
+  the {Hindmarsh--Rose} model}, Physical Review E \textbf{111} (2025), no.~4,
+  044217,
+  \href{https://doi.org/10.1103/PhysRevE.111.044217}{doi:10.1103/PhysRevE.111.044217}.
+
+\bibitem{RyashkoSlepukhina2017}
+Lev Ryashko and Evdokia Slepukhina, \emph{Noise-induced torus bursting in the
+  stochastic {Hindmarsh--Rose} neuron model}, Physical Review E \textbf{96}
+  (2017), no.~3, 032212,
+  \href{https://doi.org/10.1103/PhysRevE.96.032212}{doi:10.1103/PhysRevE.96.032212}.
+
+\bibitem{RyashkoSlepukhina2020}
+Lev Ryashko and Evdokiia Slepukhina, \emph{Noise-induced toroidal excitability
+  in neuron model}, Communications in Nonlinear Science and Numerical
+  Simulation \textbf{82} (2020), 105071,
+  \href{https://doi.org/10.1016/j.cnsns.2019.105071}{doi:10.1016/j.cnsns.2019.105071}.
+
+\bibitem{SandersVerhulstMurdock2007}
+Jan~A. Sanders, Ferdinand Verhulst, and James Murdock, \emph{Averaging methods
+  in nonlinear dynamical systems}, 2 ed., Springer, New York, 2007,
+  \href{https://doi.org/10.1007/978-0-387-48918-6}{doi:10.1007/978-0-387-48918-6}.
+
+\bibitem{ShiYangDaiXiangFeng2024}
+Xiaohua Shi, Yi~Yang, Xiangguang Dai, Changcheng Xiang, and Yuming Feng,
+  \emph{Andronov--hopf and bogdanov--takens bifurcations in a filippov
+  {Hindmarsh--Rose} system with switching policy for the slow variable},
+  Physica D: Nonlinear Phenomena \textbf{466} (2024), 134217,
+  \href{https://doi.org/10.1016/j.physd.2024.134217}{doi:10.1016/j.physd.2024.134217}.
+
+\bibitem{StoraceLinaroDeLange2008}
+Marco Storace, Daniele Linaro, and Enno de~Lange, \emph{The {Hindmarsh--Rose}
+  neuron model: Bifurcation analysis and piecewise-linear approximations},
+  Chaos \textbf{18} (2008), no.~3, 033128,
+  \href{https://doi.org/10.1063/1.2975967}{doi:10.1063/1.2975967}.
+
+\bibitem{YangJiangShiQin2026}
+Yi~Yang, Jiajia Jiang, Xiaohua Shi, and Wenjie Qin, \emph{Bifurcations and the
+  switching of spiking and bursting in the extended {Hindmarsh--Rose} neuronal
+  system}, Advances in Continuous and Discrete Models \textbf{2026} (2026), 63,
+  \href{https://doi.org/10.1186/s13662-026-04101-3}{doi:10.1186/s13662-026-04101-3}.
+
+\end{thebibliography}
