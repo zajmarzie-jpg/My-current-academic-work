@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.11.22)  17 OCT 2026 16:42
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.11.22)  22 SEP 2026 09:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -465,24 +465,17 @@ Package hyperref Info: Link coloring OFF on input line 109.
 (c:/texlive/2023/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 
-)
-Overfull \vbox (3.80905pt too high) has occurred while \output is active []
-
-
-[1] [2]
+) [1]
 File: ZH.jpg Graphic file (type bmp)
 <ZH.jpg>
- [3]
 
-LaTeX Warning: Reference `subsec:classical-Hopf-second-order-averaging' on page
- 4 undefined on input line 472.
+[2]
 
-[4] [5] [6] [7]
-Underfull \vbox (badness 1221) has occurred while \output is active []
+LaTeX Warning: Reference `eq:great-semicircle-orbits' on page 3 undefined on in
+put line 476.
 
- [8]
-[9] [10] [11] [12] [13] [14] [15] [16] [17] [18]
-Overfull \hbox (41.58952pt too wide) detected at line 2945
+[3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
+Overfull \hbox (41.58952pt too wide) detected at line 2736
 \OML/cmm/m/it/10.95 V[] \OT1/cmr/m/n/10.95 :  (\OML/cmm/m/it/10.95 x; v; f\OT1/
 cmr/m/n/10.95 ) = []\OML/cmm/m/it/10.95 ;  V[] \OT1/cmr/m/n/10.95 :  (\OML/cmm/
 m/it/10.95 x; v; f\OT1/cmr/m/n/10.95 ) = []\OML/cmm/m/it/10.95 ;  V[] \OT1/cmr/
@@ -490,11 +483,10 @@ m/n/10.95 :  (\OML/cmm/m/it/10.95 x; v; f\OT1/cmr/m/n/10.95 ) = []\OML/cmm/m/it
 /10.95 ;
  []
 
-[19]
 ! Missing number, treated as zero.
 <to be read again> 
                    \r@tocindent4 
-l.3001 E
+l.2791 E
         very such point of $\mathcal E_\infty$ has $V\neq0$, so it
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -503,7 +495,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \r@tocindent4 
-l.3001 E
+l.2791 E
         very such point of $\mathcal E_\infty$ has $V\neq0$, so it
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, bp, or sp; but yours is a new one!
@@ -512,26 +504,26 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-[20]
+[18]
 File: local.png Graphic file (type bmp)
 <local.png>
- [21] [22]
+ [19] [20]
 File: global.png Graphic file (type bmp)
 <global.png>
- [23] (./Active.bbl) [24] (./Active.aux)
+ (./Active.bbl [21]) [22] (./Active.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Active.out' has not changed.
-(rerunfilecheck)             Checksum: EE64257E382A9BCC6A9E157F4A2E33F5;3095.
+(rerunfilecheck)             Checksum: F7D3297CC0282A7B2E86F6EB2D02F37E;2621.
  ) 
 Here is how much of TeX's memory you used:
- 12904 strings out of 476642
- 195492 string characters out of 5806640
+ 12851 strings out of 476642
+ 193915 string characters out of 5806640
  1861382 words of memory out of 5000000
- 32873 multiletter control sequences out of 15000+600000
+ 32820 multiletter control sequences out of 15000+600000
  550608 words of font info for 76 fonts, out of 8000000 for 9000
  1509 hyphenation exceptions out of 8191
- 72i,11n,76p,811b,2177s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,11n,76p,811b,2179s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Active.pdf (24 pages).
+Output written on Active.pdf (22 pages).

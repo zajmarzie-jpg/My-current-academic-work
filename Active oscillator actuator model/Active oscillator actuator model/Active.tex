@@ -123,7 +123,7 @@
 \label{sec:active-oscillator-actuator}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The active , vibration control combines structural sensing, feedback control,
+Active vibration control combines structural sensing, feedback control,
 and force actuation to modify the dynamic response of lightly damped
 mechanical structures. Direct velocity feedback is widely used because of
 its simplicity and effectiveness in reducing resonant vibrations
@@ -167,9 +167,9 @@ The actuator equation can be written as the first-order tracking law
 f_c(x)=k_sx-\kappa x^2.
 \]
 When
-\[
+$
 k_s=\omega_0^2,
-\]
+$
 the linear actuator force exactly compensates the structural stiffness.
 The parameter \(k_s\) also provides a natural second unfolding direction
 for the zero--Hopf singularity.
@@ -211,9 +211,9 @@ E_1
 \right).
 \end{equation}
 At the critical stiffness-compensation value
-\[
+$
 k_s=\omega_0^2,
-\]
+$
 the two equilibrium branches coalesce at the origin.
 
 The Jacobian matrix of system~\eqref{eq:model} at \(E_0\) is
@@ -285,9 +285,9 @@ and define the zero--Hopf oscillatory frequency by
 }.
 \end{equation}
 Then
-\[
+$
 \Omega_{\mathrm{ZH}}>0,
-\]
+$
 and the eigenvalues at the zero--Hopf point are
 \begin{equation}
 \label{eq:zero-Hopf-spectrum}
@@ -299,8 +299,8 @@ and the eigenvalues at the zero--Hopf point are
 \end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{One-parameter unfolding of the zero--Hopf point}
-\label{subsec:zero-Hopf-unfolding}
+%\subsection{One-parameter unfolding of the zero--Hopf point}
+%\label{subsec:zero-Hopf-unfolding}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 We study the one-parameter unfolding
@@ -319,13 +319,15 @@ k_{s,\mathrm{ZH}}+k_1\varepsilon
 \omega_0^2+k_1\varepsilon,
 \end{equation}
 where \(g_1,k_1\in\mathbb R\) are fixed and
-\[
+$
 0<|\varepsilon|\ll1.
-\]
+$
 This path represents a one-parameter slice through the codimension-two
 zero--Hopf point in the \((g,k_s)\)-parameter plane.
 
-\begin{theorem}
+\subsection{Main Results}
+
+\begin{theorem}[Zero-Hopf bifurcation] 
 \label{thm:zero-Hopf-main}
 Consider system~\eqref{eq:model}. Assume
 \[
@@ -338,15 +340,15 @@ Consider system~\eqref{eq:model}. Assume
 \omega_0\tau>1,
 \]
 and let
-\[
+$
 g
 =
-d+\frac1\tau+g_1\varepsilon,
-\qquad
-k_s
+d+\frac1\tau+g_1\varepsilon$
+and
+$k_s
 =
 \omega_0^2+k_1\varepsilon.
-\]
+$
 If
 \begin{equation}
 \label{eq:zero-Hopf-existence-condition-theorem}
@@ -367,13 +369,13 @@ T_\varepsilon
 O(\varepsilon).
 \end{equation}
 Moreover, the periodic orbit is orbitally asymptotically stable if
-\[
+$
 \varepsilon g_1<0
-\]
+$
 and unstable if
-\[
+$
 \varepsilon g_1>0.
-\]
+$
 The case \(g_1=0\) cannot be decided by first-order averaging.
 \end{theorem}
 
@@ -394,96 +396,95 @@ numerical evidence for the orbital asymptotic stability predicted by
 \label{fig:numerical-verification}
 \end{figure}
 
-\begin{theorem}[Main result]
-\label{thm:main}
+\begin{theorem}[Hopf bifurcation]
+\label{subsec:classical-Hopf-main-theorem}
 
+Consider system~\eqref{eq:model} with
+\[
+\omega_0>0,\qquad \tau>0,\qquad \kappa\neq0,
+\]
+and fix $\sigma\neq0$ such that
+$
+\Omega^2:=\omega_0^2-\tau^{-2}+\frac{\sigma}{\tau}>0.
+$
+Set
+\[
+g_{\mathrm H}=d+\tau^{-1}-\sigma,
+\qquad
+k_{s,\mathrm H}=\omega_0^2-\tau\sigma\Omega^2.
+\]
+Then, for $g=g_{\mathrm H}$, the origin is a nondegenerate Hopf
+equilibrium at $k_s=k_{s,\mathrm H}$, with eigenvalues
+$
+-\sigma, \pm i\Omega.
+$
 Assume
 \[
-\omega_0>0,\qquad
-\tau>0,\qquad
-\kappa\neq0,\qquad
-\omega_0\tau>1.
+k_s=k_{s,\mathrm H}
++\eta_2\varepsilon^2+\eta_3\varepsilon^3,
+\qquad
+\sigma\eta_2<0,
 \]
-For every
+where $\eta_2,\eta_3\in\mathbb R$ and $0<|\varepsilon|\ll1$.
+Then a small-amplitude periodic orbit bifurcates from the origin.
+Its displacement amplitude and period satisfy
 \[
-\sigma\in\mathcal I_{\mathrm H}\setminus\{0\},
-\]
-the equilibrium
-\[
-E_0=(0,0,0)
-\]
-undergoes a codimension-one Hopf bifurcation along the curve
-\[
-g=g_{\mathrm H}(\sigma),\qquad
-k_s=k_{s,\mathrm H}(\sigma).
-\]
-
-Moreover, under the unfolding
-\[
-g=g_{\mathrm H}(\sigma),\qquad
-k_s
+A_\varepsilon
 =
-k_{s,\mathrm H}(\sigma)
-+\eta_2\varepsilon^2
-+\eta_3\varepsilon^3,
-\]
-a unique small-amplitude periodic orbit bifurcates from the equilibrium
-whenever
-\[
-\sigma\eta_2<0.
-\]
-
-Its leading-order asymptotic expansion is
-\[
-\begin{aligned}
-x(t,\varepsilon)
-&=
-\varepsilon R_{\mathrm H}^*
-\cos\bigl(\Omega_{\mathrm H}t+\theta_0\bigr)
-+
-O(\varepsilon^2),
-\\
-v(t,\varepsilon)
-&=
--\varepsilon
-\Omega_{\mathrm H}
-R_{\mathrm H}^*
-\sin\bigl(\Omega_{\mathrm H}t+\theta_0\bigr)
-+
-O(\varepsilon^2),
-\\
-f(t,\varepsilon)
-&=
-\varepsilon
-\frac{1-\sigma\tau}{\tau^2}
-R_{\mathrm H}^*
-\cos\bigl(\Omega_{\mathrm H}t+\theta_0\bigr)
-\\
-&\quad+
-\varepsilon
-\frac{\Omega_{\mathrm H}(1-\sigma\tau)}{\tau}
-R_{\mathrm H}^*
-\sin\bigl(\Omega_{\mathrm H}t+\theta_0\bigr)
-+
-O(\varepsilon^2),
-\end{aligned}
-\]
-where \(R_{\mathrm H}^*\) is given explicitly in
-Section~\ref{subsec:classical-Hopf-second-order-averaging}.
-The period satisfies
-\[
+|\varepsilon|R_{\mathrm H}^*
++O(\varepsilon^2),
+\qquad
 T_\varepsilon
 =
-\frac{2\pi}{\Omega_{\mathrm H}}
-+
-O(\varepsilon).
+\frac{2\pi}{\Omega}
++O(\varepsilon^2),
+\]
+where
+\[
+R_{\mathrm H}^*
+=
+\left[
+-\frac{
+2\tau\Omega^2\sigma(4\Omega^2+\sigma^2)
+}{
+\kappa^2(8\Omega^2+\sigma^2)
+}\,\eta_2
+\right]^{1/2}.
 \]
 
-Finally, the bifurcation is supercritical for
-\(\sigma>0\) and subcritical for \(\sigma<0\).
-
+Moreover, the bifurcation is supercritical and the periodic orbit
+is orbitally asymptotically stable when $\sigma>0$, whereas it is
+subcritical and the periodic orbit is unstable when $\sigma<0$.
 \end{theorem}
 
+\begin{theorem}[Dynamics on the sphere at infinity]
+\label{thm:dynamics-at-infinity}
+Consider system~\eqref{eq:model} with $\omega_0>0$,
+$\tau>0$, and $\kappa\neq0$. Its degree-two Poincar\'e
+compactification has the following boundary dynamics.
+\begin{enumerate}
+\item
+The equilibrium set is the great circle
+$\mathcal E_\infty=\{X=0\}\cap S_\infty^2$, and the
+boundary linearization vanishes at every equilibrium.
+Away from $p_f^\pm$, the local portrait consists of an
+equilibrium line with parallel moving trajectories on
+both sides. At $p_f^\pm$, it consists of an equilibrium
+line and incoming or outgoing rays in the force charts.
+\item
+Every nonstationary orbit is a great semicircle
+\eqref{eq:great-semicircle-orbits}, directed from $p_f^+$
+to $p_f^-$ if $\kappa>0$, and oppositely if $\kappa<0$.
+There are no nonconstant periodic or homoclinic boundary
+orbits.
+\item
+The common forward-limit endpoint is Lyapunov stable
+but not asymptotically stable on the sphere. The other
+endpoint is unstable forward in time and Lyapunov stable
+in reversed time. The oriented boundary portrait depends
+only on $\operatorname{sgn}\kappa$.
+\end{enumerate}
+\end{theorem}
 
 \subsection{Real canonical coordinates at the zero--Hopf point}
 \label{subsec:zero-Hopf-canonical-coordinates}
@@ -1033,9 +1034,9 @@ The condition \(r>0\) excludes the equilibrium and corresponds to a
 genuine oscillatory solution.
 
 Since \(r>0\), the equation
-\[
+$
 f_{\mathrm{ZH},1}(r,u)=0
-\]
+$
 is equivalent to
 \[
 g_1
@@ -1064,9 +1065,9 @@ g_1\Omega_{\mathrm{ZH}}^2\tau
 \end{equation}
 
 Substituting \eqref{eq:zero-Hopf-u0} into
-\[
+$
 f_{\mathrm{ZH},2}(r,u)=0
-\]
+$
 gives
 \[
 2k_1u_0
@@ -1188,9 +1189,9 @@ g_1^2\Omega_{\mathrm{ZH}}^4\tau^2
 }.
 \end{equation}
 Condition \eqref{eq:zero-Hopf-existence-condition} therefore implies
-\[
+$
 \det D\mathbf f_{\mathrm{ZH}}(r_0,u_0)>0.
-\]
+$
 Thus the zero \((r_0,u_0)\) is isolated and nondegenerate.
 
 By the first-order averaging theorem, for all sufficiently small
@@ -1292,13 +1293,13 @@ O(\varepsilon^2),
 j=1,2.
 \end{equation}
 Consequently, the periodic orbit is orbitally asymptotically stable when
-\[
+$
 \varepsilon g_1<0
-\]
+$
 and unstable when
-\[
+$
 \varepsilon g_1>0.
-\]
+$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Approximation of the bifurcating periodic orbit}
@@ -1523,14 +1524,13 @@ g_1\Omega_{\mathrm{ZH}}^2\tau
 O(\varepsilon^2).
 \end{aligned}
 \end{equation}
-
 Therefore, whenever
-\[
+$
 k_1^2
 -
 g_1^2\Omega_{\mathrm{ZH}}^4\tau^2
 >0,
-\]
+$
 a periodic orbit bifurcates from the zero--Hopf equilibrium. Its
 amplitude is proportional to \(|\varepsilon|\), its leading angular
 frequency is \(\Omega_{\mathrm{ZH}}\), and its leading period is
@@ -1623,10 +1623,9 @@ $
 \sigma=d-g+\frac1\tau
 $
 and define
-\begin{equation}
-\label{eq:classical-Hopf-gain}
+$
 g_{\mathrm H}(\sigma)=d+\frac1\tau-\sigma.
-\end{equation}
+$
 The corresponding oscillatory frequency is
 \begin{equation}
 \label{eq:classical-Hopf-frequency}
@@ -1673,19 +1672,17 @@ k_s=k_{s,\mathrm H}(\sigma)$ and
  $\sigma\in\mathcal I_{\mathrm H},
 $
 the characteristic polynomial at $E_0$ factors as
-\begin{equation}
-\label{eq:classical-Hopf-factorization}
+\[
 p_{\mathrm H}(\lambda;\sigma)
 =
 (\lambda+\sigma)
 \left(\lambda^2+\Omega_{\mathrm H}^2(\sigma)\right).
-\end{equation}
+\]
 Hence its eigenvalues are
-\begin{equation}
-\label{eq:classical-Hopf-spectrum}
--\sigma,\qquad
+$
+-\sigma,
 \pm i\Omega_{\mathrm H}(\sigma).
-\end{equation}
+$
 \end{proposition}
 For $\sigma>0$, the noncritical direction is stable, whereas for
 $\sigma<0$ it is unstable. At $\sigma=0$,
@@ -1698,32 +1695,32 @@ and the spectrum becomes $0,\pm i\Omega_{\mathrm{ZH}}$.
 Thus the zero--Hopf point is the limiting spectral configuration
 on this parametrized curve.
 
-The second equilibrium branch is
-$
-E_1=
-\left(
-\frac{k_s-\omega_0^2}{\kappa},
-0,
-\frac{\omega_0^2(k_s-\omega_0^2)}{\kappa}
-\right).
-$
-Along the spectral Hopf locus,
-$
-E_{1,\mathrm H}(\sigma)
-=
-\left(
--\frac{\tau\sigma\Omega_{\mathrm H}^2(\sigma)}{\kappa},
-0,
--\frac{\tau\sigma\omega_0^2\Omega_{\mathrm H}^2(\sigma)}{\kappa}
-\right).
-$
-For every fixed $\sigma\in\mathcal I_{\mathrm H}\setminus\{0\}$,
-this equilibrium is distinct from $E_0$. The two equilibria
-coalesce as $\sigma\to0$. All local statements below concern
-$E_0$ with $\sigma\neq0$ fixed.
+%The second equilibrium branch is
+%$
+%E_1=
+%\left(
+%\frac{k_s-\omega_0^2}{\kappa},
+%0,
+%\frac{\omega_0^2(k_s-\omega_0^2)}{\kappa}
+%\right).
+%$
+%Along the spectral Hopf locus,
+%$
+%E_{1,\mathrm H}(\sigma)
+%=
+%\left(
+%-\frac{\tau\sigma\Omega_{\mathrm H}^2(\sigma)}{\kappa},
+%0,
+%-\frac{\tau\sigma\omega_0^2\Omega_{\mathrm H}^2(\sigma)}{\kappa}
+%\right).
+%$
+%For every fixed $\sigma\in\mathcal I_{\mathrm H}\setminus\{0\}$,
+%this equilibrium is distinct from $E_0$. The two equilibria
+%coalesce as $\sigma\to0$. All local statements below concern
+%$E_0$ with $\sigma\neq0$ fixed.
 
-\subsection{Transversality and the parameter unfolding}
-\label{subsec:classical-Hopf-transversality}
+%\subsection{Transversality and the parameter unfolding}
+%\label{subsec:classical-Hopf-transversality}
 
 Fix
 $
@@ -1742,13 +1739,13 @@ D_\sigma=\Omega^2+\sigma^2>0.
 Let $\lambda(k_s)$ be the eigenvalue branch satisfying
 $\lambda(k_{s,\mathrm H}(\sigma))=i\Omega$. Since this eigenvalue
 is simple, implicit differentiation gives
-\[
+$
 \lambda'(k_s)
 =
 -\frac{p_{k_s}}{p_\lambda}
 =
 \frac1{\tau p_\lambda}.
-\]
+$
 At the critical parameter,
 \[
 p_\lambda(i\Omega)
@@ -1771,12 +1768,11 @@ $
 \mu=k_s-k_{s,\mathrm H}(\sigma),
 $
 the critical pair satisfies
-\begin{equation}
-\label{eq:classical-Hopf-real-part-expansion}
+\[
 \operatorname{Re}\lambda
 =
 -\frac{\mu}{2\tau D_\sigma}+O(\mu^2).
-\end{equation}
+\]
 Thus the pair lies in the right half-plane for $\mu<0$ and
 in the left half-plane for $\mu>0$, provided $|\mu|$ is
 sufficiently small.
@@ -1818,32 +1814,29 @@ parameters.
 \subsection{The first averaged function and transverse correction}
 \label{subsec:classical-first-average}
 At $\varepsilon=0$, the Jacobian at $E_0$ is
-\begin{equation}
-\label{eq:A-sigma}
+\[
 A_\sigma=
 \begin{pmatrix}
 0&1&0\\
 -\omega_0^2&\dfrac1\tau-\sigma&1\\
 \dfrac{k_{s,\mathrm H}(\sigma)}{\tau}&0&-\dfrac1\tau
 \end{pmatrix}.
-\end{equation}
+\]
 Define
-\begin{equation}
-\label{eq:abc-sigma}
+\[
 a_\sigma=\frac{1-\sigma\tau}{\tau^2},\qquad
 b_\sigma=\frac{\Omega(1-\sigma\tau)}{\tau},\qquad
 c_\sigma=\omega_0^2+\frac{\sigma}{\tau},
-\end{equation}
+\]
 and
-\begin{equation}
-\label{eq:P-sigma}
+\[
 P_\sigma=
 \begin{pmatrix}
 1&0&1\\
 0&-\Omega&-\sigma\\
 a_\sigma&b_\sigma&c_\sigma
 \end{pmatrix}.
-\end{equation}
+\]
 Its columns satisfy
 \[
 A_\sigma p_1=\Omega p_2,\qquad
@@ -1851,12 +1844,11 @@ A_\sigma p_2=-\Omega p_1,\qquad
 A_\sigma p_3=-\sigma p_3.
 \]
 Moreover,
-\[
+$
 \det P_\sigma=-\Omega D_\sigma\neq0.
-\]
+$
 Consequently,
-\begin{equation}
-\label{eq:Jordan-sigma}
+\[
 P_\sigma^{-1}A_\sigma P_\sigma
 =
 \begin{pmatrix}
@@ -1864,24 +1856,20 @@ P_\sigma^{-1}A_\sigma P_\sigma
 \Omega&0&0\\
 0&0&-\sigma
 \end{pmatrix}.
-\end{equation}
-
+\]
 Introduce $(X,Y,Z)$ by
-\begin{equation}
-\label{eq:classical-coordinate-change}
+\[
 \begin{pmatrix}x\\v\\f\end{pmatrix}
 =
 P_\sigma
 \begin{pmatrix}X\\Y\\Z\end{pmatrix}.
-\end{equation}
+\]
 Explicitly,
-\begin{equation}
-\label{eq:classical-coordinate-explicit}
+\[
 x=X+Z,\qquad
 v=-\Omega Y-\sigma Z,\qquad
 f=a_\sigma X+b_\sigma Y+c_\sigma Z.
-\end{equation}
-
+\]
 Set
 \begin{equation}
 \label{eq:H-classical}
@@ -1902,14 +1890,13 @@ P_\sigma^{-1}
 \end{pmatrix},
 \]
 the full transformed system is
-\begin{equation}
-\label{eq:classical-XYZ-system}
+\[
 \begin{aligned}
 \dot X&=-\Omega Y-\frac{\mathcal H}{D_\sigma},\\
 \dot Y&=\Omega X-\frac{\sigma\mathcal H}{\Omega D_\sigma},\\
 \dot Z&=-\sigma Z+\frac{\mathcal H}{D_\sigma}.
 \end{aligned}
-\end{equation}
+\]
 %\subsection{Scaled cylindrical coordinates}
 %\label{subsec:classical-polar}
 For $\varepsilon\neq0$, introduce
@@ -1924,19 +1911,17 @@ subinterval of $(0,\infty)$ and $W$ near zero. Thus the
 division by $R$ below causes no singularity.
 
 Define
-\begin{equation}
-\label{eq:S-classical}
+\[
 S(\theta,R,W)=R\cos\theta+W
-\end{equation}
+\]
 and
-\begin{equation}
-\label{eq:AB-classical}
+\[
 A(\theta)=
 \frac{\Omega\cos\theta+\sigma\sin\theta}{\Omega D_\sigma},
 \qquad
 B(\theta)=
 \frac{\Omega\sin\theta-\sigma\cos\theta}{\Omega D_\sigma}.
-\end{equation}
+\]
 Then
 \[
 \mathcal H
@@ -1945,9 +1930,8 @@ Then
 +\frac{\eta_2\varepsilon^3}{\tau}S
 +\frac{\eta_3\varepsilon^4}{\tau}S.
 \]
-Substitution into \eqref{eq:classical-XYZ-system} yields
-\begin{equation}
-\label{eq:classical-RthetaW-time}
+Thus we have
+\[
 \begin{aligned}
 \dot R
 &=
@@ -1965,7 +1949,7 @@ Substitution into \eqref{eq:classical-XYZ-system} yields
 +\frac{\eta_2\varepsilon^2}{\tau D_\sigma}S
 +O(|\varepsilon|^3).
 \end{aligned}
-\end{equation}
+\]
 The remainders are smooth and uniform on the compact
 neighborhoods under consideration.
 
@@ -1989,24 +1973,22 @@ Then
 
 With a prime denoting differentiation with respect to
 $\theta$, the resulting system is
-\begin{equation}
-\label{eq:classical-theta-system}
+\[
 \begin{pmatrix}R\\W\end{pmatrix}'
 =
 F_0(\theta,R,W)
 +\varepsilon F_1(\theta,R,W)
 +\varepsilon^2F_2(\theta,R,W)
 +O(|\varepsilon|^3),
-\end{equation}
+\]
 where
-\begin{equation}
+\[
 \label{eq:F0-classical}
 F_0=
 \begin{pmatrix}0\\-\sigma W/\Omega\end{pmatrix},
-\end{equation}
+\]
 and
-\begin{equation}
-\label{eq:F1-classical}
+\[
 \begin{aligned}
 F_{1,1}
 &=\frac{\kappa S^2}{\tau\Omega}A,\\
@@ -2014,10 +1996,9 @@ F_{1,2}
 &=-\frac{\kappa S^2}{\tau\Omega D_\sigma}
 -\frac{\sigma\kappa WS^2}{\tau R\Omega^2}B.
 \end{aligned}
-\end{equation}
+\]
 The second-order terms are
-\begin{equation}
-\label{eq:F2-classical}
+\[
 \begin{aligned}
 F_{2,1}
 &=
@@ -2031,15 +2012,10 @@ F_{2,2}
 -\frac{\sigma\kappa^2WS^4}{\tau^2R^2\Omega^3}B^2
 +\frac{\sigma\eta_2WS}{\tau R\Omega^2}B.
 \end{aligned}
-\end{equation}
+\]
 All these functions are $2\pi$-periodic in $\theta$.
-The coefficient $\eta_3$ first contributes at order
-$\varepsilon^3$ in \eqref{eq:classical-theta-system}.
 
-
-
-At $\varepsilon=0$, system
-\eqref{eq:classical-theta-system} reduces to
+At $\varepsilon=0$, system reduces to
 \[
 R'=0,\qquad W'=-\frac{\sigma}{\Omega}W.
 \]
@@ -2074,15 +2050,14 @@ f_{\mathrm H,1}(R_0)
 \end{equation}
 To compute the next radial contribution, fix the initial
 radial coordinate $R(0)=R_0$ and write
-\begin{equation}
-\label{eq:classical-Hopf-first-correction-expansion}
+\[
 \begin{aligned}
 R(\theta)&=R_0+\varepsilon r_1(\theta;R_0)
 +O(\varepsilon^2),\\
 W(\theta)&=\varepsilon w_1(\theta;R_0)
 +O(\varepsilon^2).
 \end{aligned}
-\end{equation}
+\]
 We impose $r_1(0;R_0)=0$ and choose $w_1$ to be
 $2\pi$-periodic.
 
@@ -2091,8 +2066,7 @@ $
 r_1'=F_{1,1}(\theta,R_0,0).
 $
 Integration gives
-\begin{equation}
-\label{eq:classical-Hopf-r1-explicit}
+\[
 \begin{aligned}
 r_1(\theta;R_0)
 =
@@ -2102,24 +2076,22 @@ r_1(\theta;R_0)
 +\frac{\sigma}{3}(1-\cos^3\theta)
 \right].
 \end{aligned}
-\end{equation}
+\]
 In particular,
 $
 r_1(2\pi;R_0)=r_1(0;R_0)=0.
 $
 The transverse correction satisfies
-\begin{equation}
-\label{eq:classical-Hopf-w1-equation}
+\[
 w_1'+\frac{\sigma}{\Omega}w_1
 =
 -\frac{\kappa R_0^2}{\tau\Omega D_\sigma}\cos^2\theta.
-\end{equation}
+\]
 Since $\sigma\neq0$, its homogeneous equation has no
 nonzero $2\pi$-periodic solution. Therefore its periodic
 solution is unique. Using
 $\cos^2\theta=(1+\cos2\theta)/2$, we obtain
-\begin{equation}
-\label{eq:classical-Hopf-w1-explicit}
+\[
 \begin{aligned}
 w_1(\theta;R_0)
 ={}&
@@ -2129,30 +2101,27 @@ w_1(\theta;R_0)
 &-\frac{\kappa R_0^2\Omega}
 {\tau D_\sigma(4\Omega^2+\sigma^2)}\sin2\theta.
 \end{aligned}
-\end{equation}
+\]
 Define
-\begin{equation}
-\label{eq:classical-gamma}
+\[
 \gamma_\sigma(R_0)
 =
 w_1(0;R_0)
 =
 -\frac{\kappa R_0^2(\sigma^2+2\Omega^2)}
 {\tau\sigma D_\sigma(\sigma^2+4\Omega^2)}.
-\end{equation}
+\]
 The transverse periodicity condition therefore requires
-\begin{equation}
-\label{eq:classical-W-initial}
+$
 W(0)=\varepsilon\gamma_\sigma(R_0)+O(\varepsilon^2).
-\end{equation}
+$
 
 \subsection{The second-order radial bifurcation function}
 \label{subsec:classical-second-average}
 
 The second-order radial displacement, after imposing
 transverse periodicity, is determined by
-\begin{equation}
-\label{eq:classical-Hopf-second-order-formula}
+\[
 \begin{aligned}
 f_{\mathrm H,2}(R_0)
 =
@@ -2165,39 +2134,24 @@ r_1(\theta;R_0)\\
 w_1(\theta;R_0)
 \Big]\,d\theta.
 \end{aligned}
-\end{equation}
+\]
 We evaluate these three contributions separately.
-
 First,
 \[
 F_{2,1}(\theta,R_0,0)
 =
 -\frac{\eta_2R_0\cos\theta}{\tau\Omega}A(\theta)
 +\frac{\kappa^2R_0^3\cos^4\theta}
-{\tau^2\Omega^2}A(\theta)B(\theta).
+{\tau^2\Omega^2}A(\theta)B(\theta),
 \]
-The identities
+and so
 \[
-\int_0^{2\pi}\cos\theta\,A(\theta)\,d\theta
-=\frac{\pi}{D_\sigma},
-\]
-and
-\[
-\int_0^{2\pi}
-\cos^4\theta\,A(\theta)B(\theta)\,d\theta
-=
--\frac{\pi\sigma}{2\Omega D_\sigma^2}
-\]
-give
-\begin{equation}
-\label{eq:classical-Hopf-direct-second-integral}
 \int_0^{2\pi}F_{2,1}(\theta,R_0,0)\,d\theta
 =
 -\frac{\pi\eta_2R_0}{\tau\Omega D_\sigma}
 -\frac{\pi\kappa^2\sigma R_0^3}
 {2\tau^2\Omega^3D_\sigma^2}.
-\end{equation}
-
+\]
 Second, since
 \[
 \partial_R F_{1,1}(\theta,R_0,0)
@@ -2207,8 +2161,7 @@ Second, since
 \frac2{R_0}r_1'(\theta;R_0),
 \]
 we have
-\begin{equation}
-\label{eq:classical-Hopf-radial-correction-integral}
+\[
 \begin{aligned}
 \int_0^{2\pi}
 \partial_R F_{1,1}(\theta,R_0,0)
@@ -2218,7 +2171,7 @@ r_1(\theta;R_0)\,d\theta
 \left[r_1(\theta;R_0)^2\right]_0^{2\pi}\\
 &=0.
 \end{aligned}
-\end{equation}
+\]
 Third,
 \[
 \partial_W F_{1,1}(\theta,R_0,0)
@@ -2229,8 +2182,7 @@ Third,
 \]
 
 we obtain
-\begin{equation}
-\label{eq:classical-Hopf-transverse-correction-integral}
+\[
 \begin{aligned}
 &\int_0^{2\pi}
 \partial_W F_{1,1}(\theta,R_0,0)
@@ -2241,10 +2193,9 @@ w_1(\theta;R_0)\,d\theta\\
 -\frac{3\pi\kappa^2\sigma R_0^3}
 {2\tau^2\Omega D_\sigma^2(4\Omega^2+\sigma^2)}.
 \end{aligned}
-\end{equation}
+\]
 Combining these expressions gives
-\begin{equation}
-\label{eq:classical-Hopf-second-bifurcation-function}
+\[
 \begin{aligned}
 f_{\mathrm H,2}(R_0)
 ={}&
@@ -2253,7 +2204,7 @@ f_{\mathrm H,2}(R_0)
 {2\tau^2\Omega^3\sigma D_\sigma(4\Omega^2+\sigma^2)}
 R_0^3.
 \end{aligned}
-\end{equation}
+\]
 In simplifying the cubic term, we use
 \[
 \sigma^4+9\Omega^2\sigma^2+8\Omega^4
@@ -2270,13 +2221,12 @@ f_{\mathrm H,2}(R_0)
 \left[\eta_2+\mathcal C_{\mathrm H}(\sigma)R_0^2\right],
 \end{equation}
 where
-\begin{equation}
-\label{eq:classical-Hopf-cubic-coefficient}
+\[
 \mathcal C_{\mathrm H}(\sigma)
 =
 \frac{\kappa^2(8\Omega^2+\sigma^2)}
 {2\tau\Omega^2\sigma(4\Omega^2+\sigma^2)}.
-\end{equation}
+\]
 
 A positive zero exists precisely when
 %\begin{equation}
@@ -2359,15 +2309,13 @@ $
 \bigl(R_0,\psi(R_0,\varepsilon)\bigr)-R_0.
 $
 The first-order term vanishes by
-\eqref{eq:classical-first-average-vanishes}, while
-\eqref{eq:classical-Hopf-second-order-formula} gives
-\begin{equation}
-\label{eq:classical-Hopf-reduced-displacement}
+\eqref{eq:classical-first-average-vanishes} and
+\[
 \Phi(R_0,\varepsilon)
 =
 \varepsilon^2f_{\mathrm H,2}(R_0)
 +O(|\varepsilon|^3),
-\end{equation}
+\]
 with the corresponding expansion also valid after
 differentiation with respect to $R_0$.
 
@@ -2383,17 +2331,16 @@ R_{\mathrm H}^*+O(|\varepsilon|)
 \]
 near $R_{\mathrm H}^*$.
 Consequently,
-\[
+$
 \left(R_\varepsilon,\psi(R_\varepsilon,\varepsilon)\right)
-\]
+$
 is a fixed point of $\mathcal P_\varepsilon$ for every
 sufficiently small nonzero $\varepsilon$.
 
 Since $R_\varepsilon>0$ and $\dot\theta>0$, this fixed point
 represents a nonconstant periodic orbit of the original
 system. Its initial scaled coordinates satisfy
-\begin{equation}
-\label{eq:classical-Hopf-initial-data}
+\[
 \begin{aligned}
 R(0,\varepsilon)
 &=R_{\mathrm H}^*+O(|\varepsilon|),\\
@@ -2401,7 +2348,7 @@ W(0,\varepsilon)
 &=\varepsilon\gamma_\sigma(R_{\mathrm H}^*)
 +O(\varepsilon^2).
 \end{aligned}
-\end{equation}
+\]
 The return-map argument proves uniqueness near this
 positive scaled radius.
 
@@ -2414,24 +2361,22 @@ manifold. Normalize its amplitude $\rho$ so that
 \]
 at the critical parameter. To the required order, the
 radial equation is
-\begin{equation}
-\label{eq:classical-Hopf-radial-normal-form}
+\[
 \dot\rho
 =
 \beta_{\mathrm H}\mu\rho
 +\ell_{\mathrm H}(\sigma)\rho^3
 +O\left(\mu^2\rho+|\mu|\rho^3+\rho^5\right).
-\end{equation}
+\]
 The cubic coefficient is obtained from the cubic return
 displacement by multiplying by $\Omega/(2\pi)$:
-\begin{equation}
-\label{eq:classical-Hopf-radial-cubic-coefficient}
+\[
 \ell_{\mathrm H}(\sigma)
 =
 -\frac{\kappa^2(8\Omega^2+\sigma^2)}
 {4\tau^2\Omega^2\sigma
 (\Omega^2+\sigma^2)(4\Omega^2+\sigma^2)}.
-\end{equation}
+\]
 This expression refers to the stated amplitude
 normalization and to the original time variable.
 
@@ -2449,12 +2394,11 @@ is chosen for the fixed value of $\sigma$ and need not
 remain uniform as $\sigma\to0$.
 
 Finally,
-\begin{equation}
-\label{eq:classical-Hopf-criticality-sign}
+\[
 \operatorname{sgn}\ell_{\mathrm H}(\sigma)
 =
 -\operatorname{sgn}\sigma.
-\end{equation}
+\]
 Thus the bifurcation is supercritical for $\sigma>0$
 and subcritical for $\sigma<0$. Here criticality is
 understood in the usual Hopf sense, with the real part
@@ -2492,15 +2436,13 @@ Z(\theta,\varepsilon)
 \]
 
 Since $\dot\theta=\Omega+O(|\varepsilon|)$,
-\begin{equation}
-\label{eq:classical-Hopf-theta-time}
+\[
 \theta(t,\varepsilon)
 =
 \Omega t+\theta_0+O(|\varepsilon|),
-\end{equation}
+\]
 uniformly for $t$ in bounded intervals. Returning to the
-original variables through
-\eqref{eq:classical-coordinate-explicit}, we obtain
+original variables, we obtain
 \begin{equation}
 \label{eq:classical-Hopf-original-periodic-orbit}
 \begin{aligned}
@@ -2567,14 +2509,13 @@ $1$ and $m_\sigma=e^{-2\pi\sigma/\Omega}$.
 They are distinct because $\sigma\neq0$.
 Thus the multiplier near $1$ can be followed smoothly.
 The reduced displacement calculation gives
-\begin{equation}
-\label{eq:classical-Hopf-radial-multiplier}
+\[
 \mu_{\mathrm{rad}}
 =
 1+\varepsilon^2
 f_{\mathrm H,2}'(R_{\mathrm H}^*)
 +O(|\varepsilon|^3).
-\end{equation}
+\]end{equation}
 Here the elimination of the transverse fixed-point
 equation gives the same leading correction as the
 eigenvalue near $1$ of the full return-map derivative:
@@ -2584,8 +2525,7 @@ Using
 \eqref{eq:classical-Hopf-simple-root} and
 \eqref{eq:classical-Hopf-period}, the radial Floquet
 exponent in the original time variable is
-\begin{equation}
-\label{eq:classical-Hopf-radial-exponent}
+\[
 \begin{aligned}
 \Lambda_{\mathrm{rad}}
 &=
@@ -2594,7 +2534,7 @@ exponent in the original time variable is
 \frac{\eta_2}{\tau D_\sigma}\varepsilon^2
 +O(|\varepsilon|^3).
 \end{aligned}
-\end{equation}
+\]
 Hence the radial direction is attracting for $\eta_2<0$
 and repelling for $\eta_2>0$.
 
@@ -2645,10 +2585,6 @@ $\eta_2>0$. Both nontrivial exponents are then positive,
 and the periodic orbit is repelling in the two directions
 transverse to the flow.
 
-These stability conclusions agree with the sign of the
-cubic coefficient in
-\eqref{eq:classical-Hopf-radial-cubic-coefficient}.
-
 \begin{remark}[Lack of uniformity near the zero--Hopf point]
 \label{rem:classical-Hopf-nonuniformity}
 The preceding analysis is performed for fixed
@@ -2669,151 +2605,14 @@ two-dimensional zero--Hopf averaged system must be used.
 %\subsection{Main classical Hopf theorem}
 %\label{subsec:classical-Hopf-main-theorem}
 
-\begin{theorem}[Main Classical Hopf bifurcation]
-\label{subsec:classical-Hopf-main-theorem}
-Consider system~\eqref{eq:model} and assume
-\[
-\omega_0>0,\qquad
-\tau>0,\qquad
-\kappa\neq0,\qquad
-\omega_0\tau>1.
-\]
-Let
-$
-\mathcal I_{\mathrm H}
-=
-\left\{
-\sigma\in\mathbb R:
-\omega_0^2-\frac1{\tau^2}+\frac{\sigma}{\tau}>0
-\right\}.
-$
-For each fixed
-$\sigma\in\mathcal I_{\mathrm H}\setminus\{0\}$, define
-\[
-\Omega=\Omega_{\mathrm H}(\sigma)
-=
-\sqrt{\omega_0^2-\frac1{\tau^2}+\frac{\sigma}{\tau}},
-\qquad
-D_\sigma=\Omega^2+\sigma^2,
-\]
-and
-\[
-g_{\mathrm H}(\sigma)=d+\frac1\tau-\sigma,\qquad
-k_{s,\mathrm H}(\sigma)
-=
-\omega_0^2-\tau\sigma\Omega^2.
-\]
-
-At
-$
-g=g_{\mathrm H}(\sigma)$ and 
-$k_s=k_{s,\mathrm H}(\sigma),
-$
-the origin is a nondegenerate classical Hopf equilibrium
-with eigenvalues $-\sigma,\pm i\Omega$.
-With $g$ fixed and $k_s$ as the bifurcation parameter,
-the crossing coefficient is
-$
-\beta_{\mathrm H}=-\frac1{2\tau D_\sigma},
-$
-and the cubic radial coefficient, in the amplitude
-normalization specified above, is
-\[
-\ell_{\mathrm H}(\sigma)
-=
--\frac{\kappa^2(8\Omega^2+\sigma^2)}
-{4\tau^2\Omega^2\sigma D_\sigma(4\Omega^2+\sigma^2)}.
-\]
-Fix $\eta_2,\eta_3\in\mathbb R$ with $\sigma\eta_2<0$,
-and consider
-$
-g=g_{\mathrm H}(\sigma)$ and 
-$k_s=k_{s,\mathrm H}(\sigma)
-+\eta_2\varepsilon^2+\eta_3\varepsilon^3.
-$
-Then there exists $\varepsilon_0>0$ such that, for
-$0<|\varepsilon|<\varepsilon_0$, a nonconstant periodic
-orbit bifurcates from the origin. It is locally unique,
-up to time translation, among periodic orbits in a
-sufficiently small neighborhood of the origin.
-
-Its leading scaled amplitude is
-\[
-R_{\mathrm H}^*
-=
-\sqrt{
--\frac{2\tau\Omega^2\sigma(4\Omega^2+\sigma^2)}
-{\kappa^2(8\Omega^2+\sigma^2)}\,\eta_2
-},
-\]
-and its period satisfies
-$
-T_\varepsilon=\frac{2\pi}{\Omega}+O(\varepsilon^2).
-$
-For a suitable phase $\theta_0$, its components satisfy
-\[
-\begin{aligned}
-x(t,\varepsilon)
-&=
-\varepsilon R_{\mathrm H}^*
-\cos(\Omega t+\theta_0)+O(\varepsilon^2),\\
-v(t,\varepsilon)
-&=
--\varepsilon\Omega R_{\mathrm H}^*
-\sin(\Omega t+\theta_0)+O(\varepsilon^2),\\
-f(t,\varepsilon)
-&=
-\varepsilon\frac{1-\sigma\tau}{\tau^2}
-R_{\mathrm H}^*\cos(\Omega t+\theta_0)\\
-&\quad+
-\varepsilon\frac{\Omega(1-\sigma\tau)}{\tau}
-R_{\mathrm H}^*\sin(\Omega t+\theta_0)
-+O(\varepsilon^2),
-\end{aligned}
-\]
-uniformly for $t$ in bounded intervals.
-
-The two nontrivial Floquet exponents satisfy
-\[
-\Lambda_{\mathrm{rad}}
-=
-\frac{\eta_2}{\tau D_\sigma}\varepsilon^2
-+O(|\varepsilon|^3),
-\]
-and
-\[
-\Lambda_{\mathrm{tr}}
-=
--\sigma
--\frac{\eta_2}{\tau D_\sigma}\varepsilon^2
-+O(|\varepsilon|^3).
-\]
-Moreover, their sum is exactly $-\sigma$.
-
-If $\sigma>0$, the Hopf bifurcation is supercritical
-and the periodic orbit is orbitally asymptotically
-stable. If $\sigma<0$, the bifurcation is subcritical
-and the periodic orbit is repelling in both nontrivial
-Floquet directions.
-
-All neighborhood and smallness assertions are made for
-fixed $\sigma\neq0$; no uniformity as $\sigma\to0$ is
-asserted.
-\end{theorem}
-
-\begin{proof}
 The spectral factorization follows from
 Proposition~\ref{prop:classical-Hopf-spectral-parametrization}.
 Equation~\eqref{eq:classical-Hopf-transversality-derivative}
-establishes transversality. The second-order calculation
-\eqref{eq:classical-Hopf-second-bifurcation-function}
-gives the positive simple zero
+establishes transversality. The second-order calculation gives the positive simple zero
 \eqref{eq:classical-Hopf-amplitude} when
 $\sigma\eta_2<0$.
 
-The return-map construction in
-Subsection~\ref{subsec:classical-Hopf-existence-proof}
-then gives a periodic orbit for every sufficiently small
+The return-map gives a periodic orbit for every sufficiently small
 nonzero $\varepsilon$. The nonvanishing crossing and
 cubic coefficients establish a nondegenerate Hopf
 bifurcation and its local uniqueness up to time
@@ -2823,14 +2622,8 @@ The coordinate transformation and the estimates in
 Subsection~\ref{subsec:classical-Hopf-periodic-orbit}
 give the stated component expansions and period.
 Finally,
-\eqref{eq:classical-Hopf-radial-exponent} and
-\eqref{eq:classical-Hopf-exponent-sum} give the Floquet
-exponents. Their signs, together with
-\eqref{eq:classical-Hopf-criticality-sign}, yield the
-stability and criticality conclusions.
-\end{proof}
-
-
+\eqref{eq:classical-Hopf-exponent-sum} gives the Floquet
+exponents. 
 
 \section{Dynamics at infinity}
 \label{sec:infinity}
@@ -2846,12 +2639,11 @@ a=\omega_0^2,\qquad b=d-g,\qquad c=\frac{k_s}{\tau},
 \qquad h=\frac1\tau,\qquad k=\frac{\kappa}{\tau}.
 \]
 Then the system becomes
-\begin{equation}
-\label{eq:abbreviated-infinity}
+\[
 \dot x=v,\qquad
 \dot v=-ax-bv+f,\qquad
 \dot f=cx-hf-kx^2.
-\end{equation}
+\]
 Since $k\neq0$, this vector field has degree two.
 
 \subsection{Compactification in the local charts}
@@ -2862,11 +2654,10 @@ $x$-, $v$-, and $f$-directions, and let $V_1,V_2,V_3$ be
 their negative counterparts. In each chart, infinity is
 represented by $w=0$, while $w>0$ corresponds to finite points.
 We use the time change
-\begin{equation}
-\label{eq:chart-time}
-\frac{dt}{ds}=w
-\end{equation}
-and denote differentiation with respect to $s$ by a prime.
+$
+\frac{dt}{ds}=w.
+$
+
 The resulting polynomial equations represent the compactified
 flow up to a positive smooth time factor in each chart.
 
@@ -2880,7 +2671,7 @@ The quotient rule gives
 \frac{dq}{dt}=c-hq-uq-\frac{k}{w},\qquad
 \frac{dw}{dt}=-uw.
 \]
-After the time change~\eqref{eq:chart-time}, we obtain
+After the time change, we obtain
 \begin{equation}
 \label{eq:chart-U1}
 \begin{aligned}
@@ -2944,20 +2735,19 @@ V_2:\ (x,v,f)=\frac{(-u,-1,-q)}w,\qquad
 V_3:\ (x,v,f)=\frac{(-u,-q,-1)}w,
 \]
 with $w>0$ and the same time change. On $w=0$, we find
-\begin{equation}
-\label{eq:negative-boundary-charts}
+\[
 \begin{aligned}
 V_1:&\quad u'=0,\qquad q'=k,\\
 V_2:&\quad u'=0,\qquad q'=ku^2,\\
 V_3:&\quad u'=-ku^3,\qquad q'=-ku^2q.
 \end{aligned}
-\end{equation}
+\]
 Thus the boundary equations in antipodal charts differ by a
 change of sign. All local classifications below concern these
 two-dimensional restrictions to $w=0$.
 
-\subsection{The equilibrium set at infinity}
-\label{subsec:infinity-equilibria}
+%\subsection{The equilibrium set at infinity}
+%\label{subsec:infinity-equilibria}
 
 Write
 \[
@@ -3002,15 +2792,13 @@ Every such point of $\mathcal E_\infty$ has $V\neq0$, so it
 can be studied in $U_2$ or $V_2$. In $U_2$, let $(0,q_*)$
 be the equilibrium under consideration and put $z=q-q_*$.
 Then
-\begin{equation}
-\label{eq:infinity-generic-local}
+\[
 u'=0,\qquad z'=-ku^2,
-\end{equation}
+\]
 with solutions
-\begin{equation}
-\label{eq:infinity-generic-solutions}
+\[
 u(s)=u_0,\qquad z(s)=z_0-ku_0^2s.
-\end{equation}
+\]
 The line $u=0$ is stationary. On either side of it,
 trajectories are straight lines parallel to the equilibrium
 line, directed toward decreasing $z$ if $k>0$ and increasing
@@ -3027,29 +2815,26 @@ For $u\neq0$, we have
 \frac{dq}{du}=\frac qu,
 \]
 so the nonstationary trajectories lie on the rays
-\begin{equation}
-\label{eq:infinity-ray-orbits}
+\[
 q=Cu,\qquad C\in\mathbb R,\qquad u\neq0.
-\end{equation}
+\]
 Indeed, the solution through $(u_0,q_0)$, with $u_0\neq0$, is
-\begin{equation}
-\label{eq:infinity-U3-explicit}
+\[
 (u(s),q(s))=
 \frac{(u_0,q_0)}{\sqrt{1-2ku_0^2s}},
 \qquad 1-2ku_0^2s>0.
-\end{equation}
+\]
 For $k>0$, it approaches the origin as $s\to-\infty$ and
 moves away in forward time. Thus the rays at $p_f^+$ are
 outgoing.
 
 At $p_f^-$, the boundary equations in $V_3$ have the opposite
 sign, and their solutions are
-\begin{equation}
-\label{eq:infinity-V3-explicit}
+\[
 (u(s),q(s))=
 \frac{(u_0,q_0)}{\sqrt{1+2ku_0^2s}},
 \qquad 1+2ku_0^2s>0.
-\end{equation}
+\]
 For $k>0$, these rays approach the origin as $s\to+\infty$.
 They are therefore incoming at $p_f^-$. When $k<0$, both
 orientations reverse. Any divergence of these chart coordinates
@@ -3058,14 +2843,13 @@ global compactified orbit.
 
 To determine stability on the sphere, put $r^2=u^2+q^2$.
 Then
-\begin{equation}
-\label{eq:infinity-local-radius}
+\[
 (r^2)'=
 \begin{cases}
 2ku^2r^2,&\text{in }U_3,\\
 -2ku^2r^2,&\text{in }V_3.
 \end{cases}
-\end{equation}
+\]
 At the endpoint with incoming rays, $r$ cannot increase in
 forward time. This proves Lyapunov stability. The endpoint is
 not asymptotically stable, however, because every neighborhood
@@ -3107,14 +2891,13 @@ selects one open semicircle. The other semicircle, with
 $X<0$, is represented in $V_1$.
 
 Thus all nonstationary orbits can be written as
-\begin{equation}
-\label{eq:great-semicircle-orbits}
+\[
 \Gamma_{\delta,m}
 =\left\{
 \frac{\delta(1,m,q)}{\sqrt{1+m^2+q^2}}:q\in\mathbb R
 \right\},
 \qquad \delta\in\{-1,1\},\quad m\in\mathbb R.
-\end{equation}
+\]
 Their endpoints are determined by
 \begin{equation}
 \label{eq:chart-orbit-endpoints}
@@ -3130,18 +2913,16 @@ If $k>0$, then $q$ decreases in $U_1$, giving the direction
 from $p_f^+$ to $p_f^-$. In $V_1$, $q$ increases, but the
 minus sign in the sphere representation gives the same
 direction. Therefore
-\begin{equation}
-\label{eq:infinity-global-limits-positive}
+\[
 \alpha(\Gamma_{\delta,m})=\{p_f^+\},\qquad
 \omega(\Gamma_{\delta,m})=\{p_f^-\}
 \qquad (k>0).
-\end{equation}
+\]
 For $k<0$, the arrows reverse, and
-\begin{equation}
-\label{eq:infinity-global-limits-negative}
+\[
 \alpha(\Gamma_{\delta,m})=\{p_f^-\},\qquad
 \omega(\Gamma_{\delta,m})=\{p_f^+\}.
-\end{equation}
+\]
 These limits are taken in the global compactified flow.
 The chart time changes preserve orientation, and the smooth
 flow on the compact sphere is complete. Its nonstationary
@@ -3166,48 +2947,6 @@ from $p_f^+$ to $p_f^-$. Dashed curves lie on the rear
 hemisphere. For $\kappa<0$, all arrows reverse.}
 \label{fig:global-infinity}
 \end{figure}
-
-The preceding calculations establish the following result.
-
-\begin{theorem}[Dynamics on the sphere at infinity]
-\label{thm:dynamics-at-infinity}
-Consider system~\eqref{eq:model} with $\omega_0>0$,
-$\tau>0$, and $\kappa\neq0$. Its degree-two Poincar\'e
-compactification has the following boundary dynamics.
-\begin{enumerate}
-\item
-The equilibrium set is the great circle
-$\mathcal E_\infty=\{X=0\}\cap S_\infty^2$, and the
-boundary linearization vanishes at every equilibrium.
-Away from $p_f^\pm$, the local portrait consists of an
-equilibrium line with parallel moving trajectories on
-both sides. At $p_f^\pm$, it consists of an equilibrium
-line and incoming or outgoing rays in the force charts.
-\item
-Every nonstationary orbit is a great semicircle
-\eqref{eq:great-semicircle-orbits}, directed from $p_f^+$
-to $p_f^-$ if $\kappa>0$, and oppositely if $\kappa<0$.
-There are no nonconstant periodic or homoclinic boundary
-orbits.
-\item
-The common forward-limit endpoint is Lyapunov stable
-but not asymptotically stable on the sphere. The other
-endpoint is unstable forward in time and Lyapunov stable
-in reversed time. The oriented boundary portrait depends
-only on $\operatorname{sgn}\kappa$.
-\end{enumerate}
-\end{theorem}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
