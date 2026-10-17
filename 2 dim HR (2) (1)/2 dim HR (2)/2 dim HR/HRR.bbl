@@ -1,0 +1,36 @@
+\begin{thebibliography}{1}
+
+\bibitem{dumortier2006qualitative}
+Freddy Dumortier, Jaume Llibre, and Joan~C Art{\'e}s.
+\newblock {\em Qualitative theory of planar differential systems}.
+\newblock Springer, 2006.
+
+\bibitem{guo2018global}
+Feng Guo.
+\newblock Global analysis of a li{\'e}nard system with quadratic damping.
+\newblock {\em Discrete Dynamics in Nature and Society}, 2018(1):1249620, 2018.
+
+\bibitem{hayashi2019criterion}
+Makoto Hayashi.
+\newblock A criterion for the unique existence of the limit cycle of a
+  li{\'e}nard-type system with one parameter.
+\newblock {\em Advances in Dynamical Systems and Applications}, 14(2):179--187,
+  2019.
+
+\bibitem{khalil2002nonlinear}
+Hassan~K Khalil and Jessy~W Grizzle.
+\newblock {\em Nonlinear systems}, volume~3.
+\newblock Prentice hall Upper Saddle River, NJ, 2002.
+
+\bibitem{kuznetsov2006andronov}
+Yuri~A Kuznetsov.
+\newblock Andronov-hopf bifurcation.
+\newblock {\em Scholarpedia}, 1(10):1858, 2006.
+
+\bibitem{zhou2023uniqueness}
+Hui Zhou and Yueding Yuan.
+\newblock On the uniqueness of limit cycles for generalized li{\'e}nard
+  systems.
+\newblock {\em Open Mathematics}, 21(1):20220558, 2023.
+
+\end{thebibliography}

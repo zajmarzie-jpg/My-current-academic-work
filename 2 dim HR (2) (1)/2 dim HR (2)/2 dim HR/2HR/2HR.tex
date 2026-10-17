@@ -1,0 +1,3724 @@
+\documentclass[11pt,a4paper]{article}
+
+% -------------------------------------------------
+% Packages
+% -------------------------------------------------
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,mathtools}
+\usepackage{bm}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+% -------------------------------------------------
+% Commands
+% -------------------------------------------------
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\PP}{\mathcal{P}}
+\newcommand{\QQ}{\mathcal{Q}}
+
+\begin{document}
+
+\begin{center}
+    {\Large\bf Poincaré Compactification of a Two-Dimensional
+    Hindmarsh--Rose-Type Polynomial System}
+\end{center}
+
+\vspace{0.5cm}
+
+We consider the two-dimensional Hindmarsh--Rose-type polynomial system
+\begin{equation}
+\boxed{
+\begin{aligned}
+\dot{x} &= y-a x^3+b x^2+I,\\
+\dot{y} &= c-dx^2-y,
+\end{aligned}}
+\tag{HR}
+\end{equation}
+where $a,b,c,d,I$ are real parameters. Throughout the generic
+cubic case, we assume
+\begin{equation}
+a\neq 0.
+\end{equation}
+
+The purpose of this section is to perform the complete Poincaré
+compactification and to determine the singularities at infinity.
+
+% =================================================
+\section{1. Standard Form and Polynomial Degree}
+% =================================================
+
+Write the system in the standard form
+\begin{equation}
+\dot{x}=P(x,y),\qquad
+\dot{y}=Q(x,y),
+\end{equation}
+where
+\begin{equation}
+\boxed{
+P(x,y)=y-a x^3+b x^2+I
+}
+\end{equation}
+and
+\begin{equation}
+\boxed{
+Q(x,y)=c-dx^2-y.
+}
+\end{equation}
+
+The degree of $P$ is
+\begin{equation}
+\deg P=3
+\end{equation}
+provided $a\neq0$, whereas
+\begin{equation}
+\deg Q=2
+\end{equation}
+provided $d\neq0$.
+
+Hence the degree of the polynomial vector field is
+\begin{equation}
+\boxed{
+n=\max\{\deg P,\deg Q\}=3.
+}
+\tag{1}
+\end{equation}
+
+Therefore, in the Poincaré compactification, the appropriate
+time rescaling is
+\begin{equation}
+\boxed{
+\frac{\dd}{\dd\tau}
+=
+v^{n-1}\frac{\dd}{\dd t}
+=
+v^2\frac{\dd}{\dd t}.
+}
+\tag{2}
+\end{equation}
+
+Equivalently,
+\begin{equation}
+\boxed{
+\frac{\dd t}{\dd\tau}=v^2.
+}
+\end{equation}
+
+% =================================================
+\section{2. Homogeneous Components}
+% =================================================
+
+We decompose $P$ and $Q$ into homogeneous components.
+
+For $P$,
+\begin{equation}
+P(x,y)
+=
+P_3(x,y)+P_2(x,y)+P_1(x,y)+P_0(x,y),
+\end{equation}
+where
+\begin{align}
+P_3(x,y)&=-a x^3,\\
+P_2(x,y)&=b x^2,\\
+P_1(x,y)&=y,\\
+P_0(x,y)&=I.
+\end{align}
+
+Thus
+\begin{equation}
+\boxed{
+P_3(x,y)=-a x^3.
+}
+\tag{3}
+\end{equation}
+
+For $Q$,
+\begin{equation}
+Q(x,y)
+=
+Q_3(x,y)+Q_2(x,y)+Q_1(x,y)+Q_0(x,y),
+\end{equation}
+where
+\begin{align}
+Q_3(x,y)&=0,\\
+Q_2(x,y)&=-d x^2,\\
+Q_1(x,y)&=-y,\\
+Q_0(x,y)&=c.
+\end{align}
+
+Therefore
+\begin{equation}
+\boxed{
+Q_3(x,y)=0.
+}
+\tag{4}
+\end{equation}
+
+Consequently, the highest-degree homogeneous part of the vector field is
+\begin{equation}
+\boxed{
+(P_3,Q_3)
+=
+\left(-a x^3,0\right).
+}
+\tag{5}
+\end{equation}
+
+This highest-degree part determines the directions of the
+singularities at infinity.
+
+% =================================================
+\section{3. Singular Directions at Infinity}
+% =================================================
+
+For a polynomial planar system of degree $n$, the singular
+directions at infinity can be found by using the highest-degree
+homogeneous components $P_n$ and $Q_n$.
+
+In the $x$-chart, the singular directions satisfy
+\begin{equation}
+\boxed{
+Q_n(1,u)-uP_n(1,u)=0.
+}
+\tag{6}
+\end{equation}
+
+For the present system, $n=3$, and therefore
+\begin{equation}
+P_3(1,u)=-a,
+\qquad
+Q_3(1,u)=0.
+\end{equation}
+
+Hence
+\begin{align}
+Q_3(1,u)-uP_3(1,u)
+&=
+0-u(-a)\\
+&=au.
+\end{align}
+
+Thus
+\begin{equation}
+au=0.
+\end{equation}
+
+Under the generic assumption $a\neq0$,
+\begin{equation}
+\boxed{
+u=0.
+}
+\tag{7}
+\end{equation}
+
+Therefore one singular direction at infinity is obtained in the
+$x$-chart.
+
+Similarly, in the $y$-chart, the singular directions satisfy
+\begin{equation}
+\boxed{
+P_n(u,1)-uQ_n(u,1)=0.
+}
+\tag{8}
+\end{equation}
+
+Since
+\begin{equation}
+P_3(u,1)=-au^3,
+\qquad
+Q_3(u,1)=0,
+\end{equation}
+we obtain
+\begin{align}
+P_3(u,1)-uQ_3(u,1)
+&=
+-au^3.
+\end{align}
+
+Thus
+\begin{equation}
+-au^3=0,
+\end{equation}
+and hence
+\begin{equation}
+\boxed{
+u=0.
+}
+\tag{9}
+\end{equation}
+
+Therefore the generic system has two singular directions at
+infinity:
+\begin{equation}
+\boxed{
+[1:0:0]
+\qquad\text{and}\qquad
+[0:1:0].
+}
+\tag{10}
+\end{equation}
+
+These correspond respectively to the $x$-axis and $y$-axis
+directions at infinity.
+
+% =================================================
+\section{4. First Local Chart: the $x$-Chart}
+% =================================================
+
+Consider the local chart defined by
+\begin{equation}
+\boxed{
+u=\frac{y}{x},
+\qquad
+v=\frac{1}{x}.
+}
+\tag{11}
+\end{equation}
+
+The inverse transformation is
+\begin{equation}
+\boxed{
+x=\frac{1}{v},
+\qquad
+y=\frac{u}{v}.
+}
+\tag{12}
+\end{equation}
+
+The coordinate $v$ measures the approach to infinity:
+\begin{equation}
+|x|\to\infty
+\quad\Longleftrightarrow\quad
+v\to0.
+\end{equation}
+
+Thus the line
+\begin{equation}
+\boxed{
+v=0
+}
+\tag{13}
+\end{equation}
+represents the set of directions at infinity in this chart.
+
+The variable
+\begin{equation}
+u=\frac{y}{x}
+\end{equation}
+is the directional coordinate.
+
+% =================================================
+\subsection{4.1 Transformation of the $v$-Equation}
+% =================================================
+
+Since
+\begin{equation}
+x=\frac{1}{v},
+\end{equation}
+we have
+\begin{equation}
+\dot{x}
+=
+-\frac{\dot v}{v^2}.
+\end{equation}
+
+Since
+\begin{equation}
+\dot{x}=P(x,y),
+\end{equation}
+it follows that
+\begin{equation}
+-\frac{\dot v}{v^2}
+=
+P\left(\frac1v,\frac{u}{v}\right),
+\end{equation}
+and consequently
+\begin{equation}
+\boxed{
+\dot v
+=
+-v^2P\left(\frac1v,\frac{u}{v}\right).
+}
+\tag{14}
+\end{equation}
+
+Now
+\begin{align}
+P\left(\frac1v,\frac{u}{v}\right)
+&=
+\frac{u}{v}
+-a\frac{1}{v^3}
++b\frac{1}{v^2}
++I\\
+&=
+\frac{-a+bv+uv^2+Iv^3}{v^3}.
+\end{align}
+
+Therefore
+\begin{align}
+\dot v
+&=
+-v^2
+\frac{-a+bv+uv^2+Iv^3}{v^3}\\
+&=
+\frac{a-bv-uv^2-Iv^3}{v}.
+\end{align}
+
+Thus
+\begin{equation}
+\boxed{
+\dot v
+=
+\frac{a-bv-uv^2-Iv^3}{v}.
+}
+\tag{15}
+\end{equation}
+
+% =================================================
+\subsection{4.2 Transformation of the $u$-Equation}
+% =================================================
+
+Since
+\begin{equation}
+u=\frac{y}{x},
+\end{equation}
+we have
+\begin{equation}
+\dot u
+=
+\frac{x\dot y-y\dot x}{x^2}.
+\end{equation}
+
+Using
+\begin{equation}
+x=\frac1v,\qquad
+y=\frac{u}{v},
+\end{equation}
+we obtain
+\begin{equation}
+\boxed{
+\dot u
+=
+v\left[
+Q\left(\frac1v,\frac{u}{v}\right)
+-
+uP\left(\frac1v,\frac{u}{v}\right)
+\right].
+}
+\tag{16}
+\end{equation}
+
+First,
+\begin{align}
+Q\left(\frac1v,\frac{u}{v}\right)
+&=
+c-d\frac1{v^2}-\frac{u}{v}\\
+&=
+\frac{cv^3-dv-uv^2}{v^3}.
+\end{align}
+
+Hence
+\begin{align}
+Q-uP
+&=
+\frac{cv^3-dv-uv^2}{v^3}\\
+&\quad
+-
+u
+\frac{-a+bv+uv^2+Iv^3}{v^3}\\
+&=
+\frac{
+au-(d+bu)v-u(1+u)v^2+(c-Iu)v^3
+}{v^3}.
+\end{align}
+
+Therefore,
+\begin{equation}
+\boxed{
+\dot u
+=
+\frac{
+au-(d+bu)v-u(1+u)v^2+(c-Iu)v^3
+}{v^2}.
+}
+\tag{17}
+\end{equation}
+
+% =================================================
+\subsection{4.3 Time Rescaling}
+% =================================================
+
+Since the degree of the system is $n=3$, we use
+\begin{equation}
+\boxed{
+\frac{\dd}{\dd\tau}
+=
+v^2\frac{\dd}{\dd t}.
+}
+\tag{18}
+\end{equation}
+
+Hence
+\begin{equation}
+u'=v^2\dot u,
+\qquad
+v'=v^2\dot v,
+\end{equation}
+where the prime denotes differentiation with respect to $\tau$.
+
+From (15),
+\begin{align}
+v'
+&=
+v^2
+\frac{a-bv-uv^2-Iv^3}{v}\\
+&=
+av-bv^2-uv^3-Iv^4.
+\end{align}
+
+From (17),
+\begin{align}
+u'
+&=
+v^2
+\frac{
+au-(d+bu)v-u(1+u)v^2+(c-Iu)v^3
+}{v^2}\\
+&=
+au-(d+bu)v-u(1+u)v^2+(c-Iu)v^3.
+\end{align}
+
+Thus the compactified vector field in the $x$-chart is
+
+\begin{equation}
+\boxed{
+\begin{aligned}
+u'
+&=
+au-(d+bu)v-u(1+u)v^2+(c-Iu)v^3,
+\\[1mm]
+v'
+&=
+av-bv^2-uv^3-Iv^4.
+\end{aligned}}
+\tag{19}
+\end{equation}
+
+This system is regular at $v=0$.
+
+% =================================================
+\subsection{4.4 Dynamics on the Line at Infinity}
+% =================================================
+
+Setting
+\begin{equation}
+v=0
+\end{equation}
+in (19), we obtain
+\begin{equation}
+\boxed{
+u'=au,
+\qquad
+v'=0.
+}
+\tag{20}
+\end{equation}
+
+Therefore the singularity condition is
+\begin{equation}
+au=0.
+\end{equation}
+
+For $a\neq0$,
+\begin{equation}
+\boxed{
+u_*=0.
+}
+\tag{21}
+\end{equation}
+
+Thus the singular point at infinity in the $x$-chart is
+\begin{equation}
+\boxed{
+p_x=(0,0).
+}
+\tag{22}
+\end{equation}
+
+Since
+\begin{equation}
+u=\frac{y}{x},
+\end{equation}
+the condition $u=0$ means
+\begin{equation}
+\frac{y}{x}\to0.
+\end{equation}
+
+Therefore
+\begin{equation}
+\boxed{
+p_x\text{ represents the $x$-axis direction at infinity}.
+}
+\tag{23}
+\end{equation}
+
+In homogeneous projective coordinates,
+\begin{equation}
+\boxed{
+p_x=[1:0:0].
+}
+\tag{24}
+\end{equation}
+
+% =================================================
+\subsection{4.5 Jacobian at $p_x$}
+% =================================================
+
+Define
+\begin{align}
+f(u,v)
+&=
+au-(d+bu)v-u(1+u)v^2+(c-Iu)v^3,
+\\
+g(u,v)
+&=
+av-bv^2-uv^3-Iv^4.
+\end{align}
+
+The Jacobian matrix is
+\begin{equation}
+J_x(u,v)
+=
+\begin{pmatrix}
+f_u & f_v\\
+g_u & g_v
+\end{pmatrix}.
+\end{equation}
+
+We have
+\begin{align}
+f_u
+&=
+a-bv-(1+2u)v^2-Iv^3,
+\\
+f_v
+&=
+-(d+bu)-2u(1+u)v+3(c-Iu)v^2,
+\\
+g_u
+&=
+-v^3,
+\\
+g_v
+&=
+a-2bv-3uv^2-4Iv^3.
+\end{align}
+
+Therefore
+\begin{equation}
+\boxed{
+J_x(u,v)
+=
+\begin{pmatrix}
+a-bv-(1+2u)v^2-Iv^3
+&
+-(d+bu)-2u(1+u)v+3(c-Iu)v^2
+\\[2mm]
+-v^3
+&
+a-2bv-3uv^2-4Iv^3
+\end{pmatrix}.
+}
+\tag{25}
+\end{equation}
+
+At $p_x=(0,0)$,
+\begin{equation}
+\boxed{
+J_x(p_x)
+=
+\begin{pmatrix}
+a & -d\\
+0 & a
+\end{pmatrix}.
+}
+\tag{26}
+\end{equation}
+
+The characteristic equation is
+\begin{align}
+\det
+\begin{pmatrix}
+a-\lambda & -d\\
+0 & a-\lambda
+\end{pmatrix}
+&=0,
+\end{align}
+which gives
+\begin{equation}
+(a-\lambda)^2=0.
+\end{equation}
+
+Hence
+\begin{equation}
+\boxed{
+\lambda_1=\lambda_2=a.
+}
+\tag{27}
+\end{equation}
+
+% =================================================
+\subsection{4.6 Classification of $p_x$}
+% =================================================
+
+If
+\begin{equation}
+a>0,
+\end{equation}
+then
+\begin{equation}
+\lambda_1=\lambda_2=a>0,
+\end{equation}
+so $p_x$ is unstable.
+
+For $d\neq0$, the matrix
+\begin{equation}
+\begin{pmatrix}
+a&-d\\
+0&a
+\end{pmatrix}
+\end{equation}
+has only one eigenvector and therefore has a nontrivial Jordan block.
+Consequently, $p_x$ is generically an unstable improper node.
+
+Thus,
+\begin{equation}
+\boxed{
+a>0,\ d\neq0
+\quad\Longrightarrow\quad
+p_x\text{ is an unstable improper node}.
+}
+\tag{28}
+\end{equation}
+
+If $d=0$, then
+\begin{equation}
+J_x(p_x)=aI,
+\end{equation}
+and the point is a star node.
+
+Similarly, if
+\begin{equation}
+a<0,
+\end{equation}
+then
+\begin{equation}
+\lambda_1=\lambda_2=a<0,
+\end{equation}
+and $p_x$ is stable.
+
+For $d\neq0$,
+\begin{equation}
+\boxed{
+a<0,\ d\neq0
+\quad\Longrightarrow\quad
+p_x\text{ is a stable improper node}.
+}
+\tag{29}
+\end{equation}
+
+For $d=0$, it is a stable star node.
+
+Therefore, for $a\neq0$, the point $p_x$ is hyperbolic.
+
+% =================================================
+\section{5. Second Local Chart: the $y$-Chart}
+% =================================================
+
+The first chart does not cover the vertical direction. We therefore
+introduce the second local chart
+\begin{equation}
+\boxed{
+u=\frac{x}{y},
+\qquad
+v=\frac1y.
+}
+\tag{30}
+\end{equation}
+
+The inverse transformation is
+\begin{equation}
+\boxed{
+x=\frac{u}{v},
+\qquad
+y=\frac1v.
+}
+\tag{31}
+\end{equation}
+
+Again,
+\begin{equation}
+v=0
+\end{equation}
+represents infinity in this chart, while $u=x/y$ represents
+direction.
+
+% =================================================
+\subsection{5.1 Transformation of the $v$-Equation}
+% =================================================
+
+Since
+\begin{equation}
+y=\frac1v,
+\end{equation}
+we have
+\begin{equation}
+\dot y=-\frac{\dot v}{v^2}.
+\end{equation}
+
+Since $\dot y=Q(x,y)$,
+\begin{equation}
+-\frac{\dot v}{v^2}
+=
+Q\left(\frac{u}{v},\frac1v\right),
+\end{equation}
+so
+\begin{equation}
+\boxed{
+\dot v
+=
+-v^2Q\left(\frac{u}{v},\frac1v\right).
+}
+\tag{32}
+\end{equation}
+
+We have
+\begin{align}
+Q\left(\frac{u}{v},\frac1v\right)
+&=
+c-d\frac{u^2}{v^2}-\frac1v\\
+&=
+\frac{cv^3-du^2v-v^2}{v^3}.
+\end{align}
+
+Therefore
+\begin{align}
+\dot v
+&=
+-v^2
+\frac{cv^3-du^2v-v^2}{v^3}\\
+&=
+\frac{du^2v+v^2-cv^3}{v}.
+\end{align}
+
+Hence
+\begin{equation}
+\boxed{
+\dot v
+=
+\frac{du^2v+v^2-cv^3}{v}.
+}
+\tag{33}
+\end{equation}
+
+% =================================================
+\subsection{5.2 Transformation of the $u$-Equation}
+% =================================================
+
+Since
+\begin{equation}
+u=\frac{x}{y},
+\end{equation}
+we have
+\begin{equation}
+\dot u
+=
+\frac{y\dot x-x\dot y}{y^2}.
+\end{equation}
+
+Using
+\begin{equation}
+x=\frac uv,\qquad
+y=\frac1v,
+\end{equation}
+we obtain
+\begin{equation}
+\boxed{
+\dot u
+=
+v\left[
+P\left(\frac uv,\frac1v\right)
+-uQ\left(\frac uv,\frac1v\right)
+\right].
+}
+\tag{34}
+\end{equation}
+
+First,
+\begin{align}
+P\left(\frac uv,\frac1v\right)
+&=
+\frac1v
+-a\frac{u^3}{v^3}
++b\frac{u^2}{v^2}
++I\\
+&=
+\frac{-au^3+bu^2v+uv^2+Iv^3}{v^3}.
+\end{align}
+
+Also,
+\begin{align}
+Q\left(\frac uv,\frac1v\right)
+&=
+\frac{cv^3-du^2v-v^2}{v^3}.
+\end{align}
+
+Therefore
+\begin{align}
+P-uQ
+&=
+\frac{
+-au^3+(bu^2+du^3)v
++(u+u^2)v^2
++(I-cu)v^3
+}{v^3}.
+\end{align}
+
+Consequently,
+\begin{equation}
+\boxed{
+\dot u
+=
+\frac{
+-au^3+(bu^2+du^3)v
++(u+u^2)v^2
++(I-cu)v^3
+}{v^2}.
+}
+\tag{35}
+\end{equation}
+
+% =================================================
+\subsection{5.3 Time Rescaling}
+% =================================================
+
+Again, since $n=3$,
+\begin{equation}
+\frac{\dd}{\dd\tau}
+=
+v^2\frac{\dd}{\dd t}.
+\end{equation}
+
+Thus
+\begin{equation}
+u'=v^2\dot u,
+\qquad
+v'=v^2\dot v.
+\end{equation}
+
+From (35),
+\begin{align}
+u'
+&=
+-au^3+(bu^2+du^3)v
++(u+u^2)v^2
++(I-cu)v^3.
+\end{align}
+
+From (33),
+\begin{align}
+v'
+&=
+v^2
+\frac{du^2v+v^2-cv^3}{v}\\
+&=
+du^2v^2+v^3-cv^4.
+\end{align}
+
+Therefore the compactified system in the $y$-chart is
+
+\begin{equation}
+\boxed{
+\begin{aligned}
+u'
+&=
+-au^3+(bu^2+du^3)v
++(u+u^2)v^2
++(I-cu)v^3,
+\\[1mm]
+v'
+&=
+du^2v^2+v^3-cv^4.
+\end{aligned}}
+\tag{36}
+\end{equation}
+
+% =================================================
+\subsection{5.4 Dynamics on the Line at Infinity}
+% =================================================
+
+Setting
+\begin{equation}
+v=0,
+\end{equation}
+we obtain
+\begin{equation}
+\boxed{
+u'=-au^3,
+\qquad
+v'=0.
+}
+\tag{37}
+\end{equation}
+
+Hence the singularity condition is
+\begin{equation}
+-au^3=0.
+\end{equation}
+
+For $a\neq0$,
+\begin{equation}
+\boxed{
+u_*=0.
+}
+\tag{38}
+\end{equation}
+
+Therefore the singular point in the $y$-chart is
+
+\begin{equation}
+\boxed{
+p_y=(0,0).
+}
+\tag{39}
+\end{equation}
+
+Since
+\begin{equation}
+u=\frac{x}{y},
+\end{equation}
+the condition $u=0$ corresponds to
+\begin{equation}
+x=0.
+\end{equation}
+
+Hence
+
+\begin{equation}
+\boxed{
+p_y\text{ represents the $y$-axis direction at infinity}.
+}
+\tag{40}
+\end{equation}
+
+In homogeneous projective coordinates,
+\begin{equation}
+\boxed{
+p_y=[0:1:0].
+}
+\tag{41}
+\end{equation}
+
+% =================================================
+\subsection{5.5 Jacobian at $p_y$}
+% =================================================
+
+Define
+\begin{align}
+f(u,v)
+&=
+-au^3+(bu^2+du^3)v
++(u+u^2)v^2
++(I-cu)v^3,
+\\
+g(u,v)
+&=
+du^2v^2+v^3-cv^4.
+\end{align}
+
+Every term in $f$ and $g$ has total degree at least $2$.
+Consequently, there are no linear terms in the vector field at the
+origin.
+
+Hence
+\begin{equation}
+\boxed{
+J_y(p_y)
+=
+\begin{pmatrix}
+0&0\\
+0&0
+\end{pmatrix}.
+}
+\tag{42}
+\end{equation}
+
+Therefore the eigenvalues are
+\begin{equation}
+\boxed{
+\lambda_1=\lambda_2=0.
+}
+\tag{43}
+\end{equation}
+
+Thus $p_y$ is a nonhyperbolic, degenerate singularity.
+
+\begin{equation}
+\boxed{
+p_y\text{ is nonhyperbolic and cannot be classified by linearization alone}.
+}
+\tag{44}
+\end{equation}
+
+Higher-order terms must be considered in order to determine its local
+phase portrait.
+
+% =================================================
+\section{6. Why the Two Infinity Points Are Different}
+% =================================================
+
+The singularity $p_x$ corresponds to
+\begin{equation}
+y=0,\qquad |x|\to\infty,
+\end{equation}
+whereas $p_y$ corresponds to
+\begin{equation}
+x=0,\qquad |y|\to\infty.
+\end{equation}
+
+Therefore they represent different directions at infinity:
+\begin{equation}
+\boxed{
+p_x=[1:0:0],
+\qquad
+p_y=[0:1:0].
+}
+\end{equation}
+
+The asymmetry between the two singularities is caused by the highest
+degree part
+\begin{equation}
+(P_3,Q_3)=(-ax^3,0).
+\end{equation}
+
+At the $x$-axis direction,
+\begin{equation}
+y=0,
+\end{equation}
+and the cubic term
+\begin{equation}
+-ax^3
+\end{equation}
+is nonzero.
+
+By contrast, along the $y$-axis direction,
+\begin{equation}
+x=0,
+\end{equation}
+and therefore
+\begin{equation}
+P_3(0,y)=0.
+\end{equation}
+
+This explains why the $x$-axis infinity point has a nonzero
+linearization, whereas the $y$-axis infinity point is degenerate.
+
+% =================================================
+\section{7. Transition Between the Two Charts}
+% =================================================
+
+The two local charts are related by the transition map.
+
+In the $x$-chart,
+\begin{equation}
+u_1=\frac{y}{x},
+\qquad
+v_1=\frac1x.
+\end{equation}
+
+In the $y$-chart,
+\begin{equation}
+u_2=\frac{x}{y},
+\qquad
+v_2=\frac1y.
+\end{equation}
+
+Therefore,
+\begin{align}
+u_2
+&=
+\frac{x}{y}
+=
+\frac{1}{y/x}
+=
+\frac1{u_1},
+\\
+v_2
+&=
+\frac1y
+=
+\frac{1/x}{y/x}
+=
+\frac{v_1}{u_1}.
+\end{align}
+
+Hence
+\begin{equation}
+\boxed{
+u_2=\frac1{u_1},
+\qquad
+v_2=\frac{v_1}{u_1}.
+}
+\tag{45}
+\end{equation}
+
+This transition map is defined on the overlap where
+\begin{equation}
+u_1\neq0.
+\end{equation}
+
+The point $u_1=0$ is the horizontal direction, which is not
+represented by the $y$-chart.
+
+Similarly, $u_2=0$ represents the vertical direction, which is not
+represented by the $x$-chart.
+
+% =================================================
+\section{8. Important Parameter Dependence}
+% =================================================
+
+The locations of the singular directions at infinity are determined
+only by the highest-degree homogeneous terms
+\begin{equation}
+P_3(x,y)=-ax^3,
+\qquad
+Q_3(x,y)=0.
+\end{equation}
+
+Consequently, for $a\neq0$, the singular directions
+\begin{equation}
+[1:0:0],\qquad[0:1:0]
+\end{equation}
+do not depend on $b,c,d,$ or $I$.
+
+However, the detailed local dynamics near the singularities may
+depend on the lower-degree terms.
+
+For example,
+\begin{equation}
+J_x(p_x)
+=
+\begin{pmatrix}
+a&-d\\
+0&a
+\end{pmatrix},
+\end{equation}
+so $d$ affects the eigenvector and Jordan structure even though it
+does not affect the location of the singular direction.
+
+Thus the general principle is
+\begin{equation}
+\boxed{
+\text{highest-degree terms}
+\quad\Longrightarrow\quad
+\text{singular directions at infinity},
+}
+\tag{46}
+\end{equation}
+whereas
+\begin{equation}
+\boxed{
+\text{all polynomial terms}
+\quad\Longrightarrow\quad
+\text{local dynamics near infinity}.
+}
+\tag{47}
+\end{equation}
+
+% =================================================
+\section{9. Degenerate Case $a=0$}
+% =================================================
+
+The preceding calculations assume
+\begin{equation}
+a\neq0.
+\end{equation}
+
+If
+\begin{equation}
+a=0,
+\end{equation}
+then the cubic term disappears and the system becomes
+\begin{equation}
+\dot x=y+bx^2+I,
+\qquad
+\dot y=c-dx^2-y.
+\end{equation}
+
+The degree is then generically
+\begin{equation}
+\boxed{
+n=2,
+}
+\end{equation}
+provided at least one quadratic coefficient is nonzero.
+
+Consequently, the appropriate Poincaré time rescaling is no longer
+$v^2$, but
+\begin{equation}
+\boxed{
+\frac{\dd}{\dd\tau}
+=
+v\frac{\dd}{\dd t}.
+}
+\end{equation}
+
+Thus, when parameters cause the degree of the polynomial vector field
+to change, the compactification must be recomputed using the actual
+degree of the resulting system.
+
+% =================================================
+\section{10. Reusable Procedure for a General Polynomial System}
+% =================================================
+
+For a general planar polynomial system
+\begin{equation}
+\dot x=P(x,y),
+\qquad
+\dot y=Q(x,y),
+\end{equation}
+the following procedure can be applied systematically.
+
+\subsection*{Step 1: Determine the degree}
+
+Set
+\begin{equation}
+n=\max\{\deg P,\deg Q\}.
+\end{equation}
+
+\subsection*{Step 2: Extract the highest-degree homogeneous terms}
+
+Write
+\begin{equation}
+P=P_n+\cdots,
+\qquad
+Q=Q_n+\cdots.
+\end{equation}
+
+\subsection*{Step 3: Find the singular directions at infinity}
+
+In the $x$-chart solve
+\begin{equation}
+\boxed{
+Q_n(1,u)-uP_n(1,u)=0.
+}
+\end{equation}
+
+In the $y$-chart solve
+\begin{equation}
+\boxed{
+P_n(u,1)-uQ_n(u,1)=0.
+}
+\end{equation}
+
+\subsection*{Step 4: Introduce the local charts}
+
+For the $x$-chart,
+\begin{equation}
+\boxed{
+x=\frac1v,
+\qquad
+y=\frac uv.
+}
+\end{equation}
+
+For the $y$-chart,
+\begin{equation}
+\boxed{
+x=\frac uv,
+\qquad
+y=\frac1v.
+}
+\end{equation}
+
+\subsection*{Step 5: Transform the vector field}
+
+In the $x$-chart,
+\begin{equation}
+\boxed{
+\dot u
+=
+v(Q-uP),
+\qquad
+\dot v=-v^2P,
+}
+\end{equation}
+where $P$ and $Q$ are evaluated at
+\begin{equation}
+\left(\frac1v,\frac uv\right).
+\end{equation}
+
+In the $y$-chart,
+\begin{equation}
+\boxed{
+\dot u
+=
+v(P-uQ),
+\qquad
+\dot v=-v^2Q,
+}
+\end{equation}
+where $P$ and $Q$ are evaluated at
+\begin{equation}
+\left(\frac uv,\frac1v\right).
+\end{equation}
+
+\subsection*{Step 6: Rescale time}
+
+Use
+\begin{equation}
+\boxed{
+\frac{\dd}{\dd\tau}
+=
+v^{n-1}\frac{\dd}{\dd t}.
+}
+\end{equation}
+
+\subsection*{Step 7: Restrict to infinity}
+
+Set
+\begin{equation}
+v=0.
+\end{equation}
+
+\subsection*{Step 8: Find and classify the singularities}
+
+Solve the resulting equation for $u$, then calculate the Jacobian
+matrix of the compactified vector field.
+
+If the eigenvalues have nonzero real parts, the singularity is
+hyperbolic and the local phase portrait is determined by the
+linearization.
+
+If zero eigenvalues occur, the singularity is nonhyperbolic and
+higher-order analysis is required.
+
+% =================================================
+\section{11. Final Results for the Hindmarsh--Rose-Type System}
+% =================================================
+
+For the system
+\begin{equation}
+\boxed{
+\begin{aligned}
+\dot{x}&=y-a x^3+b x^2+I,\\
+\dot{y}&=c-dx^2-y,
+\end{aligned}}
+\end{equation}
+with $a\neq0$, the degree is
+\begin{equation}
+\boxed{n=3}.
+\end{equation}
+
+The highest-degree homogeneous part is
+\begin{equation}
+\boxed{
+(P_3,Q_3)=(-ax^3,0).
+}
+\end{equation}
+
+The singular directions at infinity are
+\begin{equation}
+\boxed{
+[1:0:0]
+\quad\text{and}\quad
+[0:1:0].
+}
+\end{equation}
+
+The point
+\begin{equation}
+\boxed{
+p_x=[1:0:0]
+}
+\end{equation}
+is represented in the $x$-chart by
+\begin{equation}
+(u,v)=(0,0)
+\end{equation}
+and has Jacobian
+\begin{equation}
+\boxed{
+J_x(p_x)
+=
+\begin{pmatrix}
+a&-d\\
+0&a
+\end{pmatrix}.
+}
+\end{equation}
+
+Its eigenvalues are
+\begin{equation}
+\boxed{
+\lambda_1=\lambda_2=a.
+}
+\end{equation}
+
+Thus, for $a\neq0$,
+\begin{equation}
+\boxed{
+\begin{cases}
+a>0:& p_x\text{ is an unstable node},\\[1mm]
+a<0:& p_x\text{ is a stable node}.
+\end{cases}
+}
+\end{equation}
+
+For $d\neq0$, the node is generically an improper node.
+
+The point
+\begin{equation}
+\boxed{
+p_y=[0:1:0]
+}
+\end{equation}
+is represented in the $y$-chart by
+\begin{equation}
+(u,v)=(0,0)
+\end{equation}
+and has Jacobian
+\begin{equation}
+\boxed{
+J_y(p_y)
+=
+\begin{pmatrix}
+0&0\\
+0&0
+\end{pmatrix}.
+}
+\end{equation}
+
+Hence
+\begin{equation}
+\boxed{
+\lambda_1=\lambda_2=0,
+}
+\end{equation}
+so
+\begin{equation}
+\boxed{
+p_y\text{ is a degenerate nonhyperbolic singularity at infinity}.
+}
+\end{equation}
+
+Its local phase portrait cannot be obtained from the linearization and
+requires an analysis of the higher-order terms.
+
+\section{1. Equilibrium Equations}
+
+
+An equilibrium point
+\begin{equation}
+E^*=(x^*,y^*)
+\end{equation}
+satisfies
+\begin{equation}
+\dot{x}=0,
+\qquad
+\dot{y}=0.
+\end{equation}
+
+Therefore,
+\begin{equation}
+y^*-a(x^*)^3+b(x^*)^2+I=0,
+\tag{1}
+\end{equation}
+and
+\begin{equation}
+c-d(x^*)^2-y^*=0.
+\tag{2}
+\end{equation}
+
+From the second equation,
+\begin{equation}
+\boxed{
+y^*=c-d(x^*)^2.
+}
+\tag{3}
+\end{equation}
+
+Substituting (3) into the first equilibrium equation gives
+\begin{align}
+c-d(x^*)^2-a(x^*)^3+b(x^*)^2+I
+&=0.
+\end{align}
+
+Hence
+\begin{equation}
+-a(x^*)^3+(b-d)(x^*)^2+(c+I)=0.
+\end{equation}
+
+Multiplying by $-1$ gives
+\begin{equation}
+\boxed{
+a(x^*)^3+(d-b)(x^*)^2-(c+I)=0.
+}
+\tag{4}
+\end{equation}
+
+Thus all finite equilibria are obtained by solving the cubic
+equation (4), and then using (3) to obtain their $y$-coordinates.
+
+For convenience, define
+\begin{equation}
+\boxed{
+B=d-b,
+\qquad
+S=c+I.
+}
+\tag{5}
+\end{equation}
+
+Then the equilibrium equation becomes
+\begin{equation}
+\boxed{
+a x^3+B x^2-S=0.
+}
+\tag{6}
+\end{equation}
+
+Hence every equilibrium is of the form
+\begin{equation}
+\boxed{
+E^*=
+\left(
+x^*,
+c-d(x^*)^2
+\right),
+}
+\tag{7}
+\end{equation}
+where $x^*$ is a real root of (6).
+
+% =========================================================
+\section{2. Number of Equilibria}
+% =========================================================
+
+Assume
+\begin{equation}
+a\neq0.
+\end{equation}
+
+Then (6) is a cubic equation. Its discriminant is
+\begin{equation}
+\boxed{
+\mathcal{D}
+=
+4B^3S-27a^2S^2.
+}
+\tag{8}
+\end{equation}
+
+Returning to the original parameters,
+\begin{equation}
+\boxed{
+\mathcal{D}
+=
+4(d-b)^3(c+I)
+-
+27a^2(c+I)^2.
+}
+\tag{9}
+\end{equation}
+
+The number of distinct real equilibria is determined by the sign of
+$\mathcal{D}$:
+
+\begin{equation}
+\boxed{
+\begin{array}{c|c}
+\mathcal{D}>0
+&
+\text{three distinct real equilibria},
+\\[2mm]
+\mathcal{D}=0
+&
+\text{at least one multiple real equilibrium},
+\\[2mm]
+\mathcal{D}<0
+&
+\text{one real equilibrium}.
+\end{array}}
+\tag{10}
+\end{equation}
+
+Thus the discriminant provides a direct criterion for the number of
+finite equilibria.
+
+% =========================================================
+\section{3. Explicit Solution of the Cubic}
+% =========================================================
+
+Starting from
+\begin{equation}
+a x^3+B x^2-S=0,
+\end{equation}
+divide by $a$:
+\begin{equation}
+x^3+\frac{B}{a}x^2-\frac{S}{a}=0.
+\tag{11}
+\end{equation}
+
+Introduce the change of variable
+\begin{equation}
+\boxed{
+x=z-\frac{B}{3a}.
+}
+\tag{12}
+\end{equation}
+
+This removes the quadratic term and yields the depressed cubic
+\begin{equation}
+z^3+pz+q=0,
+\tag{13}
+\end{equation}
+where
+\begin{equation}
+\boxed{
+p=-\frac{B^2}{3a^2},
+}
+\tag{14}
+\end{equation}
+and
+\begin{equation}
+\boxed{
+q=
+\frac{2B^3}{27a^3}
+-\frac{S}{a}.
+}
+\tag{15}
+\end{equation}
+
+The Cardano quantity is
+\begin{equation}
+\Delta
+=
+\left(\frac q2\right)^2
++
+\left(\frac p3\right)^3.
+\tag{16}
+\end{equation}
+
+After simplification,
+\begin{equation}
+\boxed{
+\Delta
+=
+\frac{
+27a^2S^2-4B^3S
+}{
+108a^4
+}.
+}
+\tag{17}
+\end{equation}
+
+In terms of the cubic discriminant,
+\begin{equation}
+\boxed{
+\mathcal{D}
+=
+-108a^4\Delta.
+}
+\tag{18}
+\end{equation}
+
+Therefore,
+\begin{equation}
+\mathcal{D}>0
+\quad\Longleftrightarrow\quad
+\Delta<0,
+\end{equation}
+which corresponds to three distinct real roots.
+
+% =========================================================
+\section{4. The One-Real-Equilibrium Case}
+% =========================================================
+
+When
+\begin{equation}
+\Delta>0
+\end{equation}
+or equivalently
+\begin{equation}
+\mathcal{D}<0,
+\end{equation}
+there is one real root.
+
+By Cardano's formula,
+\begin{equation}
+z=
+\sqrt[3]{-\frac q2+\sqrt{\Delta}}
++
+\sqrt[3]{-\frac q2-\sqrt{\Delta}}.
+\end{equation}
+
+Consequently,
+\begin{equation}
+\boxed{
+x^*
+=
+-\frac{B}{3a}
++
+\sqrt[3]{-\frac q2+\sqrt{\Delta}}
++
+\sqrt[3]{-\frac q2-\sqrt{\Delta}}.
+}
+\tag{19}
+\end{equation}
+
+Using
+\begin{equation}
+-\frac q2
+=
+\frac{S}{2a}
+-\frac{B^3}{27a^3},
+\end{equation}
+we obtain
+\begin{equation}
+\boxed{
+x^*
+=
+-\frac{B}{3a}
++
+\sqrt[3]{
+\frac{S}{2a}
+-\frac{B^3}{27a^3}
++\sqrt{\Delta}}
++
+\sqrt[3]{
+\frac{S}{2a}
+-\frac{B^3}{27a^3}
+-\sqrt{\Delta}}
+.
+}
+\tag{20}
+\end{equation}
+
+The corresponding equilibrium is
+\begin{equation}
+\boxed{
+E^*
+=
+\left(
+x^*,
+c-d(x^*)^2
+\right).
+}
+\tag{21}
+\end{equation}
+
+% =========================================================
+\section{5. The Three-Real-Equilibria Case}
+% =========================================================
+
+When
+\begin{equation}
+\mathcal{D}>0,
+\end{equation}
+the cubic has three distinct real roots.
+
+Since
+\begin{equation}
+p=-\frac{B^2}{3a^2}<0
+\end{equation}
+for $B\neq0$, the trigonometric form of the cubic solution is
+convenient.
+
+Define
+\begin{equation}
+\boxed{
+\theta
+=
+\frac13
+\arccos
+\left(
+1-\frac{27a^2S}{2B^3}
+\right).
+}
+\tag{22}
+\end{equation}
+
+Then the three real roots may be written as
+\begin{equation}
+\boxed{
+x_k
+=
+-\frac{B}{3a}
++
+\frac{2|B|}{3|a|}
+\cos\left(
+\theta-\frac{2\pi k}{3}
+\right),
+\qquad
+k=0,1,2.
+}
+\tag{23}
+\end{equation}
+
+The corresponding equilibria are
+\begin{equation}
+\boxed{
+E_k=
+\left(
+x_k,
+c-dx_k^2
+\right),
+\qquad
+k=0,1,2.
+}
+\tag{24}
+\end{equation}
+
+For numerical calculations, it is often more convenient to obtain
+the roots using the numerical polynomial-root algorithm rather than
+the explicit trigonometric formula. Nevertheless, formula (23) gives
+an analytical representation of all three roots.
+
+% =========================================================
+\section{6. Special Case $c+I=0$}
+% =========================================================
+
+Suppose
+\begin{equation}
+S=c+I=0.
+\end{equation}
+
+Then the equilibrium equation becomes
+\begin{equation}
+ax^3+Bx^2=0.
+\end{equation}
+
+Factoring,
+\begin{equation}
+x^2(ax+B)=0.
+\end{equation}
+
+Hence
+\begin{equation}
+\boxed{
+x_1^*=0
+}
+\tag{25}
+\end{equation}
+is a double root, while
+\begin{equation}
+\boxed{
+x_2^*=-\frac{B}{a}
+=
+\frac{b-d}{a}.
+}
+\tag{26}
+\end{equation}
+
+The corresponding $y$-coordinates are
+\begin{equation}
+y_1^*=c,
+\end{equation}
+and
+\begin{equation}
+y_2^*
+=
+c-d
+\left(
+\frac{b-d}{a}
+\right)^2.
+\end{equation}
+
+Therefore the distinct equilibria are
+\begin{equation}
+\boxed{
+E_1=(0,c),
+}
+\tag{27}
+\end{equation}
+and
+\begin{equation}
+\boxed{
+E_2=
+\left(
+\frac{b-d}{a},
+\,
+c-d\frac{(b-d)^2}{a^2}
+\right).
+}
+\tag{28}
+\end{equation}
+
+The root $x=0$ is algebraically double and therefore corresponds to a
+degenerate parameter configuration.
+
+% =========================================================
+\section{7. Jacobian Matrix at an Arbitrary Equilibrium}
+% =========================================================
+
+The vector field is
+\begin{equation}
+F(x,y)
+=
+\begin{pmatrix}
+y-a x^3+b x^2+I\\
+c-dx^2-y
+\end{pmatrix}.
+\end{equation}
+
+The Jacobian matrix is
+\begin{equation}
+DF(x,y)
+=
+\begin{pmatrix}
+\dfrac{\partial\dot x}{\partial x}
+&
+\dfrac{\partial\dot x}{\partial y}
+\\[3mm]
+\dfrac{\partial\dot y}{\partial x}
+&
+\dfrac{\partial\dot y}{\partial y}
+\end{pmatrix}.
+\end{equation}
+
+Hence
+\begin{equation}
+\boxed{
+DF(x,y)
+=
+\begin{pmatrix}
+-3ax^2+2bx&1\\
+-2dx&-1
+\end{pmatrix}.
+}
+\tag{29}
+\end{equation}
+
+At an equilibrium
+\begin{equation}
+E^*=(x^*,y^*),
+\end{equation}
+the Jacobian is therefore
+\begin{equation}
+\boxed{
+J^*
+=
+\begin{pmatrix}
+-3a(x^*)^2+2bx^*&1\\
+-2dx^*&-1
+\end{pmatrix}.
+}
+\tag{30}
+\end{equation}
+
+% =========================================================
+\section{8. Trace and Determinant}
+% =========================================================
+
+The trace of $J^*$ is
+\begin{align}
+\tr(J^*)
+&=
+-3a(x^*)^2+2bx^*-1.
+\end{align}
+
+Thus
+\begin{equation}
+\boxed{
+T(x^*)
+=
+-3a(x^*)^2+2bx^*-1.
+}
+\tag{31}
+\end{equation}
+
+The determinant is
+\begin{align}
+\detm(J^*)
+&=
+\left[-3a(x^*)^2+2bx^*\right](-1)
+-
+(1)(-2dx^*)\\
+&=
+3a(x^*)^2-2bx^*+2dx^*.
+\end{align}
+
+Therefore
+\begin{equation}
+\boxed{
+D(x^*)
+=
+3a(x^*)^2+2(d-b)x^*.
+}
+\tag{32}
+\end{equation}
+
+Using $B=d-b$,
+\begin{equation}
+\boxed{
+D(x^*)
+=
+x^*\left(3ax^*+2B\right).
+}
+\tag{33}
+\end{equation}
+
+% =========================================================
+\section{9. Eigenvalues}
+% =========================================================
+
+The characteristic polynomial of $J^*$ is
+\begin{equation}
+\lambda^2-T\lambda+D=0.
+\tag{34}
+\end{equation}
+
+Consequently,
+\begin{equation}
+\boxed{
+\lambda_{\pm}
+=
+\frac12
+\left[
+T\pm\sqrt{T^2-4D}
+\right].
+}
+\tag{35}
+\end{equation}
+
+Here
+\begin{equation}
+T=-3a(x^*)^2+2bx^*-1
+\end{equation}
+and
+\begin{equation}
+D=
+x^*
+\left[
+3ax^*+2(d-b)
+\right].
+\end{equation}
+
+% =========================================================
+\section{10. Classification of Equilibria}
+% =========================================================
+
+The local type of an equilibrium can be determined from its trace,
+determinant, and discriminant.
+
+\subsection*{10.1 Saddle}
+
+If
+\begin{equation}
+\boxed{
+D<0,
+}
+\tag{36}
+\end{equation}
+then the eigenvalues have opposite signs. Therefore
+\begin{equation}
+\boxed{
+E^*\text{ is a saddle}.
+}
+\tag{37}
+\end{equation}
+
+\subsection*{10.2 Stable Equilibrium}
+
+If
+\begin{equation}
+D>0
+\end{equation}
+and
+\begin{equation}
+T<0,
+\end{equation}
+then both eigenvalues have negative real parts.
+
+Therefore
+\begin{equation}
+\boxed{
+E^*\text{ is locally asymptotically stable}.
+}
+\tag{38}
+\end{equation}
+
+More precisely:
+
+\begin{equation}
+T^2-4D>0
+\quad\Longrightarrow\quad
+\text{stable node},
+\end{equation}
+
+whereas
+
+\begin{equation}
+T^2-4D<0
+\quad\Longrightarrow\quad
+\text{stable focus}.
+\end{equation}
+
+\subsection*{10.3 Unstable Equilibrium}
+
+If
+\begin{equation}
+D>0
+\end{equation}
+and
+\begin{equation}
+T>0,
+\end{equation}
+then both eigenvalues have positive real parts.
+
+Hence
+\begin{equation}
+\boxed{
+E^*\text{ is unstable}.
+}
+\tag{39}
+\end{equation}
+
+More precisely,
+
+\begin{equation}
+T^2-4D>0
+\quad\Longrightarrow\quad
+\text{unstable node},
+\end{equation}
+
+while
+
+\begin{equation}
+T^2-4D<0
+\quad\Longrightarrow\quad
+\text{unstable focus}.
+\end{equation}
+
+% =========================================================
+\section{11. Hopf Bifurcation Condition}
+% =========================================================
+
+For a planar system, a Hopf bifurcation requires a pair of purely
+imaginary eigenvalues. For the characteristic polynomial
+\begin{equation}
+\lambda^2-T\lambda+D=0,
+\end{equation}
+the necessary linear conditions are
+\begin{equation}
+\boxed{
+T=0,
+\qquad
+D>0.
+}
+\tag{40}
+\end{equation}
+
+For the present system,
+\begin{equation}
+T(x^*)
+=
+-3a(x^*)^2+2bx^*-1.
+\end{equation}
+
+Thus the trace condition is
+\begin{equation}
+-3a(x^*)^2+2bx^*-1=0,
+\end{equation}
+or
+\begin{equation}
+\boxed{
+3a(x^*)^2-2bx^*+1=0.
+}
+\tag{41}
+\end{equation}
+
+This equation determines the candidate equilibrium locations at Hopf.
+
+% =========================================================
+\section{12. Hopf Equilibrium Coordinates}
+% =========================================================
+
+Solving
+\begin{equation}
+3a(x^*)^2-2bx^*+1=0
+\end{equation}
+gives
+\begin{equation}
+\boxed{
+x_H^{\pm}
+=
+\frac{
+b\pm\sqrt{b^2-3a}
+}{
+3a
+}.
+}
+\tag{42}
+\end{equation}
+
+Therefore real Hopf candidates require
+\begin{equation}
+\boxed{
+b^2-3a\ge0.
+}
+\tag{43}
+\end{equation}
+
+For each candidate $x_H^\pm$, the corresponding equilibrium
+$y$-coordinate is
+\begin{equation}
+\boxed{
+y_H^\pm
+=
+c-d(x_H^\pm)^2.
+}
+\tag{44}
+\end{equation}
+
+Thus the candidate Hopf equilibria are
+\begin{equation}
+\boxed{
+E_H^\pm
+=
+\left(
+x_H^\pm,
+c-d(x_H^\pm)^2
+\right).
+}
+\tag{45}
+\end{equation}
+
+% =========================================================
+\section{13. Determinant at the Hopf Point}
+% =========================================================
+
+At a Hopf candidate,
+\begin{equation}
+x_H^\pm
+=
+\frac{
+b\pm\sqrt{b^2-3a}
+}{
+3a
+}.
+\end{equation}
+
+The determinant is
+\begin{equation}
+D_H
+=
+x_H
+\left[
+3ax_H+2(d-b)
+\right].
+\tag{46}
+\end{equation}
+
+Since
+\begin{equation}
+3ax_H^\pm
+=
+b\pm\sqrt{b^2-3a},
+\end{equation}
+we obtain
+\begin{align}
+3ax_H^\pm+2(d-b)
+&=
+b\pm\sqrt{b^2-3a}+2d-2b\\
+&=
+2d-b\pm\sqrt{b^2-3a}.
+\end{align}
+
+Therefore
+\begin{equation}
+\boxed{
+D_H^\pm
+=
+x_H^\pm
+\left[
+2d-b\pm\sqrt{b^2-3a}
+\right].
+}
+\tag{47}
+\end{equation}
+
+For a Hopf bifurcation candidate, we require
+\begin{equation}
+\boxed{
+D_H^\pm>0.
+}
+\tag{48}
+\end{equation}
+
+At such a point,
+\begin{equation}
+\lambda_{\pm}
+=
+\pm i\omega_H,
+\end{equation}
+where
+\begin{equation}
+\boxed{
+\omega_H=\sqrt{D_H}.
+}
+\tag{49}
+\end{equation}
+
+% =========================================================
+\section{14. Hopf Parameter Condition}
+% =========================================================
+
+The equilibrium equation is
+\begin{equation}
+a x^3+(d-b)x^2-(c+I)=0.
+\end{equation}
+
+Therefore, at a Hopf point $x=x_H$, we must have
+\begin{equation}
+a x_H^3+(d-b)x_H^2-(c+I_H)=0.
+\end{equation}
+
+Hence
+\begin{equation}
+\boxed{
+c+I_H
+=
+a x_H^3+(d-b)x_H^2.
+}
+\tag{50}
+\end{equation}
+
+Consequently,
+\begin{equation}
+\boxed{
+I_H
+=
+a x_H^3+(d-b)x_H^2-c.
+}
+\tag{51}
+\end{equation}
+ 
+For the two Hopf candidates $x_H^\pm$,
+\begin{equation}
+\boxed{
+I_H^\pm
+=
+a(x_H^\pm)^3
++
+(d-b)(x_H^\pm)^2
+-c.
+}
+\tag{52}
+\end{equation}
+
+Thus the Hopf bifurcation candidates can be parameterized as
+\begin{equation}
+\boxed{
+x_H^\pm
+=
+\frac{
+b\pm\sqrt{b^2-3a}
+}{
+3a
+},
+}
+\tag{53}
+\end{equation}
+and
+\begin{equation}
+\boxed{
+I_H^\pm
+=
+a(x_H^\pm)^3
++
+(d-b)(x_H^\pm)^2
+-c.
+}
+\tag{54}
+\end{equation}
+
+% =========================================================
+\section{15. Simplification of the Hopf Parameter Relation}
+% =========================================================
+
+At a Hopf point,
+\begin{equation}
+3ax_H^2-2bx_H+1=0.
+\end{equation}
+
+Hence
+\begin{equation}
+3ax_H^2=2bx_H-1.
+\tag{55}
+\end{equation}
+
+Multiplying by $x_H/3$,
+\begin{equation}
+a x_H^3
+=
+\frac{x_H(2bx_H-1)}{3}.
+\tag{56}
+\end{equation}
+
+Therefore
+\begin{align}
+c+I_H
+&=
+a x_H^3+(d-b)x_H^2\\
+&=
+\frac{2b}{3}x_H^2-\frac{x_H}{3}
++(d-b)x_H^2\\
+&=
+\left(d-\frac b3\right)x_H^2
+-\frac{x_H}{3}.
+\end{align}
+
+Consequently,
+\begin{equation}
+\boxed{
+I_H
+=
+\left(d-\frac b3\right)x_H^2
+-\frac{x_H}{3}
+-c.
+}
+\tag{57}
+\end{equation}
+
+This form is often convenient for algebraic simplification.
+
+% =========================================================
+\section{16. Relation to Limit Cycles}
+% =========================================================
+
+The existence of a Hopf candidate does not by itself prove the
+existence of a periodic orbit.
+
+The logical sequence is
+\begin{equation}
+\boxed{
+\text{equilibrium}
+\quad\longrightarrow\quad
+T=0,\ D>0
+\quad\longrightarrow\quad
+\text{Hopf candidate}.
+}
+\tag{58}
+\end{equation}
+
+For a generic Hopf bifurcation, one additionally needs the appropriate
+nondegeneracy and transversality conditions.
+
+In particular, the eigenvalues must cross the imaginary axis as the
+bifurcation parameter varies, and the first Lyapunov coefficient must
+satisfy
+\begin{equation}
+\boxed{
+l_1\neq0.
+}
+\tag{59}
+\end{equation}
+
+When the generic Hopf hypotheses are satisfied, a small-amplitude
+limit cycle is created or destroyed at the Hopf bifurcation.
+
+Thus
+\begin{equation}
+\boxed{
+T=0,\ D>0
+}
+\end{equation}
+provides only the linear Hopf condition, whereas
+\begin{equation}
+\boxed{
+l_1\neq0
+}
+\end{equation}
+is needed to establish a generic nondegenerate Hopf bifurcation.
+
+% =========================================================
+\section{17. Divergence and a No-Limit-Cycle Criterion}
+% =========================================================
+
+The divergence of the vector field is
+\begin{align}
+\nabla\cdot F
+&=
+\frac{\partial \dot{x}}{\partial x}
++
+\frac{\partial \dot{y}}{\partial y}\\
+&=
+(-3ax^2+2bx)+(-1).
+\end{align}
+
+Therefore
+\begin{equation}
+\boxed{
+\nabla\cdot F
+=
+-3ax^2+2bx-1.
+}
+\tag{60}
+\end{equation}
+
+Notice that this is precisely the trace of the Jacobian:
+\begin{equation}
+\boxed{
+\nabla\cdot F=T(x).
+}
+\tag{61}
+\end{equation}
+
+Assume
+\begin{equation}
+a>0.
+\end{equation}
+
+The divergence is then a concave quadratic function of $x$:
+\begin{equation}
+\nabla\cdot F
+=
+-3ax^2+2bx-1.
+\end{equation}
+
+Its maximum occurs at
+\begin{equation}
+x=\frac{b}{3a}.
+\end{equation}
+
+The maximum value is
+\begin{align}
+\max_x\nabla\cdot F
+&=
+-3a\left(\frac{b}{3a}\right)^2
++
+2b\left(\frac{b}{3a}\right)-1\\
+&=
+-\frac{b^2}{3a}
++
+\frac{2b^2}{3a}
+-1\\
+&=
+\frac{b^2}{3a}-1\\
+&=
+\frac{b^2-3a}{3a}.
+\end{align}
+
+Consequently, if
+\begin{equation}
+\boxed{
+a>0,
+\qquad
+b^2\le3a,
+}
+\tag{62}
+\end{equation}
+then
+\begin{equation}
+\boxed{
+\nabla\cdot F\le0
+\qquad\text{for all }(x,y).
+}
+\tag{63}
+\end{equation}
+
+Since the divergence is not identically zero, Bendixson's criterion
+rules out nonconstant periodic orbits in the plane.
+
+Therefore,
+\begin{equation}
+\boxed{
+a>0,\qquad b^2\le3a
+\quad\Longrightarrow\quad
+\text{no planar limit cycle}.
+}
+\tag{64}
+\end{equation}
+
+This result is also consistent with the Hopf condition. Indeed, for
+\begin{equation}
+a>0,\qquad b^2<3a,
+\end{equation}
+the equation
+\begin{equation}
+3ax^2-2bx+1=0
+\end{equation}
+has no real solution, so no Hopf candidate exists.
+
+% =========================================================
+\section{18. Practical Procedure for a Concrete Parameter Set}
+% =========================================================
+
+Suppose that numerical values of
+\begin{equation}
+(a,b,c,d,I)
+\end{equation}
+are specified.
+
+The procedure for investigating equilibria and possible limit cycles
+is as follows.
+
+\subsection*{Step 1: Solve the equilibrium cubic}
+
+Solve
+\begin{equation}
+\boxed{
+a x^3+(d-b)x^2-(c+I)=0.
+}
+\tag{65}
+\end{equation}
+
+Let the real roots be
+\begin{equation}
+x_1^*,x_2^*,x_3^*,
+\end{equation}
+where only the real roots are retained.
+
+\subsection*{Step 2: Calculate the corresponding $y$-coordinates}
+
+For each real root,
+\begin{equation}
+\boxed{
+y_i^*
+=
+c-d(x_i^*)^2.
+}
+\tag{66}
+\end{equation}
+
+Hence
+\begin{equation}
+\boxed{
+E_i=
+\left(
+x_i^*,
+c-d(x_i^*)^2
+\right).
+}
+\tag{67}
+\end{equation}
+
+\subsection*{Step 3: Calculate the trace}
+
+For each equilibrium,
+\begin{equation}
+\boxed{
+T_i
+=
+-3a(x_i^*)^2+2bx_i^*-1.
+}
+\tag{68}
+\end{equation}
+
+\subsection*{Step 4: Calculate the determinant}
+
+For each equilibrium,
+\begin{equation}
+\boxed{
+D_i
+=
+x_i^*
+\left[
+3ax_i^*+2(d-b)
+\right].
+}
+\tag{69}
+\end{equation}
+
+\subsection*{Step 5: Classify the equilibrium}
+
+If
+\begin{equation}
+D_i<0,
+\end{equation}
+then $E_i$ is a saddle.
+
+If
+\begin{equation}
+D_i>0,\qquad T_i<0,
+\end{equation}
+then $E_i$ is stable.
+
+If
+\begin{equation}
+D_i>0,\qquad T_i>0,
+\end{equation}
+then $E_i$ is unstable.
+
+\subsection*{Step 6: Search for Hopf points}
+
+Solve
+\begin{equation}
+\boxed{
+3ax^2-2bx+1=0.
+}
+\tag{70}
+\end{equation}
+
+The candidate values are
+\begin{equation}
+\boxed{
+x_H^\pm
+=
+\frac{b\pm\sqrt{b^2-3a}}{3a}.
+}
+\tag{71}
+\end{equation}
+
+Retain only those candidates for which
+\begin{equation}
+\boxed{
+D_H^\pm>0.
+}
+\tag{72}
+\end{equation}
+
+Then calculate
+\begin{equation}
+\boxed{
+I_H^\pm
+=
+a(x_H^\pm)^3
++
+(d-b)(x_H^\pm)^2
+-c.
+}
+\tag{73}
+\end{equation}
+
+Finally, to establish a genuine generic Hopf bifurcation, calculate
+the first Lyapunov coefficient and verify
+\begin{equation}
+\boxed{
+l_1\neq0.
+}
+\tag{74}
+\end{equation}
+
+% =========================================================
+\section{19. MATLAB Implementation}
+% =========================================================
+
+The following MATLAB code computes the finite equilibria, their
+Jacobians, eigenvalues, trace, determinant, and basic classification.
+
+\begin{verbatim}
+clear;
+clc;
+
+%% Parameters
+a = 1;
+b = 2;
+c = 1;
+d = 1;
+I = 1;
+
+%% Equilibrium equation
+% a*x^3 + (d-b)*x^2 - (c+I) = 0
+
+coef = [a, d-b, 0, -(c+I)];
+
+xroots = roots(coef);
+
+tol = 1e-10;
+
+fprintf('============================================\n');
+fprintf('Finite equilibria\n');
+fprintf('============================================\n');
+
+count = 0;
+
+for k = 1:length(xroots)
+
+    if abs(imag(xroots(k))) < tol
+
+        count = count + 1;
+
+        xstar = real(xroots(k));
+        ystar = c - d*xstar^2;
+
+        %% Jacobian
+        J = [ -3*a*xstar^2 + 2*b*xstar,  1;
+              -2*d*xstar,               -1 ];
+
+        %% Eigenvalues
+        eigJ = eig(J);
+
+        %% Trace and determinant
+        T = trace(J);
+        D = det(J);
+
+        fprintf('\nEquilibrium %d\n', count);
+        fprintf('x* = %.12f\n', xstar);
+        fprintf('y* = %.12f\n', ystar);
+
+        fprintf('Trace = %.12f\n', T);
+        fprintf('Determinant = %.12f\n', D);
+
+        fprintf('Eigenvalues:\n');
+        disp(eigJ);
+
+        %% Classification
+        if D < 0
+
+            fprintf('Classification: Saddle\n');
+
+        elseif D > 0 && T < 0
+
+            if T^2 - 4*D > 0
+                fprintf('Classification: Stable node\n');
+            elseif T^2 - 4*D < 0
+                fprintf('Classification: Stable focus\n');
+            else
+                fprintf('Classification: Degenerate stable equilibrium\n');
+            end
+
+        elseif D > 0 && T > 0
+
+            if T^2 - 4*D > 0
+                fprintf('Classification: Unstable node\n');
+            elseif T^2 - 4*D < 0
+                fprintf('Classification: Unstable focus\n');
+            else
+                fprintf('Classification: Degenerate unstable equilibrium\n');
+            end
+
+        elseif D > 0 && abs(T) < tol
+
+            fprintf('Hopf candidate: T = 0 and D > 0\n');
+            fprintf('Hopf frequency = %.12f\n', sqrt(D));
+
+        else
+
+            fprintf('Classification: Nonhyperbolic / degenerate\n');
+
+        end
+    end
+end
+
+%% Cubic discriminant
+B = d - b;
+S = c + I;
+
+Disc = 4*B^3*S - 27*a^2*S^2;
+
+fprintf('\n============================================\n');
+fprintf('Cubic discriminant\n');
+fprintf('============================================\n');
+
+fprintf('Discriminant = %.12f\n', Disc);
+
+if Disc > tol
+    fprintf('Three distinct real equilibria.\n');
+elseif abs(Disc) <= tol
+    fprintf('Multiple equilibrium(s).\n');
+else
+    fprintf('One real equilibrium.\n');
+end
+
+%% Hopf candidates
+fprintf('\n============================================\n');
+fprintf('Hopf candidates\n');
+fprintf('============================================\n');
+
+if b^2 - 3*a >= 0
+
+    xH1 = (b + sqrt(b^2 - 3*a))/(3*a);
+    xH2 = (b - sqrt(b^2 - 3*a))/(3*a);
+
+    xH = [xH1, xH2];
+
+    for k = 1:2
+
+        xh = xH(k);
+
+        DH = xh*(3*a*xh + 2*(d-b));
+
+        IH = a*xh^3 + (d-b)*xh^2 - c;
+
+        fprintf('\nHopf candidate %d\n', k);
+        fprintf('x_H = %.12f\n', xh);
+        fprintf('D_H = %.12f\n', DH);
+        fprintf('I_H = %.12f\n', IH);
+
+        if DH > 0
+            fprintf('Linear Hopf condition satisfied: D_H > 0.\n');
+            fprintf('omega_H = %.12f\n', sqrt(DH));
+        else
+            fprintf('Not a Hopf point because D_H <= 0.\n');
+        end
+    end
+
+else
+
+    fprintf('No real Hopf candidates because b^2 - 3*a < 0.\n');
+
+end
+
+%% Divergence test
+if a > 0
+
+    maxDiv = (b^2 - 3*a)/(3*a);
+
+    fprintf('\n============================================\n');
+    fprintf('Divergence criterion\n');
+    fprintf('============================================\n');
+
+    fprintf('Maximum divergence = %.12f\n', maxDiv);
+
+    if maxDiv <= tol
+        fprintf('Divergence <= 0 for all x.\n');
+        fprintf('No planar limit cycle by Bendixson criterion.\n');
+    else
+        fprintf('Divergence changes sign or can be positive.\n');
+        fprintf('Bendixson criterion does not rule out limit cycles.\n');
+    end
+
+end
+\end{verbatim}
+
+% =========================================================
+\section*{Summary of the Main Formulas}
+% =========================================================
+
+For the two-dimensional Hindmarsh--Rose-type model
+\begin{equation}
+\boxed{
+\begin{aligned}
+\dot{x}&=y-a x^3+b x^2+I,\\
+\dot{y}&=c-dx^2-y,
+\end{aligned}}
+\end{equation}
+the main formulas for the finite-equilibrium and limit-cycle analysis
+are summarized below.
+
+\subsection*{Equilibrium equation}
+
+\begin{equation}
+\boxed{
+a x^3+(d-b)x^2-(c+I)=0.
+}
+\end{equation}
+
+\subsection*{$y$-coordinate}
+
+\begin{equation}
+\boxed{
+y^*=c-d(x^*)^2.
+}
+\end{equation}
+
+\subsection*{Cubic discriminant}
+
+\begin{equation}
+\boxed{
+\mathcal{D}
+=
+4(d-b)^3(c+I)
+-
+27a^2(c+I)^2.
+}
+\end{equation}
+
+\subsection*{Jacobian}
+
+\begin{equation}
+\boxed{
+J^*
+=
+\begin{pmatrix}
+-3a(x^*)^2+2bx^*&1\\
+-2dx^*&-1
+\end{pmatrix}.
+}
+\end{equation}
+
+\subsection*{Trace}
+
+\begin{equation}
+\boxed{
+T
+=
+-3a(x^*)^2+2bx^*-1.
+}
+\end{equation}
+
+\subsection*{Determinant}
+
+\begin{equation}
+\boxed{
+D
+=
+x^*
+\left[
+3ax^*+2(d-b)
+\right].
+}
+\end{equation}
+
+\subsection*{Eigenvalues}
+
+\begin{equation}
+\boxed{
+\lambda_{\pm}
+=
+\frac12
+\left[
+T\pm\sqrt{T^2-4D}
+\right].
+}
+\end{equation}
+
+\subsection*{Hopf condition}
+
+\begin{equation}
+\boxed{
+T=0,\qquad D>0.
+}
+\end{equation}
+
+Equivalently,
+
+\begin{equation}
+\boxed{
+3ax_H^2-2bx_H+1=0.
+}
+\end{equation}
+
+\subsection*{Hopf equilibrium coordinates}
+
+\begin{equation}
+\boxed{
+x_H^\pm
+=
+\frac{
+b\pm\sqrt{b^2-3a}
+}{
+3a
+}.
+}
+\end{equation}
+
+\subsection*{Hopf parameter values}
+
+\begin{equation}
+\boxed{
+I_H^\pm
+=
+a(x_H^\pm)^3
++
+(d-b)(x_H^\pm)^2
+-c.
+}
+\end{equation}
+
+\subsection*{Hopf frequency}
+
+\begin{equation}
+\boxed{
+\omega_H=\sqrt{D_H}.
+}
+\end{equation}
+
+\subsection*{No-limit-cycle condition}
+
+For
+\begin{equation}
+a>0,\qquad b^2\le3a,
+\end{equation}
+we have
+\begin{equation}
+\boxed{
+\nabla\cdot F\le0
+\quad\text{everywhere},
+}
+\end{equation}
+and therefore, by Bendixson's criterion,
+
+\begin{equation}
+\boxed{
+\text{there is no nonconstant periodic orbit in the plane}.
+}
+\end{equation}
+
+
+oooooooooooooooo
+
+% ============================================================
+\section{The two-dimensional Hindmarsh--Rose model and its
+reduced parameterization}
+% ============================================================
+
+We begin with the two-dimensional Hindmarsh--Rose-type system
+\begin{equation}
+\boxed{
+\begin{aligned}
+\dot{x} &= y-a x^3+b x^2+I,\\
+\dot{y} &= c-dx^2-y,
+\end{aligned}}
+\tag{1}
+\end{equation}
+where $x$ and $y$ denote the fast state variables and
+$a,b,c,d,I$ are real parameters. In the neuronal interpretation,
+$x$ represents the membrane potential, while $y$ is a fast recovery
+(or gating) variable. The parameter $I$ represents the externally
+applied input current, whereas $a,b,c,$ and $d$ are intrinsic
+parameters governing the nonlinear activation and recovery
+mechanisms.
+
+The system in \eqref{1} contains five parameters. Although retaining
+all five parameters is useful when describing the general model, a
+direct analytical treatment of the full five-parameter family is
+unnecessarily cumbersome for the qualitative analysis pursued in
+this work, particularly for the determination of equilibria, Hopf
+bifurcations, periodic orbits, and the global phase portrait.
+Accordingly, we introduce a mathematically justified reduction of the
+parameter space while preserving the main biological interpretation
+of the model.
+
+% ------------------------------------------------------------
+\subsection{Normalization of the cubic coefficient}
+% ------------------------------------------------------------
+
+We first note that, for the case
+\begin{equation}
+a>0,
+\end{equation}
+the coefficient $a$ can be normalized by an appropriate rescaling of
+the state variables. Indeed, introduce
+\begin{equation}
+X=\sqrt{a}\,x,
+\qquad
+Y=\sqrt{a}\,(y-c).
+\tag{2}
+\end{equation}
+Equivalently,
+\begin{equation}
+x=\frac{X}{\sqrt{a}},
+\qquad
+y=c+\frac{Y}{\sqrt{a}}.
+\end{equation}
+Since the transformation is a smooth invertible change of
+coordinates for $a>0$, it preserves the qualitative phase-space
+structure up to a smooth coordinate transformation.
+
+Substituting \eqref{2} into \eqref{1}, we obtain
+\begin{equation}
+\dot{X}
+=
+Y-X^3+\frac{b}{\sqrt{a}}X^2+\sqrt{a}(c+I),
+\tag{3}
+\end{equation}
+and
+\begin{equation}
+\dot{Y}
+=
+-\frac{d}{\sqrt{a}}X^2-Y.
+\tag{4}
+\end{equation}
+
+Thus, if we introduce the effective parameters
+\begin{equation}
+\beta=\frac{b}{\sqrt{a}},
+\qquad
+\delta=\frac{d}{\sqrt{a}},
+\qquad
+\mu=\sqrt{a}(c+I),
+\tag{5}
+\end{equation}
+the system takes the normalized form
+\begin{equation}
+\boxed{
+\begin{aligned}
+\dot{X}&=Y-X^3+\beta X^2+\mu,\\
+\dot{Y}&=-\delta X^2-Y.
+\end{aligned}}
+\tag{6}
+\end{equation}
+
+This transformation shows that, for the qualitative analysis of the
+two-dimensional autonomous system, the original five parameters can
+be represented by three effective dimensionless combinations,
+namely $\beta$, $\delta$, and $\mu$. In particular, the normalization
+of the cubic coefficient is not an additional biological assumption;
+rather, it corresponds to a choice of scales for the state variables.
+
+For notational simplicity, in what follows we relabel
+\[
+(X,Y,\beta,\delta,\mu)
+\longmapsto
+(x,y,b,d,I),
+\]
+so that the normalized system is written as
+\begin{equation}
+\boxed{
+\begin{aligned}
+\dot{x}&=y-x^3+b x^2+I,\\
+\dot{y}&=-d x^2-y.
+\end{aligned}}
+\tag{7}
+\end{equation}
+
+% ------------------------------------------------------------
+\subsection{Biological interpretation of the normalization}
+% ------------------------------------------------------------
+
+The normalization above should be understood as a
+nondimensionalization rather than as the biological assertion that
+the original cubic coefficient is physically equal to one. The
+coefficient $a$ determines the scale of the cubic nonlinear
+contribution in the fast voltage equation. By rescaling the state
+variables, its numerical value can be absorbed into the definition
+of the dimensionless voltage and recovery variables.
+
+Similarly, the translation
+\begin{equation}
+Y=\sqrt{a}\,(y-c)
+\end{equation}
+centers the recovery variable around the constant offset $c$. This
+does not imply that the intrinsic parameter $c$ is biologically
+absent. Rather, its constant contribution is absorbed into the choice
+of the origin of the $y$-coordinate. In the transformed first
+equation, $c$ and the applied current $I$ occur through the effective
+combination
+\begin{equation}
+\mu=\sqrt{a}(c+I).
+\end{equation}
+Hence, from the viewpoint of the phase portrait of the reduced
+two-dimensional autonomous system, $c$ and $I$ do not provide two
+independent directions in the equilibrium equation.
+
+Nevertheless, we retain the conventional biological interpretation
+of $I$ as the externally applied current. Therefore, rather than
+regarding the reduction as an elimination of the biological meaning
+of $c$, we retain a biologically meaningful baseline value for $c$
+when relating the reduced system to the standard Hindmarsh--Rose
+parameterization.
+
+% ------------------------------------------------------------
+\subsection{Choice of fixed parameter values}
+% ------------------------------------------------------------
+
+For the subsequent analytical and numerical investigation, we fix
+\begin{equation}
+\boxed{
+a=1,\qquad c=1,
+}
+\tag{8}
+\end{equation}
+and retain
+\begin{equation}
+\boxed{
+b,\qquad d,\qquad I
+}
+\end{equation}
+as the remaining parameters.
+
+This choice has two complementary justifications. First, the
+normalization $a=1$ is mathematically natural because the coefficient
+of the cubic term can be absorbed by a rescaling of the state
+variables when $a>0$, as demonstrated above. Second, the choice
+$c=1$ provides a conventional dimensionless baseline for the
+recovery equation and allows the reduced system to remain close to
+the standard nondimensional Hindmarsh--Rose formulation.
+
+Consequently, the model considered in the remainder of the analysis
+is
+\begin{equation}
+\boxed{
+\begin{aligned}
+\dot{x}&=y-x^3+b x^2+I,\\
+\dot{y}&=1-dx^2-y,
+\end{aligned}}
+\tag{9}
+\end{equation}
+where
+\begin{equation}
+\boxed{
+(b,d,I)\in\mathbb{R}^3
+}
+\end{equation}
+are treated as the effective parameters.
+
+The parameter $b$ controls the quadratic contribution to the fast
+nonlinear voltage equation and consequently influences the geometry
+of the cubic nullcline. The parameter $d$ determines the strength of
+the quadratic contribution in the recovery equation and therefore
+affects the geometry of the recovery nullcline. Finally, $I$ retains
+the interpretation of an externally applied input current and is
+therefore particularly natural as a principal bifurcation parameter.
+
+% ------------------------------------------------------------
+\subsection{Why this parameterization is suitable for the present
+analysis}
+% ------------------------------------------------------------
+
+The reduction from five parameters to the three-parameter family
+\eqref{9} is advantageous for the analysis of limit cycles and global
+phase portraits. In particular, the equilibrium equation becomes
+\begin{equation}
+\boxed{
+x^3+(d-b)x^2-(1+I)=0,
+}
+\tag{10}
+\end{equation}
+which is a one-variable cubic equation. Thus the number and location
+of finite equilibria can be determined explicitly in terms of
+$(b,d,I)$.
+
+Moreover, the Jacobian matrix at an equilibrium
+$E^*=(x^*,y^*)$ is
+\begin{equation}
+J(E^*)
+=
+\begin{pmatrix}
+-3(x^*)^2+2bx^* & 1\\
+-2dx^* & -1
+\end{pmatrix}.
+\tag{11}
+\end{equation}
+Consequently,
+\begin{equation}
+\boxed{
+\operatorname{tr}J(E^*)
+=
+-3(x^*)^2+2bx^*-1,
+}
+\tag{12}
+\end{equation}
+and
+\begin{equation}
+\boxed{
+\det J(E^*)
+=
+x^*\left[3x^*+2(d-b)\right].
+}
+\tag{13}
+\end{equation}
+
+The Hopf condition is therefore given by
+\begin{equation}
+3(x_H)^2-2b x_H+1=0,
+\tag{14}
+\end{equation}
+and hence
+\begin{equation}
+\boxed{
+x_H^\pm
+=
+\frac{b\pm\sqrt{b^2-3}}{3}.
+}
+\tag{15}
+\end{equation}
+Thus the existence of real Hopf candidates requires
+\begin{equation}
+\boxed{
+b^2\geq 3.
+}
+\tag{16}
+\end{equation}
+
+The corresponding values of the input current are obtained from the
+equilibrium equation:
+\begin{equation}
+\boxed{
+I_H^\pm
+=
+(x_H^\pm)^3
++
+(d-b)(x_H^\pm)^2
+-1.
+}
+\tag{17}
+\end{equation}
+
+Therefore, the reduced three-parameter system retains sufficient
+freedom to investigate equilibrium multiplicity, Hopf bifurcations,
+periodic orbits, and the associated global phase portraits, while
+avoiding the substantial algebraic redundancy of the original
+five-parameter representation.
+
+% ------------------------------------------------------------
+\subsection{Two-parameter global study}
+% ------------------------------------------------------------
+
+For a detailed two-parameter bifurcation and global phase-plane
+analysis, one may subsequently fix the intrinsic parameter $d$ at
+the conventional baseline value
+\begin{equation}
+\boxed{
+d=5,
+}
+\tag{18}
+\end{equation}
+and regard
+\begin{equation}
+\boxed{
+(b,I)
+}
+\end{equation}
+as the principal bifurcation parameters. The resulting family is
+\begin{equation}
+\boxed{
+\begin{aligned}
+\dot{x}&=y-x^3+b x^2+I,\\
+\dot{y}&=1-5x^2-y.
+\end{aligned}}
+\tag{19}
+\end{equation}
+
+The value $d=5$ is not introduced as a mathematical normalization;
+rather, it is adopted as a biologically motivated baseline choice
+consistent with the commonly used dimensionless Hindmarsh--Rose
+parameterization. In this two-parameter setting, $b$ controls the
+shape of the fast nonlinear response, while $I$ serves as the
+externally controllable input current.
+
+Accordingly, the analysis may be organized in two stages. First, the
+three-parameter family \eqref{9} is used for the general analytical
+derivation of equilibria, local stability and bifurcation conditions.
+Second, the biologically motivated choice $d=5$ is employed for the
+detailed exploration of the $(b,I)$ parameter plane, including limit
+cycles and global phase portraits.
+
+gggggggggggg
+
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Simplified 2D Hindmarsh--Rose Model: \\ Finite Singular Points and Bifurcation Analysis}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{The Simplified Model}
+
+The general 2D Hindmarsh--Rose-type system is given by:
+\begin{equation}
+\begin{aligned}
+\dot{x} &= y - ax^3 + bx^2 + I, \\
+\dot{y} &= c - dx^2 - y,
+\end{aligned}
+\end{equation}
+where \(x\) represents the membrane potential, \(y\) is the recovery variable, and \(I\) is the external input current. The parameters \(a, b, c, d\) control the intrinsic nonlinearities.
+
+To obtain a mathematically tractable model for global phase-portrait analysis, we fix the parameters as follows:
+\begin{itemize}
+    \item \(a = 1\)
+    \item \(c = 1\)
+    \item \(b = d = k\) (where \(k\) is a fixed positive constant, biologically motivated by the standard Hindmarsh--Rose baseline \(k=5\))
+\end{itemize}
+
+The system reduces to:
+\begin{equation}
+\begin{aligned}
+\dot{x} &= y - x^3 + kx^2 + I, \\
+\dot{y} &= 1 - kx^2 - y.
+\end{aligned} \tag{S}
+\label{eq:simplified}
+\end{equation}
+Here, \(I\) is treated as the primary bifurcation parameter.
+
+\section{Finite Singular Points}
+
+\subsection{Solving for the Equilibria}
+Set \(\dot{x} = 0\) and \(\dot{y} = 0\).
+From \(\dot{y} = 0\), we obtain:
+\begin{equation}
+y = 1 - kx^2
+\end{equation}
+Substitute this into \(\dot{x} = 0\):
+\begin{equation}
+(1 - kx^2) - x^3 + kx^2 + I = 0
+\end{equation}
+The \(kx^2\) terms cancel out perfectly, yielding:
+\begin{equation}
+x^3 = I + 1
+\end{equation}
+For \(I > -1\), there exists a \textbf{unique real equilibrium}:
+\begin{equation}
+x^* = \sqrt[3]{I+1}, \qquad y^* = 1 - k(I+1)^{2/3}.
+\end{equation}
+This avoids the intractable cubic radicals associated with the general model.
+
+\subsection{The Jacobian Matrix}
+Let \(P(x,y) = y - x^3 + kx^2 + I\) and \(Q(x,y) = 1 - kx^2 - y\). The Jacobian matrix is:
+\begin{equation}
+J(x,y) = \begin{pmatrix} 
+\frac{\partial P}{\partial x} & \frac{\partial P}{\partial y} \\ 
+\frac{\partial Q}{\partial x} & \frac{\partial Q}{\partial y} 
+\end{pmatrix} 
+= \begin{pmatrix} 
+-3x^2 + 2kx & 1 \\ 
+-2kx & -1 
+\end{pmatrix}.
+\end{equation}
+Evaluated at the equilibrium \((x^*, y^*)\), and letting \(u = x^* = (I+1)^{1/3}\), we have:
+\begin{equation}
+J^* = \begin{pmatrix} 
+-3u^2 + 2ku & 1 \\ 
+-2ku & -1 
+\end{pmatrix}.
+\end{equation}
+
+\subsection{Trace and Determinant}
+The trace \(T\) and determinant \(D\) of \(J^*\) are:
+\begin{align}
+T &= \operatorname{tr}(J^*) = -3u^2 + 2ku - 1, \\
+D &= \det(J^*) = (-3u^2 + 2ku)(-1) - (1)(-2ku) = 3u^2 - 2ku + 2ku = 3u^2.
+\end{align}
+Notice that \(D = 3u^2 > 0\) for all \(I > -1\). Therefore, the equilibrium is \textbf{never a saddle}. It is either a node or a focus, and its stability is determined entirely by the sign of the trace \(T\).
+
+\subsection{Classification of the Singular Point}
+\begin{itemize}
+    \item If \(T^2 - 4D > 0\): Node (stable if \(T < 0\), unstable if \(T > 0\)).
+    \item If \(T^2 - 4D < 0\): Focus (stable if \(T < 0\), unstable if \(T > 0\)).
+    \item If \(T = 0\) and \(D > 0\): Center (linearization) or weak focus.
+\end{itemize}
+
+\section{Hopf Bifurcation Analysis}
+A Hopf bifurcation occurs when \(T = 0\) and \(D > 0\).
+\begin{equation}
+T = -3u^2 + 2ku - 1 = 0 \implies 3u^2 - 2ku + 1 = 0.
+\end{equation}
+Solving for \(u\):
+\begin{equation}
+u = \frac{2k \pm \sqrt{4k^2 - 12}}{6} = \frac{k \pm \sqrt{k^2 - 3}}{3}.
+\end{equation}
+For real roots, we require \(k^2 \ge 3 \implies |k| \ge \sqrt{3}\).
+
+Adopting the biologically standard \(k=5\), we obtain:
+\begin{equation}
+u = \frac{5 \pm \sqrt{25-3}}{3} = \frac{5 \pm \sqrt{22}}{3}.
+\end{equation}
+Since \(5 > \sqrt{22}\), both roots are positive. The corresponding critical current values are:
+\begin{equation}
+I_{\text{Hopf}} = u^3 - 1 = \left(\frac{5 \pm \sqrt{22}}{3}\right)^3 - 1.
+\end{equation}
+This yields two explicit Hopf bifurcation values for \(I\), allowing for a clean analytical study of the transition from a stable equilibrium to limit cycles (spiking behavior) and back.
+
+\section*{Why This Case is Ideal for a New Paper}
+\begin{enumerate}
+    \item \textbf{Tractable Algebra:} The unique equilibrium \(x^* = \sqrt[3]{I+1}\) is explicit for \(I > -1\), eliminating the need to solve a general cubic.
+    \item \textbf{Clean Trace/Determinant:} The determinant \(D = 3u^2\) is always positive, so no saddle points exist in the biological region. Stability is governed entirely by the trace \(T\).
+    \item \textbf{Explicit Hopf Bifurcations:} Two explicit Hopf bifurcation points in terms of \(I\) provide a clear route to studying limit cycles.
+    \item \textbf{Poincar\'e Compactification:} The highest-degree terms (\(-x^3\) and \(-kx^2\)) preserve the essential nonlinear structure, making the behavior at infinity tractable while retaining exact control over the finite singular point.
+    \item \textbf{Biological Meaning:} Setting \(b=d\) is a mathematical normalization that preserves the fast-slow structure and nonlinear spiking behavior of the HR neuron.
+\end{enumerate}
+
+
+
+\section{The Simplified Model}
+We study the system
+\begin{equation}
+\begin{aligned}
+\dot{x} &= y - x^3 + kx^2 + I, \\
+\dot{y} &= 1 - kx^2 - y,
+\end{aligned} \tag{S}
+\label{eq:model}
+\end{equation}
+where \(k\) is a fixed positive constant (e.g., \(k=5\)) and \(I\) is the primary bifurcation parameter. The polynomial degree is \(n=3\).
+
+\section{Poincar\'e Compactification}
+
+To study the behaviour at infinity, we use the Poincar\'e compactification. We consider the local charts \(U_1\) and \(U_2\).
+
+\subsection{Local Chart \(U_1\)}
+In the local chart \(U_1\), we set
+\[
+x = \frac{1}{u}, \qquad y = \frac{v}{u}.
+\]
+After the change of variables and a time rescaling \(d\tau = dt/u^{n-1} = dt/u^2\), system \eqref{eq:model} becomes
+\begin{equation}
+\begin{aligned}
+\dot{u} &= -u^3 v + u - k u^2 - I u^4, \\
+\dot{v} &= u^3 - k u - u^2 v - u^2 v^2 + v - k u v - I u^3 v.
+\end{aligned} \tag{U1}
+\label{eq:U1}
+\end{equation}
+
+The line at infinity in this chart is \(u=0\). Setting \(u=0\) in \eqref{eq:U1} yields
+\[
+\dot{u} = 0, \qquad \dot{v} = v.
+\]
+Thus the only infinite singular point in \(U_1\) is
+\[
+(u,v) = (0,0).
+\]
+The Jacobian matrix of \eqref{eq:U1} at \((0,0)\) is
+\[
+J_{U_1}(0,0) = \begin{pmatrix} 1 & 0 \\ -k & 1 \end{pmatrix}.
+\]
+Its eigenvalues are both \(1\). Therefore, the infinite singular point \((0,0)\) in \(U_1\) is a \textbf{hyperbolic unstable node} (a source) on the equator. This point corresponds to the direction of the \(x\)-axis at infinity.
+
+\subsection{Local Chart \(U_2\)}
+In the local chart \(U_2\), we set
+\[
+x = \frac{u}{v}, \qquad y = \frac{1}{v}.
+\]
+After the change of variables and a time rescaling \(d\tau = dt/v^{n-1} = dt/v^2\), system \eqref{eq:model} becomes
+\begin{equation}
+\begin{aligned}
+\dot{u} &= -u^3 + k u^3 v + k u^2 v + u v^2 - u v^3 + v^2 + I v^3, \\
+\dot{v} &= v^3(1 - v + k u^2).
+\end{aligned} \tag{U2}
+\label{eq:U2}
+\end{equation}
+
+The line at infinity in this chart is \(v=0\). Setting \(v=0\) in \eqref{eq:U2} yields
+\[
+\dot{u} = -u^3, \qquad \dot{v} = 0.
+\]
+Thus the only infinite singular point in \(U_2\) is
+\[
+(u,v) = (0,0).
+\]
+The Jacobian matrix of \eqref{eq:U2} at \((0,0)\) is identically zero:
+\[
+J_{U_2}(0,0) = \begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix}.
+\]
+Hence \((0,0)\) is a \textbf{linearly zero singular point}. Its local phase portrait must be determined by the blow-up technique. The leading terms near the origin are
+\[
+\dot{u} \approx -u^3 + v^2, \qquad \dot{v} \approx v^3.
+\]
+This is a quasi-homogeneous singular point of type \((3,2)\). A standard blow-up analysis (e.g., using weights \(u = r^2 X\), \(v = r^3 Y\)) shows that the origin is formed by a combination of hyperbolic and parabolic sectors. In particular, the flow on the equator \(v=0\) satisfies \(\dot{u} = -u^3\), so \(u=0\) is a stable equilibrium along the equator. Off the equator, \(\dot{v} = v^3\), so the flow moves away from the equator. The detailed sector decomposition yields \textbf{two hyperbolic sectors and two parabolic sectors}, similar to the even-\(\gamma\) case in the Higgins--Selkov system. This point corresponds to the direction of the \(y\)-axis at infinity.
+
+\section{Summary of Infinite Singular Points}
+
+\begin{itemize}
+    \item In chart \(U_1\): \((0,0)\) is a hyperbolic unstable node (source) on the equator.
+    \item In chart \(U_2\): \((0,0)\) is a linearly zero singular point, which after blow-up consists of two hyperbolic and two parabolic sectors.
+\end{itemize}
+
+These two points are the only infinite singular points on the Poincar\'e sphere. The qualitative behaviour at infinity is independent of the parameter \(I\) for \(I>-1\), since the leading terms are governed by the fixed cubic and quadratic nonlinearities.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

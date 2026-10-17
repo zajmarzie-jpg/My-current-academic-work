@@ -1,0 +1,134 @@
+\begin{thebibliography}{10}
+
+\bibitem{AaronsonDenker2002GroupExtensions}
+Jon Aaronson and Manfred Denker.
+\newblock Group extensions of {Gibbs}--{Markov} maps.
+\newblock {\em Probability Theory and Related Fields}, 123(1):28--40, 2002.
+
+\bibitem{Ale+92}
+J.~C. Alexander, J.~A. Yorke, Z.~You, and I.~Kan.
+\newblock Riddled basins.
+\newblock {\em International Journal of Bifurcation and Chaos in Applied
+  Sciences and Engineering}, 2(4):795--813, 1992.
+
+\bibitem{ABS96}
+Peter Ashwin, Jorge Buescu, and Ian Stewart.
+\newblock From attractor to chaotic saddle: A tale of transverse instability.
+\newblock {\em Nonlinearity}, 9(3):703--737, 1996.
+
+\bibitem{BM08}
+Araceli Bonifant and John Milnor.
+\newblock Schwarzian derivatives and cylinder maps.
+\newblock In {\em Holomorphic Dynamics and Renormalization}, volume~53 of {\em
+  Fields Institute Communications}, pages 1--21. American Mathematical Society,
+  Providence, RI, 2008.
+
+\bibitem{EckmannThomasWittwer1981}
+Jean-Pierre Eckmann, Laurence Thomas, and Peter Wittwer.
+\newblock Intermittency in the presence of noise.
+\newblock {\em Journal of Physics A: Mathematical and General},
+  14(12):3153--3168, 1981.
+
+\bibitem{Ghane+Kessebohmer2025}
+F.~H. Ghane and Marc Kesseb{\"o}hmer.
+\newblock Multifractal analysis of intermingled basins of chaotic attractors
+  and blowout bifurcations in a parametric family of skew product maps, 2025.
+
+\bibitem{Kel17}
+Gerhard Keller.
+\newblock Stability index, uncertainty exponent, and thermodynamic formalism
+  for intermingled basins of chaotic attractors.
+\newblock {\em Discrete and Continuous Dynamical Systems - Series S},
+  10(2):313--334, 2017.
+
+\bibitem{LiveraniSaussolVaienti1999ProbabilisticIntermittency}
+Carlangelo Liverani, Beno{\^\i}t Saussol, and Sandro Vaienti.
+\newblock A probabilistic approach to intermittency.
+\newblock {\em Ergodic Theory and Dynamical Systems}, 19(3):671--685, 1999.
+
+\bibitem{Mel91}
+Ian Melbourne.
+\newblock An example of a nonasymptotically stable attractor.
+\newblock {\em Nonlinearity}, 4(3):835--844, 1991.
+
+\bibitem{Mil85}
+John Milnor.
+\newblock On the concept of attractor.
+\newblock {\em Communications in Mathematical Physics}, 99(2):177--195, 1985.
+
+\bibitem{Monti2024OnOffPopulationOutbreaks}
+Angela Monti, Fasma Diele, Carmela Marangi, and Antonello Provenzale.
+\newblock On--off intermittency in population outbreaks: Reactive equilibria
+  and propagation on networks.
+\newblock {\em Communications in Nonlinear Science and Numerical Simulation},
+  130:107788, 2024.
+
+\bibitem{Olsen2000MultifractalGeometry}
+Lars Olsen.
+\newblock Multifractal geometry.
+\newblock In {\em Fractal Geometry and Stochastics II}, volume~46 of {\em
+  Progress in Probability}, pages 3--37. Birkh{\"a}user, Basel, 2000.
+
+\bibitem{Oshagh+Ghane+Zaj2021}
+M.~Oshagh et~al.
+\newblock The occurrence of locally riddled basins and on--off intermittency in
+  a parametric nonlinear system.
+\newblock {\em Chaos, Solitons \& Fractals}, 153:111582, 2021.
+
+\bibitem{Ott+94}
+Edward Ott and John~C. Sommerer.
+\newblock Blowout bifurcations and the onset of riddling.
+\newblock {\em Physics Letters A}, 188(1):39--47, 1994.
+
+\bibitem{Ott+93}
+Edward Ott, John~C. Sommerer, James~C. Alexander, Ittai Kan, and James~A.
+  Yorke.
+\newblock Scaling behavior of chaotic systems with riddled basins.
+\newblock {\em Physical Review Letters}, 71(25):4134--4137, 1993.
+
+\bibitem{PW97}
+Yakov~B. Pesin and Howard Weiss.
+\newblock A multifractal analysis of equilibrium measures for conformal
+  expanding maps and {Moran}-like geometric constructions.
+\newblock {\em Journal of Statistical Physics}, 86(1--2):233--275, 1997.
+
+\bibitem{PST93}
+N.~Platt, E.~A. Spiegel, and C.~Tresser.
+\newblock On--off intermittency: A mechanism for bursting.
+\newblock {\em Physical Review Letters}, 70(3):279--282, 1993.
+
+\bibitem{PomeauManneville1980IntermittentTransition}
+Yves Pomeau and Paul Manneville.
+\newblock Intermittent transition to turbulence in dissipative dynamical
+  systems.
+\newblock {\em Communications in Mathematical Physics}, 74(2):189--197, 1980.
+
+\bibitem{PS89}
+Charles Pugh and Michael Shub.
+\newblock Ergodic attractors.
+\newblock {\em Transactions of the American Mathematical Society},
+  312(1):1--54, 1989.
+
+\bibitem{Sarig1999}
+Omri~M. Sarig.
+\newblock Thermodynamic formalism for countable {Markov} shifts.
+\newblock {\em Ergodic Theory and Dynamical Systems}, 19(6):1565--1593, 1999.
+
+\bibitem{vanKanAlexakisBrachet2021LevyOnOff}
+Adrian van Kan, Alexandros Alexakis, and Marc-Étienne Brachet.
+\newblock L{\'e}vy on--off intermittency.
+\newblock {\em Physical Review E}, 103(5):052115, 2021.
+
+\bibitem{VO16}
+Marcelo Viana and Krerley Oliveira.
+\newblock {\em Foundations of Ergodic Theory}, volume 151 of {\em Cambridge
+  Studies in Advanced Mathematics}.
+\newblock Cambridge University Press, Cambridge, 2016.
+
+\bibitem{Walters1982}
+Peter Walters.
+\newblock {\em An Introduction to Ergodic Theory}, volume~79 of {\em Graduate
+  Texts in Mathematics}.
+\newblock Springer-Verlag, New York, 1982.
+
+\end{thebibliography}
