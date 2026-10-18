@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.8.3)  8 OCT 2026 10:44
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.11.22)  18 OCT 2026 10:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6389,7 +6389,7 @@ Missing character: There is no 2 ("32) in font nullfont!
  
 Here is how much of TeX's memory you used:
  71 strings out of 476642
- 1349 string characters out of 5806642
+ 1349 string characters out of 5806640
  1845382 words of memory out of 5000000
  20455 multiletter control sequences out of 15000+600000
  516330 words of font info for 35 fonts, out of 8000000 for 9000

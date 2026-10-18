@@ -418,59 +418,35 @@ T^2-4D
 \]
 Hence the node--focus transitions occur at
 \[
-k=k_H\pm\sqrt{3}.
+k_{\pm\sqrt{3}}=k_H\pm\sqrt{3}.
 \]
 
 Since
-\[
-k_H-\sqrt{3}
+$
+k_{-\sqrt{3}}
 =
 \frac{(\sqrt{3}\,x_*-1)^2}{2x_*}\geq0,
-\]
+$
 the local type of \(E_*\), for \(k>0\), is classified as follows:
 \[
 \begin{array}{c|c}
 \text{Parameter range} & \text{Type of }E_* \\ \hline
 0<k<k_H-\sqrt{3}
     & \text{hyperbolic stable node}, \\[1mm]
-k=k_H-\sqrt{3}
+k=k_{-\sqrt{3}}
     & \text{stable improper node}, \\[1mm]
-k_H-\sqrt{3}<k<k_H
+k_{-\sqrt{3}}<k<k_H
     & \text{hyperbolic stable focus}, \\[1mm]
 k=k_H
     & \text{stable weak focus (Hopf point)}, \\[1mm]
-k_H<k<k_H+\sqrt{3}
+k_H<k<k_{+\sqrt{3}}
     & \text{hyperbolic unstable focus}, \\[1mm]
-k=k_H+\sqrt{3}
+k=k_{+\sqrt{3}}
     & \text{unstable improper node}, \\[1mm]
-k>k_H+\sqrt{3}
+k>k_{+\sqrt{3}}
     & \text{hyperbolic unstable node}.
 \end{array}
 \]
-
-At \(k=k_H\), the eigenvalues are
-\[
-\lambda_{1,2}=\pm i\sqrt{3}\,x_*.
-\]
-The transversality condition obtained above gives
-\[
-\left.
-\frac{d}{dk}\operatorname{Re}\lambda(k)
-\right|_{k=k_H}
-=x_*>0,
-\]
-while the first Lyapunov coefficient satisfies
-\[
-l_1
-=
--\frac{3x_*^2+1}{8\sqrt{3}\,x_*^2}
-<0.
-\]
-Thus \(E_*\) is a stable weak focus at \(k=k_H\), and the Hopf
-bifurcation is supercritical. Consequently, an asymptotically stable
-periodic orbit is generated for \(k>k_H\) sufficiently close to
-\(k_H\).
-
 Therefore, as \(k\) increases, the finite equilibrium passes through
 the sequence
 \[
@@ -484,7 +460,7 @@ the sequence
 \;\longrightarrow\;
 \text{unstable node}.
 \]
-The values \(k=k_H\pm\sqrt{3}\) mark only node--focus transitions and
+The values \(k=k_{\pm\sqrt{3}}\) mark only node--focus transitions and
 do not change the stability of the equilibrium; the only local
 bifurcation occurs at \(k=k_H\).
 
@@ -492,10 +468,9 @@ bifurcation occurs at \(k=k_H\).
 \label{sec:infinity}
 
 The vector field associated with system \eqref{eq:model}
-is polynomial of degree three. Throughout this section, $k,I\in\mathbb R$
-are fixed. We study its behavior at infinity by Poincar\'e
+is polynomial of degree three. We study its behavior at infinity by Poincar\'e
 compactification in the two local charts corresponding to the coordinate
-axes; see \cite[Chapter~5]{DumortierLlibreArtes2006}.
+axes; see \cite{dumortier2006qualitative}.
 
 In the compactification charts, dots denote differentiation with respect
 to the compactified time $\tau$, rather than the original time $t$.
@@ -660,7 +635,7 @@ DX_{U_2}(P_2)
 \]
 linearization does not determine its local phase portrait.
 We therefore resolve the singularity by ordinary directional
-blow-ups; see \cite[Chapter~3]{DumortierLlibreArtes2006}.
+blow-ups; see \cite{dumortier2006qualitative}.
 
 %---------------------------------------------------------
 \subsubsection{First directional blow-up}
@@ -693,12 +668,11 @@ uQ_2(u,v)-vP_2(u,v)
 -v^3.
 \]
 Thus the only characteristic direction is
-\[
+$
 v=0.
-\]
-
+$
 We perform the directional blow-up
-\begin{equation}
+\begin{equation*}
 \label{eq:first-blowup}
 v=uz,
 \end{equation}
@@ -1077,10 +1051,10 @@ must be determined by a center-manifold reduction.
 The chart $r=zs$ represents the characteristic directions $r=0$
 and $r=z$, but it does not represent the remaining direction
 $z=0$. To complete the third blow-up, introduce
-\begin{equation}
+\begin{equation*}
 \label{eq:third-complementary}
 z=rq.
-\end{equation}
+\end{equation*}
 
 We use the system already given in
 \eqref{eq:second-desing-chart2}. Since
@@ -1145,9 +1119,9 @@ r=zs,
 z=rq,
 \]
 and therefore
-\[
+$
 sq=1.
-\]
+$
 Thus $q=1$ corresponds to $s=1$, and $Q_1=(1,0)$ represents
 the same semi-hyperbolic point as $R_1=(0,1)$.
 
@@ -1220,7 +1194,7 @@ and hence $b=ka$. Therefore the center eigenspace is
 E^c=\{(z,h):h=kz\}.
 \]
 
-By the center-manifold theorem \cite{Carr1981}, a local center
+By the center-manifold theorem, a local center
 manifold, with sufficiently high finite differentiability for
 the expansions below, can be represented as
 \[
