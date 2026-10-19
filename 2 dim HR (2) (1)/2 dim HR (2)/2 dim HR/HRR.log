@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.11.22)  18 OCT 2026 11:02
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.11.22)  19 OCT 2026 11:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -506,28 +506,117 @@ Overfull \hbox (24.46965pt too wide) detected at line 462
 
 [3] [4]
 
-! LaTeX Error: \begin{equation*} on input line 675 ended by \end{equation}.
+! LaTeX Error: \begin{equation*} on input line 668 ended by \end{equation}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.678 \end{equation}
+l.671 \end{equation}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[5] [6] [7] [8] [9] [10]
+[5] [6] [7] [8]
 
-LaTeX Warning: Citation `DumortierLlibreArtes2006' on page 11 undefined on inpu
-t line 1376.
+! LaTeX Error: \begin{equation*} on input line 1197 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1202 \end{equation}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[9]
+
+! LaTeX Error: \begin{equation*} on input line 1305 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1310 \end{equation}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[10]
+
+! LaTeX Error: \begin{equation*} on input line 1388 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1399 \end{equation}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{equation*} on input line 1401 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1404 \end{equation}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{equation*} on input line 1409 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1414 \end{equation}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{equation*} on input line 1416 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1423 \end{equation}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{equation*} on input line 1463 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1472 \end{equation}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 [11]
 ! Missing number, treated as zero.
 <to be read again> 
                    \r@tocindent4 
-l.1528 L
+l.1512 L
         et $f(z,h)$ and $g(z,h)$ denote the right-hand sides of
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -536,7 +625,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \r@tocindent4 
-l.1528 L
+l.1512 L
         et $f(z,h)$ and $g(z,h)$ denote the right-hand sides of
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, bp, or sp; but yours is a new one!
@@ -545,35 +634,121 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-[12] [13]
+[12] [13] [14]
 
-LaTeX Warning: Citation `DumortierLlibreArtes2006' on page 14 undefined on inpu
-t line 1760.
+! LaTeX Error: \begin{equation*} on input line 1978 ended by \end{equation}.
 
-[14] [15] [16] [17] [18] [19]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 237
-8.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1981 \end{equation}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
+
+! LaTeX Error: \begin{equation*} on input line 1983 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1989 \end{equation}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[15] [16]
+
+! LaTeX Error: \begin{equation*} on input line 2149 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2152 \end{equation}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[17]
+
+! LaTeX Error: \begin{equation*} on input line 2281 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2286 \end{equation}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[18]
+
+! LaTeX Error: \begin{equation*} on input line 2325 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2329 \end{equation}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+LaTeX Font Info:    Trying to load font information for U+euf on input line 235
+6.
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [20] [21] [22] [23]
-[24]
-File: HR.png Graphic file (type bmp)
-<HR.png>
- (./HRR.bbl) [25] [26] (./HRR.aux)
+) [19]
 
-LaTeX Warning: There were undefined references.
+! LaTeX Error: \begin{equation*} on input line 2486 ended by \end{equation}.
 
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2489 \end{equation}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[20] [21]
+
+! LaTeX Error: \begin{equation*} on input line 2617 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2620 \end{equation}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[22]
+File: gpp.jpg Graphic file (type bmp)
+<gpp.jpg>
+ (./HRR.bbl) [23] (./HRR.aux)
 Package rerunfilecheck Info: File `HRR.out' has not changed.
-(rerunfilecheck)             Checksum: FCC215E081886A5C5F9D0007593024A9;2679.
+(rerunfilecheck)             Checksum: B54F413DBB2E373912B5F1CBC594AA5B;2292.
  ) 
 Here is how much of TeX's memory you used:
- 12828 strings out of 476642
- 192600 string characters out of 5806640
+ 12829 strings out of 476642
+ 192547 string characters out of 5806640
  1859382 words of memory out of 5000000
- 32790 multiletter control sequences out of 15000+600000
+ 32789 multiletter control sequences out of 15000+600000
  559238 words of font info for 79 fonts, out of 8000000 for 9000
  1509 hyphenation exceptions out of 8191
- 72i,11n,76p,1284b,2052s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,11n,76p,592b,2058s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on HRR.pdf (26 pages).
+Output written on HRR.pdf (23 pages).

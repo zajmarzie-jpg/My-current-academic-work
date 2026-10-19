@@ -481,11 +481,8 @@ $d\sigma/d\tau=m$. Time orientation is preserved where $m>0$ and
 reversed where $m<0$. These signs must be retained when the resolved
 field is blown down.
 
-%=========================================================
-\subsection{Local chart \texorpdfstring{$U_1$}{U1}}
-%=========================================================
-
-In the first chart, use the coordinates
+For local chart \texorpdfstring{$U_1$}{U1},
+use the coordinates
 \[
 x=\frac1v,
 \qquad
@@ -543,11 +540,7 @@ horizontal directions, respectively. They represent distinct boundary
 points of the Poincar\'e disk, although the signed formulas are the
 same.
 
-%=========================================================
-\subsection{Local chart \texorpdfstring{$U_2$}{U2}}
-%=========================================================
-
-The second chart is defined by
+Local chart \texorpdfstring{$U_2$}{U2} is defined by
 \[
 x=\frac{u}{v},
 \qquad
@@ -1146,9 +1139,9 @@ semi-hyperbolic point $R_1$. We now analyze the latter.
 %---------------------------------------------------------
 
 Introduce
-\[
+$
 s=1+h,
-\]
+$
 so that $R_1$ is translated to $(z,h)=(0,0)$.
 System \eqref{eq:third-desing} becomes
 \begin{equation}
@@ -1186,9 +1179,9 @@ The eigenvalues are
 \lambda_2=-3.
 \]
 For the zero eigenvalue, an eigenvector $(a,b)^T$ satisfies
-\[
+$
 3ka-3b=0,
-\]
+$
 and hence $b=ka$. Therefore the center eigenspace is
 \[
 E^c=\{(z,h):h=kz\}.
@@ -1197,11 +1190,11 @@ E^c=\{(z,h):h=kz\}.
 By the center-manifold theorem, a local center
 manifold, with sufficiently high finite differentiability for
 the expansions below, can be represented as
-\[
+$
 h=H(z),
-\]
+$
 where
-\begin{equation}
+\begin{equation*}
 \label{eq:center-tangency}
 H(0)=0,
 \qquad
@@ -1224,35 +1217,35 @@ H'(z)z'=h'
 Substitution of \eqref{eq:center-expansion-assumption} into
 \eqref{eq:center-invariance} and comparison of coefficients give,
 at first order,
-\[
+
+$
 3a_1-3k=0,
-\]
+$
 so
-\[
+$
 a_1=k.
-\]
+$
 
 At second order,
 \[
 4a_1^2-7ka_1+3a_2-1=0.
 \]
 Using $a_1=k$, this reduces to
-\[
+$
 3a_2-3k^2-1=0,
-\]
+$
 and therefore
 \[
 a_2=k^2+\frac13.
 \]
-
 At third order,
 \[
 -3I-4a_1^2k+9a_1a_2-2a_1-8ka_2+3a_3-k=0.
 \]
 Substitution of the preceding coefficients gives
-\[
+$
 3a_3-3I-3k^3-\frac{8k}{3}=0.
-\]
+$
 Hence
 \[
 a_3=I+k^3+\frac{8k}{9}.
@@ -1309,7 +1302,7 @@ u=zr,
 r=zs.
 \]
 Combining them gives the exact blow-down relations
-\begin{equation}
+\begin{equation*}
 \label{eq:combined-blowdown}
 u=z^2s,
 \qquad
@@ -1334,21 +1327,12 @@ Moreover,
 \longrightarrow1.
 \]
 Therefore
-\begin{equation}
-\label{eq:cusp-balance}
-v^2\sim u^3
-\qquad
-\text{along such trajectories approaching }R_1.
-\end{equation}
-
+$
+v^2\sim u^3$
+along such trajectories approaching $R_1$.
 This relation follows directly from the blow-down map.
 
-%---------------------------------------------------------
-\subsubsection{Conclusion of the blow-up analysis}
-\label{subsubsec:blowup-conclusion}
-%---------------------------------------------------------
-
-The point $P_2=(0,0)$ is completely degenerate at the linear
+Thus until now we obtained that, the point $P_2=(0,0)$ is completely degenerate at the linear
 level. Directional blow-ups resolve its characteristic
 directions into hyperbolic saddles and a single semi-hyperbolic
 point $R_1$. At $R_1$, the center-manifold reduction gives
@@ -1359,11 +1343,12 @@ so the center direction is repelling, while the transverse
 eigenvalue is negative.
 
 The exact blow-down map near $R_1$ is
-\[
+$
 u=z^2s,
-\qquad
-v=z^3s.
-\]
+$ and 
+$v=z^3s.
+$
+
 Along trajectories off the exceptional divisor tending to $R_1$,
 we have $s\to1$ and therefore $v^2\sim u^3$.
 
@@ -1372,8 +1357,7 @@ and the first complementary chart contains no additional
 singular point. The ordinary blow-up atlas and the
 center-manifold reduction therefore provide a complete local
 desingularization. A semi-hyperbolic point whose center dynamics
-has been determined need not be blown up again; see
-\cite[Chapters~2 and~3]{DumortierLlibreArtes2006}.
+has been determined need not be blown up again.
 
 To recover the phase portrait of the original compactified
 field, we must still restore time orientation, distinguish
@@ -1401,7 +1385,7 @@ The signed chart provides a common algebraic representation of
 two physical half-charts; their boundary points are not
 identified. Let $\tau$ be defined by $d\tau/dt=v^{-2}$. The
 compactified equations are
-\begin{equation}
+\begin{equation*}
 \label{eq:hrr-signed-vertical}
 \begin{aligned}
 \frac{du}{d\tau}
@@ -1414,7 +1398,7 @@ ku^2v^2+v^3-v^4.
 \end{aligned}
 \end{equation}
 The boundary $v=0$ is invariant and carries the flow
-\begin{equation}
+\begin{equation*}
 \label{eq:hrr-vertical-boundary}
 \frac{du}{d\tau}=-u^3.
 \end{equation}
@@ -1422,14 +1406,14 @@ Both boundary branches are directed towards the origin.
 
 The successive substitutions in the chart containing $R_1$
 give
-\begin{equation}
+\begin{equation*}
 \label{eq:hrr-blowdown-map}
 u=z^2s,
 \qquad
 v=z^3s.
 \end{equation}
 Write its local invariant center curve as $s=S(z)$, where
-\begin{equation}
+\begin{equation*}
 \label{eq:hrr-separatrix-series}
 S(z)
 =
@@ -1476,7 +1460,7 @@ the branch parametrized by
 Since $S(z)>0$ near zero, $\Gamma_+$ lies in $v>0$, whereas
 $\Gamma_-$ lies in $v<0$. Each physical vertical point thus
 has one such outgoing interior branch. Moreover,
-\begin{equation}
+\begin{equation*}
 \label{eq:hrr-cusp-asymptotics}
 \frac{v^2}{u^3}
 =
@@ -1528,9 +1512,9 @@ from infinity towards the finite plane.
 Let $f(z,h)$ and $g(z,h)$ denote the right-hand sides of
 \eqref{eq:R1-translated}, and use the invariant graph $h=H(z)$
 constructed above. Set
-\[
+$
 \eta=h-H(z).
-\]
+$
 Its exact differential equation is
 \[
 \frac{d\eta}{d\sigma}
@@ -1539,12 +1523,11 @@ g(z,H(z)+\eta)-H'(z)f(z,H(z)+\eta).
 \]
 The invariance equation makes the right-hand side zero at
 $\eta=0$. The fundamental theorem of calculus therefore gives
-\begin{equation}
-\label{eq:ordinary-transverse}
+$
 \frac{d\eta}{d\sigma}
 =
 a(z,\eta)\eta,
-\end{equation}
+$
 where
 \[
 a(z,\eta)
@@ -1557,15 +1540,16 @@ H'(z)f_h(z,H(z)+\theta\eta)
 \right]\,d\theta.
 \]
 Since
-\[
+$
 g_h(0,0)=-3,
-\qquad
+$ and
+$
 f_h(0,0)=0,
-\]
+$
 we have $a(0,0)=-3$. After reducing the neighborhood,
-\[
+$
 a(z,\eta)\leq-2.
-\]
+$
 
 Suppose an orbit tends to $R_1$ as $\sigma\to-\infty$.
 If $\eta(\sigma_0)\ne0$ at a sufficiently negative time, then,
@@ -1658,32 +1642,34 @@ half-chart is the unique branch already constructed.
 Fix a physical half-chart $\varepsilon v>0$.
 In the $(u,w)$ chart, this means $\varepsilon w>0$.
 On $u=0$, the divided flow is
-\[
+$
 w'=2w.
-\]
+$
 The cumulative time factor is $u^2>0$ off the divisor.
 Hence the divisor arrows, interpreted from the adjacent
 physical region, point away from $A_0$ towards increasing
 $|w|$.
 
 On the overlap with the second complementary chart,
-\[
-r=\frac1w,
-\qquad
-z=uw.
-\]
+$
+r=\frac1w$
+and
+$z=uw.
+$
+
 This flow therefore approaches $r=0$ along the old second
 divisor. In the third complementary chart, that divisor is
 $q=0$, where
-\[
+$
 r'=-2r.
-\]
+$
 It consequently enters $Q_0$.
 
 On the new divisor $r=0$ in the $(q,r)$ chart,
-\[
+$
 q'=3q(1-q).
-\]
+$
+
 The cumulative factor $r^4q^2$ is positive off the divisor.
 For $0<q<1$, the arrows point from $Q_0$ towards $Q_1$, which
 represents $R_1$. For $q<0$, the arrows point towards
@@ -1693,18 +1679,18 @@ of $R_0$.
 The $(z,s)$ chart requires a sign correction because its
 cumulative time factor $z^4s$ has the sign of $s$.
 On $z=0$, the divided equation is
-\[
+$
 s'=3s(1-s).
-\]
+$
 The physical arrows are therefore reversed for $s<0$.
 They point towards $s=0$ on the negative-$s$ side and
 towards $s=1$ for $0<s<1$. For $s>1$, they also point
 towards $s=1$.
 
 On the old first divisor $s=0$, the divided equation is
-\[
+$
 z'=-z.
-\]
+$
 From the adjacent region $s<0$, physical time reverses these
 arrows, so they point away from $R_0$. From the adjacent
 region $s>0$, they point towards $R_0$.
@@ -1712,9 +1698,10 @@ region $s>0$, they point towards $R_0$.
 The first complementary chart connects these two incidences
 of the old first divisor. In that chart, $u=v\eta$ and the
 divided flow on $v=0$ is
-\[
+$
 \eta'=1.
-\]
+$
+
 Since $d\widehat\sigma_1/d\tau=v$, its physical arrows have
 the sign of $\varepsilon$. They run from
 \[
@@ -1756,8 +1743,7 @@ Collapsing the exceptional divisors turns each passage
 into one hyperbolic sector at $Y_\varepsilon$, bounded
 by an incoming boundary separatrix and
 $\Gamma_\varepsilon$. This is the usual sector
-reconstruction under blow-down; see
-\cite[Chapters~2 and~3]{DumortierLlibreArtes2006}.
+reconstruction under blow-down.
 
 The complete chart coverage, absence of further
 nonexceptional separatrices, and directed connections above
@@ -1821,11 +1807,10 @@ positive normalization of compactified time gives
 \end{aligned}
 \end{equation}
 Its only zeros are
-\[
-0,\quad \frac{\pi}{2},\quad \pi,\quad \frac{3\pi}{2},
-\]
+$
+0, \frac{\pi}{2}, \pi, \frac{3\pi}{2},
+$
 corresponding to $X_+$, $Y_+$, $X_-$, and $Y_-$.
-
 The signs of the right-hand side give
 \begin{equation}
 \label{eq:hrr-boundary-connections}
@@ -1880,14 +1865,10 @@ equation: each has two incoming boundary branches, one
 outgoing interior separatrix, and two hyperbolic sectors
 on the disk side.
 
-%=========================================================
-\subsection{Classification of the dynamics at infinity}
-\label{subsec:hrr-infinity-classification}
-%=========================================================
-
+Thus for classification of the dynamics at infinity we can prove the following theorem:
 \begin{theorem}
 \label{thm:hrr-infinity-classification}
-For every fixed $k,I\in\mathbb R$, consider
+Consider
 system \eqref{eq:model}.
 Its Poincar\'e compactification has exactly four equilibria
 on the boundary of the compactified plane, namely
@@ -1929,7 +1910,7 @@ X_-\longrightarrow Y_-,
 \qquad
 X_+\longrightarrow Y_-.
 \]
-There are no other boundary equilibria or nonconstant
+There are no other boundary equilibria or
 periodic boundary orbits. The boundary connections and
 the local sector configuration at infinity are
 independent of $k$ and $I$.
@@ -1967,7 +1948,7 @@ expressions follow from
 
 Finally, the angular field is nonzero on each open
 boundary arc and vanishes at its endpoints. Consequently,
-no nonconstant periodic orbit lies on the boundary.
+no periodic orbit lies on the boundary.
 Neither the angular signs nor the eigenvalue signs and
 leading cubic coefficient in the local resolutions depend
 on the parameters. This proves the stated parameter
@@ -1994,12 +1975,12 @@ The affine coordinates
 p=x-a,\qquad q=x+y-(a+1-ka^2)
 \]
 place the equilibrium at the origin and give the Li\'enard system
-\begin{equation}
+\begin{equation*}
 \label{eq:pg-centered-global}
 \dot p=q-F_k(p),\qquad \dot q=-g(p),
 \end{equation}
 where
-\begin{equation}
+\begin{equation*}
 \label{eq:pg-functions-global}
 \begin{aligned}
 F_k(p)&=p\bigl[p^2+(3a-k)p+3a^2-2ka+1\bigr],\\
@@ -2054,7 +2035,7 @@ invariant set absorbs every forward trajectory.
 
 \item
 If $0<k\le k_H$, then $E_*$ is globally asymptotically
-stable. Consequently, there are no nonconstant periodic
+stable. Consequently, there are no periodic
 orbits.
 
 \item
@@ -2092,9 +2073,8 @@ attraction is $\mathbb R^2\setminus\{E_*\}$.
 %We prove the theorem in the following steps.
 
 \begin{proof}
-We first establish a bound valid for every initial condition.
-
-\medskip\noindent\textit{Boundedness and forward completeness.}
+We first establish a bound valid for every initial condition and forward completeness.
+So, we
 Choose
 \[
 c=\frac{1}{2(1+k^2)},\qquad W(x,y)=x^2+cy^2.
@@ -2160,17 +2140,17 @@ compact interval. Indeed, replace $k$ by an upper bound
 $\kappa$ when choosing $c$ and $C$. This uniform version
 will be used below to exclude distant cycles near Hopf.
 
-\medskip\noindent\textit{No periodic orbits up to and including Hopf.}
-We use the equal-potential comparison criterion of Sugie
+%\medskip\noindent\textit{No periodic orbits up to and including Hopf.}
+Now, we use the equal-potential comparison criterion of Sugie
 and Hara, recalled in \cite{guo2018global}. For a
 Li\'enard system with $pg(p)>0$ and $G(\pm\infty)=\infty$,
 let $p_L(h)<0<p_R(h)$ be the unique points satisfying
 $G(p_L(h))=G(p_R(h))=h$, where $h>0$. If
-\begin{equation}
+\begin{equation*}
 \label{eq:pg-comparison-criterion-global}
 F_k(p_R(h))\ne F_k(p_L(h))\qquad\text{for every }h>0,
 \end{equation}
-then no nonconstant periodic orbit exists. This criterion
+then no periodic orbit exists. This criterion
 compares the two sides of the equilibrium at the same
 potential value and does not require symmetry.
 
@@ -2181,15 +2161,14 @@ $x$-coordinate the potential is
 \widehat G(x)=G(x-a)=\frac14x^4-a^3x+\frac34a^4.
 \]
 Subtracting the equal potential values gives
-\[
+$
 S(x_L^2+x_R^2)=4a^3.
-\]
+$
 In particular, $S>0$. Since $x_L\ne x_R$,
 $x_L^2+x_R^2>S^2/2$, and therefore
-\begin{equation}
-\label{eq:pg-paired-sum-global}
+$
 0<S<2a.
-\end{equation}
+$
 Writing $\Phi_k(x)=x^3-kx^2+x$, we have
 $F_k(p)=\Phi_k(p+a)-\Phi_k(a)$. Hence
 \begin{equation}
@@ -2237,8 +2216,8 @@ initial condition prove global asymptotic stability.
 %particular Lyapunov function, rather than a bifurcation
 %boundary.
 
-\medskip\noindent\textit{Global periodic behavior above Hopf.}
-Fix $k>k_H$. Let $\xi=(x-a,y-1+ka^2)^T$ and
+Now, for global periodic behavior above Hopf,
+we fix $k>k_H$. Let $\xi=(x-a,y-1+ka^2)^T$ and
 $A=DX(E_*)$. Since $A$ has eigenvalues with positive
 real parts, the matrix
 \[
@@ -2267,8 +2246,7 @@ compact positively invariant annulus
 \]
 There is no equilibrium in $\mathcal A$. The
 Poincar\'e--Bendixson theorem consequently shows that
-the omega-limit set of every such trajectory is a
-nonconstant periodic orbit; see
+the omega-limit set of every such trajectory is a periodic orbit; see
 \cite{dumortier2006qualitative}.
 
 We next show that these periodic orbits are isolated and
@@ -2300,7 +2278,7 @@ The polynomial vector field and the transverse crossings
 make $P$ real analytic on $(0,\infty)$. In fact, if
 $\tau(v_0)$ denotes the return time, the variational
 equation gives
-\begin{equation}
+\begin{equation*}
 \label{eq:pg-return-derivative-global}
 P'(v_0)=\frac{v_0}{P(v_0)}
 \exp\left[-\int_0^{\tau(v_0)}
@@ -2344,7 +2322,7 @@ asymptotically stable. This proves part~3 of the theorem.
 Fix $k>k_H$ and put $f_k=F_k'$. Since
 $F_k(p)/p$ is a monic quadratic with negative value at
 $p=0$, it has two simple roots of opposite signs. Write
-\begin{equation}
+\begin{equation*}
 \label{eq:pg-root-factor-global}
 F_k(p)=p(p+b)(p-r),\qquad
 b>0,\quad r>0,\quad r-b=k-3a,\quad br=2a(k-k_H).
@@ -2399,7 +2377,7 @@ orbit; its strict negativity gives hyperbolicity as well
 as attraction. We now verify the four conditions, allowing
 the reflection $(p,q)\mapsto(-p,-q)$ when necessary.
 
-First, we establish the monotonicity needed in condition~3
+First, we establish the monotonicity
 on both outer branches. Define
 \[
 \mathcal P_k(p)=\frac{F_k(p)f_k(p)}{g(p)}
@@ -2505,7 +2483,7 @@ x^2+xt+t^2+1=kS.
 \end{equation}
 Its left side is positive, so $S>0$. The potential
 $\widehat G(x)=x^4/4-a^3x+3a^4/4$ satisfies
-\begin{equation}
+\begin{equation*}
 \label{eq:pg-equal-F-potential-global}
 \widehat G(x)-\widehat G(t)=d(B-a^3).
 \end{equation}
@@ -2586,7 +2564,7 @@ periodic orbit, it must approach this unique cycle.
 Together with the nonexistence result for $k\le k_H$,
 this proves part~4.
 
-\medskip\noindent\textit{Uniqueness in the whole plane near Hopf.}
+%\medskip\noindent\textit{Uniqueness in the whole plane near Hopf.}
 The supercritical Hopf calculation gives a neighborhood
 $\mathcal V$ of the origin in the centered coordinates
 and $\delta_0(a)>0$ such that exactly one attracting
@@ -2606,9 +2584,9 @@ and a finite covering of $\mathcal K$ give a common
 entry time. Choose an open neighborhood
 $\mathcal V_0$ whose closure lies in $\mathcal V$.
 There is a finite time $T$ such that
-\[
+$
 \varphi_{k_H}(T,\mathcal K)\subset\mathcal V_0,
-\]
+$
 where $\varphi_k$ denotes the centered flow.
 Continuous dependence on $k$ and on initial conditions,
 uniformly over $\mathcal K$, gives $\delta_1(a)>0$ with
@@ -2630,13 +2608,13 @@ Taking
 proves that the Hopf cycle is the unique limit cycle
 in the entire plane for $k_H<k<k_H+\delta(a)$.
 
-\medskip\noindent\textit{An explicit region of global uniqueness for large $k$.}
+%\medskip\noindent\textit{An explicit region of global uniqueness for large $k$.}
 Assume $k>K(a)$ and retain the factorization
 \eqref{eq:pg-root-factor-global}.
 The inequality $k>a+1/a$ gives
 $R_k(-a)=a^2-ka+1<0$, where $R_k=F_k/p$;
 hence $b>a$. Also,
-\begin{equation}
+\begin{equation*}
 \label{eq:pg-root-bounds-global}
 r>k-3a>3\sqrt3.
 \end{equation}
@@ -2661,7 +2639,7 @@ Let $\eta\in(0,r)$ be the unique point for which
 $G(\eta)=G(-b)$.
 
 We apply the asymmetric uniqueness criterion in
-\cite[Theorems~2.2--2.3 and Remark~2.4]{hayashi2019criterion}
+\cite{hayashi2019criterion}
 with the coefficient $\lambda=1$. In the present
 notation, if $\eta\ge m$, the outer monotonicity already
 gives at most one cycle. If $\eta<m$, a sufficient
@@ -2674,11 +2652,7 @@ condition is
 \right]^{1/2}<1.
 \end{equation}
 Under either condition the periodic orbit, if it exists,
-is hyperbolic and attracting. The regularity, restoring
-sign, three-zero sign pattern, and outer monotonicity
-required by this criterion follow from
-\eqref{eq:pg-functions-global} and
-\eqref{eq:pg-root-factor-global}.
+is hyperbolic and attracting. 
 
 It remains to verify \eqref{eq:pg-Hayashi-test-global}
 when $\eta<m$. For $0<s\le m<2r/3$,
@@ -2723,7 +2697,7 @@ For $-1<I<I_0$, existence is still completely determined:
 there is no periodic orbit for $k\le k_H$, and at least
 one limit cycle for every $k>k_H$. The global count is
 exactly one near Hopf and for $k>K(a)$, as stated in
-part~5. An exact count in the intervening range is not
+part~4. An exact count in the intervening range is not
 established by the present arguments. The sufficient
 condition $a\ge a_0$ cannot simply be removed from the
 proof above. For example, at $a=1/5$ and $k=3>k_H=14/5$,
@@ -2772,39 +2746,10 @@ before the exact count can be asserted for every $I>-1$.
 % Universitext, Springer, Berlin, 2006.
 % \url{https://doi.org/10.1007/978-3-540-32902-2}.
 
-
-
-
-
-\newpage
-
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\linewidth]{HR}
-    \caption{Panels (a)--(f) correspond, respectively, to
-    $k=0$, $1.5$, $2$, $2.05$, $2.5$, and $4$; the Hopf value
-    is $k_H=2$.
-    The finite equilibrium $E_*=(1,1-k)$ is a stable node
-    in (a), a stable focus in (b), a stable weak focus in (c),
-    an unstable focus in (d)--(e), and an unstable node in (f).
-    Filled and open circles denote attracting and repelling
-    equilibria, respectively.
-    The two horizontal boundary points are source nodes,
-    whereas the vertical diamonds denote degenerate boundary
-    saddles, each with two incoming boundary separatrices,
-    one outgoing interior separatrix, and two hyperbolic
-    sectors on the disk side.
-    Blue curves are numerical approximations of the outgoing
-    interior separatrices from infinity; gray curves are
-    sample trajectories, and arrows indicate forward time.
-    Red curves in (d)--(f) are numerically computed attracting
-    periodic orbits; panel (d) illustrates a parameter value
-    near the Hopf threshold.
-    The inset in (f) magnifies the indicated lower-boundary
-    region and distinguishes the periodic orbit from the
-    blue separatrix and the disk boundary.
-    The interior trajectories were obtained by direct
-    numerical integration.
+    \includegraphics[width=\linewidth]{gpp}
+    \caption{
     }
     \label{fig:hr-representative-portraits}
 \end{figure}
