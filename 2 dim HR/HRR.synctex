@@ -1,5 +1,5 @@
 SyncTeX Version:1
-Input:1:D:/My-current-academic-work/2 dim HR (2) (1)/2 dim HR (2)/2 dim HR/./HRR.tex
+Input:1:D:/My-current-academic-work/2 dim HR/./HRR.tex
 Input:2:c:/texlive/2023/texmf-dist/tex/latex/amscls/amsart.cls
 Input:3:c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
 Input:4:c:/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -54,12 +54,12 @@ Input:52:c:/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Input:53:c:/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty
 Input:54:c:/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Input:55:c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
-Input:56:D:/My-current-academic-work/2 dim HR (2) (1)/2 dim HR (2)/2 dim HR/./HRR.aux
+Input:56:D:/My-current-academic-work/2 dim HR/./HRR.aux
 Input:57:c:/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
 Input:58:c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 Input:59:c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
-Input:60:D:/My-current-academic-work/2 dim HR (2) (1)/2 dim HR (2)/2 dim HR/./HRR.out
-Input:61:D:/My-current-academic-work/2 dim HR (2) (1)/2 dim HR (2)/2 dim HR/./HRR.out
+Input:60:D:/My-current-academic-work/2 dim HR/./HRR.out
+Input:61:D:/My-current-academic-work/2 dim HR/./HRR.out
 Input:62:c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 Input:63:c:/texlive/2023/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 Output:pdf
@@ -68,7 +68,7 @@ Unit:1
 X Offset:0
 Y Offset:0
 Content:
-!4428
+!4308
 {1
 [1,149:4736287,50573384:28827951,45837097,0
 (1,149:4736287,4736287:0,0,0
@@ -38838,8 +38838,8 @@ h1,2707:5594040,50573384:27970198,0,0
 ]
 !50406
 }22
-Input:65:D:/My-current-academic-work/2 dim HR (2) (1)/2 dim HR (2)/2 dim HR/./HRR.bbl
-!97
+Input:65:D:/My-current-academic-work/2 dim HR/./HRR.bbl
+!67
 {23
 [1,2786:4736287,50573384:28827951,45837097,0
 [1,2786:4736287,4736287:0,0,0
@@ -39555,8 +39555,8 @@ h1,2786:5594040,50573384:27970198,0,0
 ]
 !18604
 }23
-Input:66:D:/My-current-academic-work/2 dim HR (2) (1)/2 dim HR (2)/2 dim HR/./HRR.aux
-!97
+Input:66:D:/My-current-academic-work/2 dim HR/./HRR.aux
+!67
 Postamble:
 Count:23750
 !27
