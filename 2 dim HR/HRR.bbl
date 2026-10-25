@@ -1,9 +1,55 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{barrio2024exploring}
+Roberto Barrio, Santiago Ib{\'a}{\~n}ez, and Luc{\'\i}a P{\'e}rez.
+\newblock Exploring the geometry of the bifurcation sets in parameter space.
+\newblock {\em Scientific Reports}, 14(1):10900, 2024.
+
+\bibitem{cao2025global}
+Chen Cao, Hebai Chen, Jaume Llibre, and Yilei Tang.
+\newblock Global dynamics of the selkov systems.
+\newblock {\em Physica D: Nonlinear Phenomena}, page 134894, 2025.
+
+\bibitem{chen2026global}
+Hebai Chen, Shu Li, and Yu~Xiao.
+\newblock Global dynamics of the fitzhugh--nagumo neuronal model.
+\newblock {\em Communications in Nonlinear Science and Numerical Simulation},
+  page 110095, 2026.
+
+\bibitem{chen2025global}
+Hebai Chen, Zhijie Li, Yu~Xiao, and Xin Yang.
+\newblock Global dynamics of li{\'e}nard systems with arbitrary degrees.
+\newblock {\em Journal of Mathematical Analysis and Applications},
+  550(1):129503, 2025.
+
+\bibitem{chen2023uniqueness}
+Hebai Chen, Yilei Tang, and Dongmei Xiao.
+\newblock On the uniqueness of limit cycles in second-order oscillators.
+\newblock {\em Journal of Differential Equations}, 370:140--166, 2023.
+
+\bibitem{chen2024new}
+Hebai Chen, Hao Yang, Rui Zhang, and Xiang Zhang.
+\newblock New criterions on nonexistence of periodic orbits of planar dynamical
+  systems and their applications.
+\newblock {\em Journal of Nonlinear Science}, 34(5):96, 2024.
+
+\bibitem{chen2013application}
+Shyan-Shiou Chen, Chang-Yuan Cheng, and Yi-Ru Lin.
+\newblock Application of a two-dimensional hindmarsh--rose type model for
+  bifurcation analysis.
+\newblock {\em International Journal of Bifurcation and Chaos}, 23(03):1350055,
+  2013.
 
 \bibitem{dumortier2006qualitative}
 Freddy Dumortier, Jaume Llibre, and Joan~C Art{\'e}s.
 \newblock {\em Qualitative theory of planar differential systems}.
 \newblock Springer, 2006.
+
+\bibitem{gebreselassie2024uniqueness}
+Kibreab Gebreselassie, Zhaoxia Wang, and Lan Zou.
+\newblock The uniqueness of limit cycles for a generalized
+  rayleigh--li{\'e}nard oscillator: K. gebreselassie et al.
+\newblock {\em Nonlinear Dynamics}, 112(21):19023--19036, 2024.
 
 \bibitem{guo2018global}
 Feng Guo.
@@ -26,6 +72,29 @@ Hassan~K Khalil and Jessy~W Grizzle.
 Yuri~A Kuznetsov.
 \newblock Andronov-hopf bifurcation.
 \newblock {\em Scholarpedia}, 1(10):1858, 2006.
+
+\bibitem{liu2012codimension}
+Xuanliang Liu and Shenquan Liu.
+\newblock Codimension-two bifurcation analysis in two-dimensional
+  hindmarsh--rose model.
+\newblock {\em Nonlinear Dynamics}, 67(1):847--857, 2012.
+
+\bibitem{llibre2022phase}
+Jaume Llibre and Marzieh Mousavi.
+\newblock Phase portraits of the higgins--selkov system.
+\newblock {\em Discrete Contin. Dyn. Syst}, 27:245--256, 2022.
+
+\bibitem{yang2026bifurcations}
+Yi~Yang, Jiajia Jiang, Xiaohua Shi, and Wenjie Qin.
+\newblock Bifurcations and the switching of spiking and bursting in the
+  extended hindmarsh--rose neuronal system.
+\newblock {\em Advances in Continuous and Discrete Models}, 2026.
+
+\bibitem{zhao2025limit}
+Jinyuan Zhao, Jun Li, and Kuilin Wu.
+\newblock Limit cycles for a cubic generalized li{\'e}nard system.
+\newblock {\em Discrete and Continuous Dynamical Systems-B}, 30(10):3761--3777,
+  2025.
 
 \bibitem{zhou2023uniqueness}
 Hui Zhou and Yueding Yuan.

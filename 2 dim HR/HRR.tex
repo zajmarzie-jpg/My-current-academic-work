@@ -78,6 +78,106 @@ aaaaaaaaa
 
 \section{Introduction}
 \label{sec:intro}
+Transitions between rest and sustained oscillation are central to the
+interpretation of neuronal models. In a planar setting, these regimes
+are represented by attracting equilibria and periodic orbits,
+respectively. Understanding their transition requires more than
+locating a Hopf bifurcation: one must also determine whether
+trajectories remain bounded, whether periodic orbits coexist, and
+which attractor governs each initial condition. These global questions
+motivate the present study of a restricted Hindmarsh--Rose-type family.
+
+Planar Hindmarsh--Rose models already exhibit substantial bifurcation
+structure. Liu and Liu \cite{liu2012codimension} investigated Bautin and
+Bogdanov--Takens bifurcations, while Chen, Cheng, and Lin
+\cite{chen2013application} developed a systematic analysis of
+two-dimensional variants. Recent studies address Hopf bifurcation
+and switching between spiking and bursting in an extended model
+\cite{yang2026bifurcations}, and the geometry of bifurcation sets in
+Hindmarsh--Rose and FitzHugh--Nagumo systems \cite{barrio2024exploring}.
+Complementary global studies of the FitzHugh--Nagumo neuronal
+model \cite{chen2026global}, the Higgins--Selkov system
+\cite{llibre2022phase}, and Selkov systems \cite{cao2025global}
+emphasize the importance of combining finite-plane dynamics with
+the geometry at infinity.
+
+Li\'enard theory provides a natural setting for this analysis.
+Global classifications with quadratic damping \cite{guo2018global}
+and arbitrary polynomial degrees \cite{chen2025global},
+together with existence results for cubic generalized systems
+\cite{zhao2025limit}, illustrate its scope. Nonexistence criteria
+\cite{chen2024new} and uniqueness theorems for
+second-order \cite{chen2023uniqueness} and generalized
+Rayleigh--Li\'enard oscillators \cite{gebreselassie2024uniqueness}
+supply further tools. Their application to an asymmetric neuronal
+family, however, requires verifying global sign and comparison
+conditions for the specific nonlinearities. The central question
+here is whether the local Hopf threshold also separates the global
+rest and oscillatory regimes.
+
+We investigate the two-parameter system
+\[
+\dot{x}=y-x^3+kx^2+I,
+\qquad
+\dot{y}=1-kx^2-y,
+\qquad
+k>0,\quad I>-1.
+\]
+The matched quadratic coefficients give a unique equilibrium
+\[
+E_*=(a,1-ka^2),
+\qquad
+a=(1+I)^{1/3}>0.
+\]
+The equivalent Li\'enard equation has restoring force $x^3-a^3$
+and damping $3x^2-2kx+1$. Applying standard Hopf theory
+\cite{Kuznetsov2006}, we obtain a supercritical bifurcation at
+\[
+k_H=\frac{3a^2+1}{2a}.
+\]
+
+The principal contribution is an explicit global transition theorem.
+For every $I>-1$, all forward solutions are bounded and exist for
+all positive time, and $E_*$ is globally asymptotically stable
+for $0<k\leq k_H$. Above this threshold, a finite, nonzero number
+of limit cycles exists, and every non-equilibrium trajectory
+approaches a limit cycle. Under the explicit sufficient condition
+\[
+I\geq I_0:=
+\left(\frac{3}{17}\right)^{3/2}-1,
+\]
+we prove that exactly one cycle exists for every $k>k_H$.
+It is hyperbolic and attracting, with basin
+$\mathbb{R}^2\setminus\{E_*\}$. This gives an exact global
+cycle count throughout a parameter region containing all
+$I\geq0$. For $-1<I<I_0$, global uniqueness is established
+sufficiently close to Hopf and whenever
+\[
+k>\max\left\{
+a+\frac{1}{a},\,
+3a+3\sqrt{3}
+\right\}.
+\]
+The exact count in the intervening range remains open.
+
+A second contribution is a complete description of the
+compactification boundary and its adjacent local sectors.
+The boundary contains two horizontal source nodes and two
+degenerate vertical points. Ordinary directional blow-ups
+resolve the vertical points, establishing that each has two
+hyperbolic sectors and a unique outgoing interior separatrix.
+This configuration is independent of the parameters. The proof
+combines planar compactification \cite{dumortier2006qualitative},
+Lyapunov estimates and continuation arguments \cite{khalil2002nonlinear},
+and asymmetric Li\'enard comparison criteria
+\cite{hayashi2019criterion,zhou2023uniqueness}. The resulting model-specific
+conditions connect the local onset of oscillations with global
+attraction across the finite phase plane.
+
+Section~2 introduces the model. Section~3 analyzes the finite
+equilibrium and Hopf bifurcation. Section~4 resolves the dynamics
+at infinity, and Section~5 establishes boundedness, global
+convergence, and the cycle counts.
 
 \section{The Simplified Model}
 
