@@ -62,7 +62,7 @@
 \address{Department of Pure Mathematics, Ferdowsi University of Mashhad, Mashhad, Iran}
 \email{zaj@ferdowsi.um.ac.ir}
 
-\thanks{Corresponding author: F. H. Ghane (\texttt{htina@um.ac.ir})}
+\thanks{Corresponding author: mmm (\texttt{email})}
 
 \keywords{Monotone}
 \subjclass[2020]{Primary 37D25; Secondary 37A35, 37C40, 37A60.}
@@ -73,114 +73,143 @@
 
 
 \begin{abstract}
-aaaaaaaaa
+We investigate the transition from stationary to sustained oscillatory
+behavior in a two-parameter planar Hindmarsh--Rose-type system.
+For every input current $I>-1$, all solutions are forward complete
+and ultimately bounded. The unique finite equilibrium undergoes a
+supercritical Hopf bifurcation and is globally asymptotically stable
+below and at the Hopf threshold. Above this threshold, the number
+of limit cycles is finite and positive, and every non-equilibrium
+trajectory approaches a limit cycle. Using asymmetric Li\'enard
+comparison methods, we prove global uniqueness of the cycle
+throughout the parameter range above Hopf whenever
+$I\geq(3/17)^{3/2}-1$, a condition including all nonnegative input
+currents. For the remaining input values, uniqueness holds
+sufficiently close to Hopf and for an explicit large-parameter
+range. In all these uniqueness regions, the cycle is hyperbolic
+and attracts every non-equilibrium trajectory. Poincar\'e
+compactification and ordinary directional blow-ups identify two
+horizontal hyperbolic source nodes and two degenerate vertical
+boundary saddles at infinity. Each vertical point has exactly
+two hyperbolic sectors and a unique outgoing interior separatrix.
+This local topological configuration is independent of the
+parameters. The results support a qualitative interpretation of
+the global transition from rest-like behavior to sustained
+voltage oscillations.
 \end{abstract}
 
 \section{Introduction}
 \label{sec:intro}
-Transitions between rest and sustained oscillation are central to the
-interpretation of neuronal models. In a planar setting, these regimes
-are represented by attracting equilibria and periodic orbits,
-respectively. Understanding their transition requires more than
-locating a Hopf bifurcation: one must also determine whether
-trajectories remain bounded, whether periodic orbits coexist, and
-which attractor governs each initial condition. These global questions
-motivate the present study of a restricted Hindmarsh--Rose-type family.
 
-Planar Hindmarsh--Rose models already exhibit substantial bifurcation
-structure. Liu and Liu \cite{liu2012codimension} investigated Bautin and
-Bogdanov--Takens bifurcations, while Chen, Cheng, and Lin
-\cite{chen2013application} developed a systematic analysis of
-two-dimensional variants. Recent studies address Hopf bifurcation
-and switching between spiking and bursting in an extended model
-\cite{yang2026bifurcations}, and the geometry of bifurcation sets in
-Hindmarsh--Rose and FitzHugh--Nagumo systems \cite{barrio2024exploring}.
-Complementary global studies of the FitzHugh--Nagumo neuronal
-model \cite{chen2026global}, the Higgins--Selkov system
-\cite{llibre2022phase}, and Selkov systems \cite{cao2025global}
-emphasize the importance of combining finite-plane dynamics with
-the geometry at infinity.
+A global description of neuronal oscillations requires identifying
+their onset, their possible coexistence, and the initial conditions
+that lead to them. In planar models, this amounts to relating
+equilibrium stability to the existence, number, and stability of
+periodic orbits, together with the behavior of trajectories far from
+the equilibrium. Standard Andronov--Hopf theory
+\cite{kuznetsov2006andronov} identifies the birth of small-amplitude cycles.
+Establishing global attraction and excluding additional cycles
+requires control of the flow across the entire phase plane.
 
-Li\'enard theory provides a natural setting for this analysis.
-Global classifications with quadratic damping \cite{guo2018global}
-and arbitrary polynomial degrees \cite{chen2025global},
-together with existence results for cubic generalized systems
-\cite{zhao2025limit}, illustrate its scope. Nonexistence criteria
-\cite{chen2024new} and uniqueness theorems for
+The Hindmarsh--Rose family provides a useful setting for these
+questions. For planar variants, Liu and Liu
+\cite{liu2012codimension} studied Bautin and Bogdanov--Takens
+bifurcations, while Chen, Cheng, and Lin
+\cite{chen2013application} analyzed equilibrium configurations,
+bifurcation scenarios, and bistability. Recent investigations
+consider Hopf bifurcation and switching between spiking and bursting
+in an extended model \cite{yang2026bifurcations}, as well as the
+geometry of bifurcation sets in Hindmarsh--Rose and FitzHugh--Nagumo
+systems \cite{barrio2024exploring}. These studies reveal how changes
+in parameters organize neuronal activity and motivate precise
+global conclusions for specified model families.
+
+Global investigations of the FitzHugh--Nagumo neuronal model
+\cite{chen2026global}, the Higgins--Selkov system
+\cite{llibre2022phase}, and Selkov systems
+\cite{cao2025global} combine the study of periodic orbits with
+phase-portrait analysis in the Poincar\'e disk. Within Li\'enard
+theory, classifications with quadratic damping
+\cite{guo2018global} and arbitrary polynomial degrees
+\cite{chen2025global} provide related global perspectives.
+Existence results for cubic generalized systems
+\cite{zhao2025limit} and nonexistence criteria
+\cite{chen2024new} are complemented by uniqueness theorems for
 second-order \cite{chen2023uniqueness} and generalized
-Rayleigh--Li\'enard oscillators \cite{gebreselassie2024uniqueness}
-supply further tools. Their application to an asymmetric neuronal
-family, however, requires verifying global sign and comparison
-conditions for the specific nonlinearities. The central question
-here is whether the local Hopf threshold also separates the global
-rest and oscillatory regimes.
+Rayleigh--Li\'enard oscillators
+\cite{gebreselassie2024uniqueness}. Applying these results to an
+asymmetric neuronal family requires verification of their global
+sign, monotonicity, and comparison hypotheses.
 
-We investigate the two-parameter system
-\[
-\dot{x}=y-x^3+kx^2+I,
-\qquad
-\dot{y}=1-kx^2-y,
-\qquad
-k>0,\quad I>-1.
-\]
-The matched quadratic coefficients give a unique equilibrium
-\[
-E_*=(a,1-ka^2),
-\qquad
-a=(1+I)^{1/3}>0.
-\]
-The equivalent Li\'enard equation has restoring force $x^3-a^3$
-and damping $3x^2-2kx+1$. Applying standard Hopf theory
-\cite{Kuznetsov2006}, we obtain a supercritical bifurcation at
-\[
-k_H=\frac{3a^2+1}{2a}.
-\]
+For the planar Hindmarsh--Rose-type family considered
+here, the main task is to determine whether the Hopf threshold is
+also the exact global boundary between convergence to equilibrium
+and periodic behavior, and to identify the parameter regions in
+which a single cycle governs the long-term dynamics. A further
+issue is the resolution of degenerate equilibria at infinity:
+their linearization does not determine the adjacent sectors or
+the interior separatrices. These are the two global problems
+addressed in this paper.
 
-The principal contribution is an explicit global transition theorem.
-For every $I>-1$, all forward solutions are bounded and exist for
-all positive time, and $E_*$ is globally asymptotically stable
-for $0<k\leq k_H$. Above this threshold, a finite, nonzero number
-of limit cycles exists, and every non-equilibrium trajectory
-approaches a limit cycle. Under the explicit sufficient condition
-\[
-I\geq I_0:=
-\left(\frac{3}{17}\right)^{3/2}-1,
-\]
-we prove that exactly one cycle exists for every $k>k_H$.
-It is hyperbolic and attracting, with basin
-$\mathbb{R}^2\setminus\{E_*\}$. This gives an exact global
-cycle count throughout a parameter region containing all
-$I\geq0$. For $-1<I<I_0$, global uniqueness is established
-sufficiently close to Hopf and whenever
-\[
-k>\max\left\{
-a+\frac{1}{a},\,
-3a+3\sqrt{3}
-\right\}.
-\]
-The exact count in the intervening range remains open.
+Our principal result establishes a global transition theorem.
+For every input current $I>-1$, all forward solutions exist for
+all positive time and enter a compact absorbing set. The unique
+finite equilibrium is globally asymptotically stable below and
+at the Hopf threshold. Above it, the system has a finite,
+nonzero number of limit cycles, and every non-equilibrium
+trajectory approaches a limit cycle. Under the explicit sufficient
+condition $I\geq(3/17)^{3/2}-1$, which includes every $I\geq0$,
+we prove that exactly one cycle exists throughout the entire
+parameter range above Hopf. This cycle is hyperbolic and orbitally
+asymptotically stable, and attracts every non-equilibrium
+trajectory. Thus the uniqueness statement controls periodic
+orbits of arbitrary amplitude in the entire finite plane.
+For the remaining admissible input values, global uniqueness is
+established sufficiently close to Hopf and for an explicit
+large-parameter range; the exact count in the intervening range
+remains open.
 
-A second contribution is a complete description of the
-compactification boundary and its adjacent local sectors.
-The boundary contains two horizontal source nodes and two
-degenerate vertical points. Ordinary directional blow-ups
-resolve the vertical points, establishing that each has two
-hyperbolic sectors and a unique outgoing interior separatrix.
-This configuration is independent of the parameters. The proof
-combines planar compactification \cite{dumortier2006qualitative},
-Lyapunov estimates and continuation arguments \cite{khalil2002nonlinear},
-and asymmetric Li\'enard comparison criteria
-\cite{hayashi2019criterion,zhou2023uniqueness}. The resulting model-specific
-conditions connect the local onset of oscillations with global
-attraction across the finite phase plane.
+Our second main result classifies the compactification boundary
+and its adjacent local sectors. We identify two horizontal
+hyperbolic source nodes and two degenerate vertical boundary
+saddles. At each vertical point, there are exactly two hyperbolic
+sectors and a unique outgoing interior separatrix. We also
+determine the boundary connections and the asymptotic form of
+the interior separatrices. Ordinary directional blow-ups,
+center-manifold reduction, and restoration of time orientation
+provide a complete local resolution. The resulting local
+topological configuration at infinity is independent of the
+parameters.
 
-Section~2 introduces the model. Section~3 analyzes the finite
-equilibrium and Hopf bifurcation. Section~4 resolves the dynamics
-at infinity, and Section~5 establishes boundedness, global
-convergence, and the cycle counts.
+The analysis combines planar compactification
+\cite{dumortier2006qualitative}, Lyapunov estimates and continuation
+arguments \cite{khalil2002nonlinear}, analytic return maps, and
+asymmetric Li\'enard comparison criteria
+\cite{hayashi2019criterion,zhou2023uniqueness}. Together, these
+arguments yield explicit global cycle counts in the stated
+parameter regions and resolve the degenerate geometry at
+infinity, connecting local oscillation onset with the global
+organization of the flow.
+
+These results also support a qualitative interpretation of the
+transition from rest-like behavior to rhythmic voltage activity
+within the voltage--recovery framework \cite{hindmarsh1982model}.
+In the proved uniqueness regions, all non-equilibrium initial
+states approach the same periodic response up to phase. At fixed
+parameters, this gives a deterministic mechanism for recovery
+after transient state perturbations. Identifying these oscillations
+with neuronal firing requires validation of the waveform and its
+voltage and time scales.
+
+Section \ref{model} introduces the model. Section \ref{sec hopf} analyzes the finite
+equilibrium and Hopf bifurcation. Section \ref{sec:infinity} resolves the dynamics
+at infinity. Section \ref{subsec:pg-global-cycle-results} establishes boundedness, global
+convergence, and the cycle-count results. Section \ref{sec:neuroscientific-interpretation} discusses the
+neuroscientific interpretation and its scope.
+
 
 \section{The Simplified Model}
-
+\label{model}
 The general 2D Hindmarsh--Rose-type system is given by:
 \begin{equation}
 \begin{aligned}
@@ -208,7 +237,7 @@ The system reduces to:
 where, \(I\) and $k$ are parameters of system.
 
 \section{Hopf Bifurcation and Preliminary Analysis of Limit Cycles}
-
+\label{sec hopf}
 We consider the following planar system
 \eqref{eq:model}. The aim of this section is to
 investigate the occurrence of Hopf bifurcation and derive a suitable
@@ -2810,57 +2839,70 @@ does not prove the existence of additional cycles;
 it identifies the step requiring a different argument
 before the exact count can be asserted for every $I>-1$.
 
-% Add the following bibliography entries if they are absent.
-%
-% \bibitem{Guo2018}
-% F.~Guo, Global analysis of a Li\'enard system with quadratic
-% damping, \emph{Discrete Dynamics in Nature and Society}
-% \textbf{2018} (2018), Article ID 1249620, 9 pp.
-% \url{https://doi.org/10.1155/2018/1249620}.
-%
-% \bibitem{ZhouYuan2023}
-% H.~Zhou and Y.~Yuan, On the uniqueness of limit cycles
-% for generalized Li\'enard systems, \emph{Open Mathematics}
-% \textbf{21}(1) (2023), Article 20220558.
-% \url{https://doi.org/10.1515/math-2022-0558}.
-%
-% \bibitem{Hayashi2019}
-% M.~Hayashi, A criterion for the unique existence of the
-% limit cycle of a Li\'enard-type system with one parameter,
-% \emph{Advances in Dynamical Systems and Applications}
-% \textbf{14}(2) (2019), 179--187.
-% \url{https://campus.mst.edu/adsa/contents/v14n2p3.pdf}.
-%
-% \bibitem{Khalil2002}
-% H.~K.~Khalil, \emph{Nonlinear Systems}, 3rd ed.,
-% Prentice Hall, Upper Saddle River, NJ, 2002.
-%
-% \bibitem{Kuznetsov2006Hopf}
-% Y.~A.~Kuznetsov, Andronov--Hopf bifurcation,
-% \emph{Scholarpedia} \textbf{1}(10) (2006), 1858.
-% \url{https://doi.org/10.4249/scholarpedia.1858}.
-%
-% \bibitem{DumortierLlibreArtes2006}
-% F.~Dumortier, J.~Llibre, and J.~C.~Art\'es,
-% \emph{Qualitative Theory of Planar Differential Systems},
-% Universitext, Springer, Berlin, 2006.
-% \url{https://doi.org/10.1007/978-3-540-32902-2}.
-
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\linewidth]{gpp}
-    \caption{
-    }
+    \caption{Representative global phase portraits of the planar
+Hindmarsh--Rose-type system in the Poincar\'e disk, for
+$I\geq I_0=(3/17)^{3/2}-1$.
+(a) A globally asymptotically stable node for
+$0<k<k_H-\sqrt{3}$.
+(b) A globally asymptotically stable focus for
+$k_H-\sqrt{3}<k<k_H$.
+(c) An unstable focus surrounded by a unique attracting limit
+cycle for $k_H<k<k_H+\sqrt{3}$; every non-equilibrium trajectory
+approaches this cycle.
+Here $a=(1+I)^{1/3}$ and $k_H=(3a^2+1)/(2a)$.
+The outer circle represents infinity. Its horizontal marked
+points are source nodes, whereas its vertical marked points
+are degenerate boundary saddles, each with two hyperbolic
+sectors and one outgoing interior separatrix.
+The boundary connections run from the horizontal nodes to
+the adjacent vertical saddles. Arrows indicate the direction
+of increasing time.}
     \label{fig:hr-representative-portraits}
 \end{figure}
 
 
+\section{Neuroscientific interpretation}
+\label{sec:neuroscientific-interpretation}
 
+The model admits a phenomenological voltage--recovery interpretation:
+$x$ represents a voltage-like variable and $y$ a recovery variable,
+following the Hindmarsh--Rose modeling framework
+\cite{hindmarsh1982model,chen2013application}. The parameter $k$
+controls the matched quadratic feedback terms; identifying it with
+a specific physiological mechanism would require additional
+calibration.
 
+For fixed input $I$, global asymptotic stability for $0<k\leq k_H$
+describes relaxation toward a stationary voltage state after transient
+state perturbations. Increasing $k$ through $k_H$ produces stable
+voltage oscillations through a supercritical Hopf bifurcation.
+The emerging oscillation amplitude vanishes continuously at onset,
+while its angular frequency tends to
+$\omega_H=\sqrt{3}(1+I)^{1/3}>0$, in model time units.
+This gives a continuous onset of rhythmic voltage activity with
+nonzero limiting frequency, consistent with the local Hopf
+mechanism \cite{kuznetsov2006andronov}.
 
+In the parameter ranges where global cycle uniqueness is established,
+particularly $I\geq I_0$ and $k>k_H$, every non-equilibrium initial
+condition approaches the same attracting periodic orbit. Thus,
+at fixed parameters, the initial voltage and recovery state affect
+the transient response and asymptotic phase, but do not select
+different long-term oscillatory waveforms. A transient state
+perturbation is followed by return to the same periodic response,
+provided the perturbed state is not exactly the unstable equilibrium.
+This is a deterministic mechanism for recovery of a single
+oscillatory regime.
 
-
-
+These conclusions describe a qualitative transition from rest-like
+behavior to sustained voltage oscillations. Interpreting the periodic
+response as repetitive action potentials requires validation of its
+waveform and voltage and time scales. Forward boundedness excludes
+divergence of the model variables, but does not by itself establish
+physiological voltage bounds.
 
 
 

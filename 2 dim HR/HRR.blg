@@ -9,13 +9,11 @@ Reallocated glb_str_ptr (elt_size=4) to 10 items from 0.
 Reallocated global_strs (elt_size=200001) to 10 items from 0.
 Reallocated glb_str_end (elt_size=4) to 10 items from 0.
 Database file #1: bibliography.bib
-Warning--I didn't find a database entry for "Kuznetsov2006"
 
 Here's how much of BibTeX's memory you used:
- Cites:                18 out of 750
- Fields:              380 out of 5000
- Hash table:        29820 out of 30000
- Strings:             614 out of 30000
- Free string pool:   7059 out of 65000
+ Cites:                19 out of 750
+ Fields:              403 out of 5000
+ Hash table:        29819 out of 30000
+ Strings:             620 out of 30000
+ Free string pool:   7180 out of 65000
  Wizard functions:   2118 out of 3000
-(There was 1 warning)

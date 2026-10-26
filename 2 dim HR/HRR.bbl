@@ -63,6 +63,12 @@ Makoto Hayashi.
 \newblock {\em Advances in Dynamical Systems and Applications}, 14(2):179--187,
   2019.
 
+\bibitem{hindmarsh1982model}
+James~L Hindmarsh and RM~Rose.
+\newblock A model of the nerve impulse using two first-order differential
+  equations.
+\newblock {\em Nature}, 296(5853):162--164, 1982.
+
 \bibitem{khalil2002nonlinear}
 Hassan~K Khalil and Jessy~W Grizzle.
 \newblock {\em Nonlinear systems}, volume~3.
