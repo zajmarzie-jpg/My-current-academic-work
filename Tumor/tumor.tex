@@ -1,0 +1,250 @@
+\documentclass[11pt,reqno]{amsart}
+
+% --- Encoding / fonts ---
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% --- Core AMS packages ---
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+
+% --- Graphics and lists ---
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+% --- Page layout ---
+\usepackage[a4paper,margin=3cm]{geometry}
+
+% --- Theorem environments ---
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{assertion}[theorem]{Assertion}
+\newtheorem{notations}[theorem]{Notations}
+
+\newtheorem{assumption}{Assumption}
+\newtheorem{hypothesis}{Hypothesis}
+
+\newtheorem*{theoremA}{Theorem A}
+\newtheorem*{theoremB}{Theorem B}
+\newtheorem*{theoremC}{Theorem C}
+
+% --- Operators ---
+\DeclareMathOperator{\IFS}{IFS}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\vol}{vol}
+
+% --- Hyperref: load late ---
+\usepackage[pdfencoding=auto,psdextra]{hyperref}
+
+% --- TOC depth ---
+\setcounter{tocdepth}{3}
+
+% --- Title & Authors ---
+\title[T]{TransTitle}
+
+\author[A1]{B1}
+\address{Department of Pure Mathematics, Ferdowsi University of Mashhad, Mashhad, Iran}
+\email{htina@um.ac.ir}
+
+\author[A2]{B2}
+\address{Department of Pure Mathematics, Ferdowsi University of Mashhad, Mashhad, Iran}
+\email{zaj@ferdowsi.um.ac.ir}
+
+\thanks{Corresponding author: F. H. Ghane (\texttt{htina@um.ac.ir})}
+
+\keywords{Monotone}
+\subjclass[2020]{Primary 37D25; Secondary 37A35, 37C40, 37A60.}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{abstract}
+abbbaaaaaaaa
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+
+\section{Model}
+\label{sec:model}
+
+Sun et al.~\cite{sun2024spatiotemporal} investigated a cancer growth model
+incorporating a strong Allee effect, tumor--immune interactions,
+and self- and cross-diffusion, with particular emphasis on its
+discrete space--time dynamics. We consider the spatially
+homogeneous continuous-time kinetics underlying their model.
+Writing
+\[
+r=r_1,\qquad b=b_1,\qquad k=c_2,\qquad
+c=c_1,\qquad d=d_1
+\]
+in the notation of~\cite{sun2024spatiotemporal}, these kinetics take the form
+\begin{equation}
+\label{eq:tumor-original}
+\begin{aligned}
+\frac{dT}{dt}
+&=rT(1-bT)(T-m)-kTI,\\
+\frac{dI}{dt}
+&=\frac{\rho TI}{\alpha+T}-cTI-dI.
+\end{aligned}
+\end{equation}
+Here $T$ and $I$ denote the tumor and immune cell populations,
+respectively, and $t$ denotes physical time. Throughout,
+\begin{equation}
+\label{eq:tumor-parameters}
+r,b,k,\rho,\alpha,c,d>0,
+\qquad 0<m<\frac{1}{b}.
+\end{equation}
+
+The coefficient $r$ sets the scale of tumor growth,
+$b^{-1}$ is the tumor carrying capacity, and $m$ is the
+strong Allee threshold. The parameter $k$ measures
+immune-mediated tumor killing. In the immune equation,
+$\rho$ is the maximal per-capita stimulation rate and
+$\alpha$ is the tumor population at half-maximal stimulation.
+The coefficients $c$ and $d$ describe tumor-induced immune
+inactivation and natural immune loss, respectively.
+No external immune-cell influx is included.
+
+The biological meaning of the Allee assumption follows from
+the tumor per-capita growth function
+\[
+g(T)=r(1-bT)(T-m).
+\]
+In the absence of immune cells, this function is negative for
+$0<T<m$, positive for $m<T<b^{-1}$, and negative for
+$T>b^{-1}$. Thus, the model assumes that sufficiently small
+tumor populations cannot sustain positive net growth.
+This is a phenomenological assumption about the tumor
+population under consideration, rather than a universal
+property of cancer growth. Moreover, $m$ is the threshold
+for the immune-free subsystem; in the coupled system,
+tumor decline is determined by $g(T)-kI$.
+
+The immune per-capita growth function is
+\[
+h(T)=\frac{\rho T}{\alpha+T}-cT-d.
+\]
+Its stimulation component increases with tumor abundance
+and saturates, whereas the inactivation component grows
+linearly. Consequently, increased tumor abundance need not
+produce increased net immune growth. The variable $I$
+represents the immune population described by these
+assumptions, rather than the entire immune system:
+when $T=0$, it satisfies $dI/dt=-dI$.
+
+To obtain a polynomial vector field, introduce the time
+variable $\tau$ by
+\begin{equation}
+\label{eq:tumor-time}
+\frac{dt}{d\tau}=\alpha+T.
+\end{equation}
+The chain rule transforms~\eqref{eq:tumor-original} into
+\begin{equation}
+\label{eq:tumor-polynomial}
+\boxed{
+\begin{aligned}
+T'
+&=T(\alpha+T)
+  \left[r(1-bT)(T-m)-kI\right],\\
+I'
+&=I\left[-cT^2+(\rho-c\alpha-d)T-d\alpha\right],
+\end{aligned}}
+\end{equation}
+where prime denotes differentiation with respect to $\tau$.
+System~\eqref{eq:tumor-polynomial} is an autonomous planar
+polynomial system of degree four. This transformation is
+exact and involves no approximation of the saturating
+response.
+
+The biologically relevant phase space is
+\[
+\mathcal Q=\{(T,I)\in\mathbb R^2:T\geq0,\ I\geq0\}.
+\]
+Both coordinate axes are invariant, and uniqueness of
+solutions implies that $\mathcal Q$ is positively invariant.
+Since $\alpha+T>0$ on $\mathcal Q$, the original and
+polynomial systems are orbitally equivalent there, with
+the same time orientation. In particular, their equilibria,
+local stability types, periodic orbits, separatrices, and
+basins of attraction coincide.
+
+The correspondence also preserves the forward asymptotic
+interpretation of trajectories. Indeed, the tumor equation
+gives
+\[
+0\leq T\leq M,\qquad
+M=\max\{T(0),b^{-1}\},
+\]
+because the tumor component cannot increase above its
+carrying capacity. Hence, along each forward trajectory,
+\[
+\alpha\leq\frac{dt}{d\tau}\leq\alpha+M.
+\]
+The immune component has at most exponential growth on
+finite time intervals, so both formulations are forward
+complete, and $t\to\infty$ if and only if $\tau\to\infty$.
+
+The rescaled time $\tau$ is an analytical variable.
+Physical time is recovered through
+\begin{equation}
+\label{eq:tumor-time-recovery}
+t(\tau)-t(0)
+=\int_0^\tau \bigl[\alpha+T(s)\bigr]\,ds.
+\end{equation}
+Therefore, quantitative statements about growth rates,
+transient durations, or oscillation periods must be
+expressed in the original time variable.
+
+We study~\eqref{eq:tumor-polynomial} as a polynomial
+representation of the established tumor--immune kinetics.
+Its higher-degree terms arise from the common time
+rescaling and do not represent additional biological
+interactions. This formulation permits the use of
+polynomial dynamical-systems methods while retaining the
+biological interpretation of trajectories in $\mathcal Q$.
+The equivalence asserted here is restricted to this domain;
+an extension of the polynomial vector field outside
+$\mathcal Q$ requires separate mathematical interpretation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\section*{Acknowledgments}
+%[Funding, collaborations]
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
+%\printbibliography
+
+
+
+
+\end{document}

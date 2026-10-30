@@ -1,0 +1,2094 @@
+\documentclass[11pt,reqno]{amsart}
+
+% --- Encoding / fonts ---
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% --- Core AMS packages ---
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+
+% --- Graphics and lists ---
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+
+% --- Hyperref (load late) ---
+\usepackage[pdfencoding=auto,psdextra]{hyperref}
+
+% --- Page layout ---
+% amsart already has a well-tested layout.
+% If you must change margins, keep geometry simple:
+\usepackage[a4paper,margin=3cm]{geometry}
+
+% --- Theorem environments (single consistent system) ---
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{assertion}[theorem]{Assertion}
+\newtheorem{notations}[theorem]{Notations}
+\newtheorem{assumption}{Assumption}
+\newtheorem{hypothesis}{Hypothesis}
+
+\newtheorem*{theoremA}{Theorem A}
+\newtheorem*{theoremB}{Theorem B}
+\newtheorem*{theoremC}{Theorem C}
+
+% --- Operators ---
+\DeclareMathOperator{\IFS}{IFS}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\vol}{vol}
+
+% --- TOC depth ---
+\setcounter{tocdepth}{3}
+
+% --- Title & Authors ---
+\title[T]{TransTitle}
+
+\author[A1]{B1}
+\address{Department of Pure Mathematics, Ferdowsi University of Mashhad, Mashhad, Iran}
+\email{htina@um.ac.ir}
+
+\author[A2]{B2}
+\address{Department of Pure Mathematics, Ferdowsi University of Mashhad, Mashhad, Iran}
+\email{zaj@ferdowsi.um.ac.ir}
+
+\thanks{Corresponding author: F. H. Ghane (\texttt{htina@um.ac.ir})}
+
+\keywords{ Monotone skew products, blowout bifurcation, on--off intermittency, laminar first passage, riddled basins, stability indices, thermodynamic formalism, multifractal spectra.}
+\subjclass[2020]{Primary 37D25; Secondary 37A35, 37C40, 37A60.}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{abstract}
+aaaaaaaaa
+\end{abstract}
+
+
+
+
+
+\section{Introduction}
+\label{sec:intro}
+
+\section{The Simplified Model}
+
+The general 2D Hindmarsh--Rose-type system is given by:
+\begin{equation}
+\begin{aligned}
+\dot{x} &= y - ax^3 + bx^2 + I, \\
+\dot{y} &= c - dx^2 - y,
+\end{aligned}
+\end{equation}
+where \(x\) represents the membrane potential, \(y\) is the recovery variable, and \(I\) is the external input current. The parameters \(a, b, c, d\) control the intrinsic nonlinearities.
+
+To obtain a mathematically tractable model for global phase-portrait analysis, we fix the parameters as follows:
+\begin{itemize}
+    \item \(a = 1\)
+    \item \(c = 1\)
+    \item \(b = d = k\) (where \(k\) is a fixed positive constant, biologically motivated by the standard Hindmarsh--Rose baseline \(k=5\))
+\end{itemize}
+
+The system reduces to:
+\begin{equation}
+\begin{aligned}
+\dot{x} &= y - x^3 + kx^2 + I, \\
+\dot{y} &= 1 - kx^2 - y.
+\end{aligned} \tag{S}
+\label{eq:simplified}
+\end{equation}
+Here, \(I\) is fixed and $k$ treated as the bifurcation parameter.
+
+\section{Hopf Bifurcation and Preliminary Analysis of Limit Cycles}
+
+We consider the following planar system
+\begin{equation}
+\label{eq:model}
+\begin{cases}
+\dot{x}=y-x^3+kx^2+I,\\[1mm]
+\dot{y}=1-kx^2-y,
+\end{cases}
+\end{equation}
+where $k$ and $I$ are real parameters. The aim of this section is to
+investigate the occurrence of Hopf bifurcation and derive a suitable
+formulation for the study of periodic solutions.
+
+\subsection{The equilibrium point and Hopf bifurcation}
+
+The equilibrium points of system \eqref{eq:model} satisfy
+
+\[
+y-x^3+kx^2+I=0,
+\]
+
+and
+
+\[
+1-kx^2-y=0.
+\]
+
+From the second equation we obtain
+
+\[
+y=1-kx^2.
+\]
+
+Substituting this expression into the first equation gives
+
+\[
+1-kx^2-x^3+kx^2+I=0,
+\]
+
+and consequently
+
+\[
+x^3=1+I.
+\]
+
+Hence system \eqref{eq:model} has a unique equilibrium point
+
+\begin{equation}
+\label{eq:equilibrium}
+E_*=(x_*,y_*),
+\end{equation}
+
+where
+
+\begin{equation}
+\label{eq:xstar}
+x_*=(1+I)^{1/3},
+\end{equation}
+
+and
+
+\begin{equation}
+\label{eq:ystar}
+y_*=1-kx_*^2 .
+\end{equation}
+
+The Jacobian matrix of system \eqref{eq:model} is
+
+\[
+J(x,y)=
+\begin{pmatrix}
+-3x^2+2kx&1\\
+-2kx&-1
+\end{pmatrix}.
+\]
+
+At the equilibrium point $E_*$ we have
+
+\[
+J(E_*)=
+\begin{pmatrix}
+-3x_*^2+2kx_*&1\\
+-2kx_*&-1
+\end{pmatrix}.
+\]
+
+The trace and determinant of this matrix are
+
+\begin{equation}
+\label{eq:trace}
+T=-3x_*^2+2kx_*-1,
+\end{equation}
+
+and
+
+\begin{equation}
+\label{eq:det}
+D=
+(-3x_*^2+2kx_*)(-1)+2kx_*.
+\end{equation}
+
+Therefore,
+
+\[
+D=3x_*^2.
+\]
+
+The necessary conditions for a Hopf bifurcation are
+
+\[
+T=0,\qquad D>0.
+\]
+
+The trace condition gives
+
+\[
+-3x_*^2+2kx_*-1=0,
+\]
+
+and therefore the Hopf curve is
+
+\begin{equation}
+\label{eq:Hopfcurve}
+k=k_H=
+\frac{3x_*^2+1}{2x_*}.
+\end{equation}
+
+Since
+
+\[
+D=3x_*^2,
+\]
+
+we have
+
+\[
+D>0
+\]
+
+provided that
+
+\[
+x_*\neq0,
+\]
+
+or equivalently,
+
+\[
+I\neq -1.
+\]
+
+At the Hopf point, the eigenvalues of $J(E_*)$ are
+
+\[
+\lambda_{1,2}=\pm i\omega,
+\]
+
+where
+
+\begin{equation}
+\label{eq:omega}
+\omega=\sqrt{3}|x_*|.
+\end{equation}
+
+
+It remains to verify the transversality condition. Since
+
+\[
+T(k)=-3x_*^2+2kx_*-1,
+\]
+
+we obtain
+
+\[
+\frac{dT}{dk}=2x_*.
+\]
+
+Because
+
+\[
+\operatorname{Re}(\lambda)=\frac{T}{2},
+\]
+
+we have
+
+\[
+\frac{d}{dk}\operatorname{Re}(\lambda)
+=
+x_*.
+\]
+
+Therefore,
+
+\[
+\frac{d}{dk}\operatorname{Re}(\lambda)
+\neq0
+\]
+
+whenever $I\neq-1$. Consequently, system \eqref{eq:model}
+undergoes a Hopf bifurcation on the curve \eqref{eq:Hopfcurve}.
+
+
+\subsection{The first Lyapunov coefficient}
+
+To determine the type of Hopf bifurcation, we translate the equilibrium
+point $E_*$ to the origin by introducing
+
+\[
+x=x_*+u,\qquad y=y_*+v .
+\]
+
+Then system \eqref{eq:model} becomes
+
+\begin{equation}
+\label{eq:shifted}
+\begin{cases}
+\dot{u}=(-3x_*^2+2kx_*)u+v
+ +(k-3x_*)u^2-u^3,\\[1mm]
+\dot{v}=-2kx_*u-v-ku^2 .
+\end{cases}
+\end{equation}
+
+At the Hopf point $k=k_H$, using
+
+\[
+2k_Hx_*=3x_*^2+1,
+\]
+
+the linear part of \eqref{eq:shifted} is
+
+\[
+A=
+\begin{pmatrix}
+1&1\\
+-(3x_*^2+1)&-1
+\end{pmatrix}.
+\]
+
+The nonlinear terms are
+
+\[
+F_2(u,v)=
+\begin{pmatrix}
+(k_H-3x_*)u^2\\
+-k_Hu^2
+\end{pmatrix},
+\]
+
+and
+
+\[
+F_3(u,v)=
+\begin{pmatrix}
+-u^3\\
+0
+\end{pmatrix}.
+\]
+
+Using the standard formula for the first Lyapunov coefficient of a
+planar Hopf bifurcation, after substituting the eigenvectors of $A$ and
+simplifying the resulting expression, we obtain
+
+\begin{equation}
+\label{eq:l1}
+l_1=
+-\frac{3x_*^2+1}
+{8\sqrt{3}\,x_*^2}.
+\end{equation}
+
+Since
+
+\[
+3x_*^2+1>0,
+\]
+
+we conclude that
+
+\[
+l_1<0 .
+\]
+
+Hence the Hopf bifurcation is supercritical and a stable limit cycle
+bifurcates from the equilibrium point when the parameter crosses the
+Hopf curve.
+
+So, until now we have: 
+
+{theorem:}
+\label{thm:hopf_limit_cycle}
+Consider the planar system
+\begin{equation}
+\label{eq:system}
+\begin{cases}
+\dot{x}=y-x^3+kx^2+I,\\[1mm]
+\dot{y}=1-kx^2-y,
+\end{cases}
+\end{equation}
+where $k$ and $I$ are real parameters. Let
+
+\[
+x_*=(1+I)^{1/3},
+\]
+
+and assume that
+
+\[
+I\neq -1.
+\]
+
+Then system \eqref{eq:system} has a unique equilibrium point
+
+\[
+E_*=
+\left(
+x_*,
+1-kx_*^2
+\right).
+\]
+
+Moreover, the equilibrium undergoes a Hopf bifurcation at the
+parameter value
+
+\begin{equation}
+\label{eq:hopf}
+k=k_H=
+\frac{3x_*^2+1}{2x_*}.
+\end{equation}
+
+Indeed, at $k=k_H$ the Jacobian matrix of system \eqref{eq:system}
+at $E_*$ has a pair of purely imaginary eigenvalues
+
+\[
+\lambda_{1,2}=\pm i\omega ,
+\]
+
+where
+
+\[
+\omega=\sqrt{3}|x_*|,
+\]
+
+and the transversality condition
+
+\[
+\frac{d}{dk}\operatorname{Re}(\lambda(k))
+\bigg|_{k=k_H}\neq0
+\]
+
+is satisfied.
+
+Furthermore, after translating the equilibrium point to the origin,
+the first Lyapunov coefficient at the Hopf point is
+
+\begin{equation}
+\label{eq:l1}
+l_1=
+-\frac{3x_*^2+1}
+{8\sqrt{3}\,x_*^2}.
+\end{equation}
+
+Consequently,
+
+\[
+l_1<0,
+\]
+
+and therefore the Hopf bifurcation is supercritical. Hence, for
+parameter values sufficiently close to and beyond the Hopf curve,
+system \eqref{eq:system} possesses a stable limit cycle bifurcating
+from the equilibrium point $E_*$.
+\end{theorem}
+
+{proof:}
+The equilibrium point is obtained by solving
+\[
+y-x^3+kx^2+I=0,
+\qquad
+1-kx^2-y=0,
+\]
+which gives
+\[
+x_*^3=1+I,
+\qquad
+y_*=1-kx_*^2.
+\]
+
+The Jacobian matrix is
+
+\[
+J(x,y)=
+\begin{pmatrix}
+-3x^2+2kx&1\\
+-2kx&-1
+\end{pmatrix}.
+\]
+
+Therefore, at $E_*$,
+
+\[
+\operatorname{tr}(J)
+=
+-3x_*^2+2kx_*-1,
+\]
+
+and
+
+\[
+\det(J)=3x_*^2.
+\]
+
+The Hopf condition
+\[
+\operatorname{tr}(J)=0
+\]
+gives
+
+\[
+k_H=\frac{3x_*^2+1}{2x_*}.
+\]
+
+Since $I\neq-1$, we have $x_*\neq0$ and hence
+
+\[
+\det(J)=3x_*^2>0.
+\]
+
+Thus the eigenvalues are purely imaginary at the Hopf point.
+
+Furthermore,
+
+\[
+\frac{d}{dk}\operatorname{Re}(\lambda)
+=
+\frac12
+\frac{d}{dk}\operatorname{tr}(J)
+=
+x_* \neq0,
+\]
+
+which verifies the transversality condition.
+
+Finally, applying the standard formula for the first Lyapunov
+coefficient of a planar Hopf bifurcation to the translated system gives
+
+\[
+l_1=
+-\frac{3x_*^2+1}{8\sqrt3\,x_*^2}.
+\]
+
+Since $x_*\neq0$, we have $l_1<0$. Hence the Hopf bifurcation is
+supercritical and a stable periodic orbit is generated from the
+equilibrium point.
+\end{proof}
+
+
+\subsection{Transformation into a Lienard system}
+
+For the global study of periodic solutions, we rewrite system
+\eqref{eq:model} as a second-order differential equation.
+
+From the second equation,
+
+\[
+\dot y=1-kx^2-y,
+\]
+
+we obtain
+
+\[
+y=1-kx^2-\dot y .
+\]
+
+Substitution into the first equation gives
+
+\[
+\dot{x}=1+I-x^3-\dot y .
+\]
+
+Differentiating this relation yields
+
+\[
+\ddot{x}=-3x^2\dot{x}-\ddot{y}.
+\]
+
+On the other hand,
+
+\[
+\ddot{y}+2kx\dot{x}+\dot y=0.
+\]
+
+Combining the above relations gives the following second-order equation:
+
+\begin{equation}
+\label{eq:lienard}
+\ddot{x}
++
+(3x^2-2kx+1)\dot{x}
++
+x^3-(1+I)=0 .
+\end{equation}
+
+Therefore, system \eqref{eq:model} is equivalent to the Lienard system
+
+\begin{equation}
+\label{eq:lienardplanar}
+\begin{cases}
+\dot{x}=z,\\[1mm]
+\dot{z}=-(3x^2-2kx+1)z-x^3+(1+I).
+\end{cases}
+\end{equation}
+
+The damping function of the Lienard system is
+
+\[
+f(x)=3x^2-2kx+1,
+\]
+
+and its primitive function is
+
+\[
+F(x)=\int_0^x f(s)\,ds
+=x^3-kx^2+x .
+\]
+
+The damping function changes sign if and only if
+
+\[
+\Delta_f=(-2k)^2-12>0,
+\]
+
+which gives
+
+\begin{equation}
+\label{eq:dampingcondition}
+k^2>3 .
+\end{equation}
+
+Therefore, the parameter region satisfying \eqref{eq:dampingcondition}
+is the natural region where self-sustained oscillations and limit cycles
+may occur.
+
+The above transformation provides the basis for the global analysis of
+periodic solutions.
+
+
+
+
+
+\newpage
+
+pppppppppppppppp
+
+
+\subsection{Trace and Determinant}
+The trace \(T\) and determinant \(D\) of \(J^*\) are:
+\begin{align}
+T &= \operatorname{tr}(J^*) = -3u^2 + 2ku - 1, \\
+D &= \det(J^*) = (-3u^2 + 2ku)(-1) - (1)(-2ku) = 3u^2 - 2ku + 2ku = 3u^2.
+\end{align}
+Notice that \(D = 3u^2 > 0\) for all \(I > -1\). Therefore, the equilibrium is \textbf{never a saddle}. It is either a node or a focus, and its stability is determined entirely by the sign of the trace \(T\).
+
+\subsection{Classification of the Singular Point}
+\begin{itemize}
+    \item If \(T^2 - 4D > 0\): Node (stable if \(T < 0\), unstable if \(T > 0\)).
+    \item If \(T^2 - 4D < 0\): Focus (stable if \(T < 0\), unstable if \(T > 0\)).
+    \item If \(T = 0\) and \(D > 0\): Center (linearization) or weak focus.
+\end{itemize}
+
+\section{Poincar\'e Compactification and the Dynamics at Infinity}
+
+\label{sec:infinity}
+
+The vector field associated with system \eqref{eq:model} is polynomial of
+degree three. Therefore, the behavior of solutions at infinity can be
+studied by means of the Poincar\'e compactification. We analyze the
+compactified vector field in two local charts corresponding to the
+directions of the coordinate axes.
+
+
+\subsection{Local chart \(U_1\)}
+
+In the first chart, we introduce the coordinates
+
+\[
+x=\frac{1}{u},\qquad y=\frac{v}{u}.
+\]
+
+Since the degree of the vector field is three, the time transformation
+
+\[
+d\tau=\frac{dt}{u^{2}}
+\]
+
+gives the compactified system
+
+\begin{equation}
+\label{eq:U1}
+\begin{aligned}
+\dot u&=-u^3v+u-ku^2-Iu^4,\\
+\dot v&=u^3-ku-u^2v-u^2v^2+v-kuv-Iu^3v .
+\end{aligned}
+\end{equation}
+
+The line at infinity in this chart is
+
+\[
+u=0 .
+\]
+
+Restricting \eqref{eq:U1} to this invariant line gives
+
+\[
+\dot u=0,\qquad
+\dot v=v .
+\]
+
+Hence the only singular point on the equator in \(U_1\) is
+
+\[
+P_1=(0,0).
+\]
+
+The Jacobian matrix at \(P_1\) is
+
+\[
+J_{U_1}(P_1)
+=
+\begin{pmatrix}
+1&0\\
+-k&1
+\end{pmatrix}.
+\]
+
+Both eigenvalues are equal to one. Consequently,
+
+\[
+\boxed{
+P_1\ \text{is a hyperbolic unstable node at infinity}.
+}
+\]
+
+\subsection{Local chart \(U_2\)}
+
+The second chart is defined by
+
+\[
+x=\frac{u}{v},\qquad y=\frac1v .
+\]
+
+After the rescaling
+
+\[
+d\tau=\frac{dt}{v^2},
+\]
+
+we obtain
+
+\begin{equation}
+\label{eq:U2}
+\begin{aligned}
+\dot u={}&
+-u^3+ku^3v+ku^2v+uv^2-uv^3+v^2+Iv^3,
+\\
+\dot v={}&
+ku^2v^2+v^3-v^4 .
+\end{aligned}
+\end{equation}
+
+The infinity line is
+
+\[
+v=0 .
+\]
+
+On this line,
+
+\[
+\dot u=-u^3,\qquad \dot v=0 .
+\]
+
+Thus the unique singular point in this chart is
+
+\[
+P_2=(0,0).
+\]
+
+The Jacobian matrix satisfies
+
+\[
+J_{U_2}(P_2)=
+\begin{pmatrix}
+0&0\\
+0&0
+\end{pmatrix}.
+\]
+
+Therefore \(P_2\) is a linearly zero singular point. Since the linear
+part gives no information about the local phase portrait, a
+desingularization by a blow-up technique is required.
+
+%=========================================================
+\subsection{Blow-up analysis of the degenerate point in $U_2$}
+\label{subsec:blowup-U2}
+%=========================================================
+
+In the local chart $U_2$, the compactified vector field is
+\begin{equation}
+\label{eq:U2-system}
+\begin{aligned}
+\dot u
+&=
+-u^3
++ku^3v
++ku^2v
++uv^2
+-uv^3
++v^2
++Iv^3,
+\\
+\dot v
+&=
+ku^2v^2+v^3-v^4.
+\end{aligned}
+\end{equation}
+The line at infinity is $v=0$, and the restriction of
+\eqref{eq:U2-system} to this line is
+\[
+\dot u=-u^3,
+\qquad
+\dot v=0.
+\]
+Hence the only singular point on the equator in this chart is
+\[
+P_2=(0,0).
+\]
+Moreover,
+\[
+D X_{U_2}(P_2)
+=
+\begin{pmatrix}
+0&0\\
+0&0
+\end{pmatrix},
+\]
+so that $P_2$ is completely degenerate and linearization gives no
+information about its local phase portrait.
+
+We therefore resolve this singularity by means of directional blow-ups.
+
+%---------------------------------------------------------
+\subsubsection{First directional blow-up}
+%---------------------------------------------------------
+
+Let
+\[
+P(u,v)
+=
+-u^3+ku^3v+ku^2v+uv^2-uv^3+v^2+Iv^3,
+\]
+and
+\[
+Q(u,v)
+=
+ku^2v^2+v^3-v^4.
+\]
+The lowest-order nonzero homogeneous terms are
+\[
+P_2(u,v)=v^2,
+\qquad
+Q_2(u,v)=0.
+\]
+Consequently, the characteristic polynomial is
+\[
+\mathcal F(u,v)
+=
+uQ_2(u,v)-vP_2(u,v)
+=
+-v^3.
+\]
+Thus the only characteristic direction is
+\[
+v=0.
+\]
+It is therefore natural to perform the directional blow-up
+\begin{equation}
+\label{eq:first-blowup}
+v=uz,
+\end{equation}
+where $z=v/u$ represents the slope with respect to the $u$-axis.
+
+Since
+\[
+\dot v=z\dot u+u\dot z,
+\]
+substitution of $v=uz$ into the first equation of
+\eqref{eq:U2-system} gives
+\begin{align*}
+\dot u
+={}&
+-u^3
++ku^4z
++ku^3z
++u^3z^2
+-u^4z^3
++u^2z^2
++Iu^3z^3
+\\
+={}&
+u^2
+\left(
+z^2-u+kuz+uz^2+Iuz^3
++ku^2z-u^2z^3
+\right).
+\end{align*}
+Similarly,
+\[
+Q(u,uz)
+=
+ku^4z^2+u^3z^3-u^4z^4.
+\]
+Therefore,
+\[
+u\dot z
+=
+Q(u,uz)-zP(u,uz),
+\]
+and hence
+\[
+\dot z
+=
+uz
+\left(
+u-z^2-kuz-Iuz^3
+\right).
+\]
+Thus, before desingularization, the blown-up system reads
+\[
+\begin{aligned}
+\dot u
+&=
+u^2
+\left(
+z^2-u+kuz+uz^2+Iuz^3
++ku^2z-u^2z^3
+\right),
+\\
+\dot z
+&=
+uz
+\left(
+u-z^2-kuz-Iuz^3
+\right).
+\end{aligned}
+\]
+Both equations contain the common factor $u$. Cancelling this factor,
+which corresponds to a time rescaling away from the exceptional
+divisor, yields the desingularized system
+\begin{equation}
+\label{eq:first-desingularized}
+\boxed{
+\begin{aligned}
+u'
+&=
+u
+\left(
+z^2-u+kuz+uz^2+Iuz^3
++ku^2z-u^2z^3
+\right),
+\\
+z'
+&=
+z
+\left(
+u-z^2-kuz-Iuz^3
+\right).
+\end{aligned}}
+\end{equation}
+Here the prime denotes differentiation with respect to the
+desingularized time.
+
+The exceptional divisor is
+\[
+u=0.
+\]
+Restricting \eqref{eq:first-desingularized} to $u=0$ gives
+\[
+u'=0,
+\qquad
+z'=-z^3.
+\]
+Hence the only singular point on the exceptional divisor is again
+\[
+(u,z)=(0,0).
+\]
+Moreover,
+\[
+D X_1(0,0)
+=
+\begin{pmatrix}
+0&0\\
+0&0
+\end{pmatrix}.
+\]
+Thus the first directional blow-up does not completely resolve the
+degeneracy.
+
+The lowest-order homogeneous terms of
+\eqref{eq:first-desingularized} are
+\[
+P^{(1)}_2(u,z)=-u^2,
+\qquad
+Q^{(1)}_2(u,z)=uz.
+\]
+Therefore the corresponding characteristic polynomial is
+\[
+\mathcal F_1(u,z)
+=
+uQ^{(1)}_2(u,z)-zP^{(1)}_2(u,z)
+=
+2u^2z.
+\]
+Hence the new characteristic directions are
+\[
+z=0
+\qquad\text{and}\qquad
+u=0.
+\]
+We consequently study these two directions in complementary blow-up
+charts.
+
+%---------------------------------------------------------
+\subsubsection{Second blow-up: the direction $z=0$}
+%---------------------------------------------------------
+
+To resolve the direction $z=0$, introduce
+\begin{equation}
+\label{eq:second-blowup-chart1}
+z=uw.
+\end{equation}
+Since
+\[
+\dot z=w\dot u+u\dot w,
+\]
+substitution into \eqref{eq:first-desingularized} gives
+\[
+u'
+=
+u^2
+\left[
+-1
++kuw
++uw^2
++ku^2w
++u^2w^2
++Iu^3w^3
+-u^4w^3
+\right],
+\]
+while
+\[
+w'
+=
+uw
+\left[
+2
+-2kuw
+-2uw^2
+-ku^2w
+-u^2w^2
+-2Iu^3w^3
++u^4w^3
+\right].
+\]
+After cancelling the common factor $u$, the desingularized system is
+\begin{equation}
+\label{eq:second-desing-chart1}
+\boxed{
+\begin{aligned}
+u'
+&=
+u
+\left[
+-1
++kuw
++uw^2
++ku^2w
++u^2w^2
++Iu^3w^3
+-u^4w^3
+\right],
+\\
+w'
+&=
+w
+\left[
+2
+-2kuw
+-2uw^2
+-ku^2w
+-u^2w^2
+-2Iu^3w^3
++u^4w^3
+\right].
+\end{aligned}}
+\end{equation}
+On the exceptional divisor $u=0$,
+\[
+u'=0,
+\qquad
+w'=2w.
+\]
+Thus the only singular point is $(0,0)$.
+
+The Jacobian matrix at this point is
+\[
+D X_2(0,0)
+=
+\begin{pmatrix}
+-1&0\\
+0&2
+\end{pmatrix}.
+\]
+Hence
+\[
+\lambda_1=-1,
+\qquad
+\lambda_2=2.
+\]
+Consequently,
+\[
+\boxed{
+(0,0)\text{ is a hyperbolic saddle in this blow-up chart}.
+}
+\]
+Thus the characteristic direction $z=0$ is completely resolved.
+
+%---------------------------------------------------------
+\subsubsection{Second blow-up: the complementary direction $u=0$}
+%---------------------------------------------------------
+
+The direction $u=0$ is not represented by the previous chart.
+We therefore introduce the complementary directional blow-up
+\begin{equation}
+\label{eq:second-blowup-chart2}
+u=zr.
+\end{equation}
+Since
+\[
+\dot u=r\dot z+z\dot r,
+\]
+substitution into \eqref{eq:first-desingularized} gives, after
+cancelling a common factor $z$,
+\begin{equation}
+\label{eq:second-desing-chart2}
+\boxed{
+\begin{aligned}
+z'
+&=
+z\left(
+r-z-kzr-Iz^3r
+\right),
+\\
+r'
+&=
+r\left(
+2Iz^3r
++kz^2r^2
++2kzr
+-z^4r^2
++z^2r
++2z
+-2r
+\right).
+\end{aligned}}
+\end{equation}
+The exceptional divisor is now $z=0$. Restriction to this divisor
+gives
+\[
+z'=0,
+\qquad
+r'=-2r^2.
+\]
+Thus the unique singularity on the exceptional divisor is again
+\[
+(z,r)=(0,0),
+\]
+which remains degenerate.
+
+The quadratic homogeneous part of
+\eqref{eq:second-desing-chart2} is
+\[
+P^{(2)}_2(z,r)=z(r-z),
+\]
+and
+\[
+Q^{(2)}_2(z,r)=2r(z-r).
+\]
+Hence the characteristic polynomial is
+\begin{align*}
+\mathcal F_2(z,r)
+&=
+zQ^{(2)}_2(z,r)-rP^{(2)}_2(z,r)
+\\
+&=
+2zr(z-r)-rz(r-z)
+\\
+&=
+3zr(z-r).
+\end{align*}
+Therefore the characteristic directions are
+\[
+z=0,
+\qquad
+r=0,
+\qquad
+r=z.
+\]
+
+%---------------------------------------------------------
+\subsubsection{Third blow-up along the direction $r=z$}
+%---------------------------------------------------------
+
+To resolve the nontrivial characteristic direction $r=z$, set
+\begin{equation}
+\label{eq:third-blowup}
+r=zs.
+\end{equation}
+Since
+\[
+\dot r=s\dot z+z\dot s,
+\]
+substitution of \eqref{eq:third-blowup} into
+\eqref{eq:second-desing-chart2} and cancellation of the common factor
+$z$ yield
+\begin{equation}
+\label{eq:third-desing}
+\boxed{
+\begin{aligned}
+z'
+&=
+z
+\left(
+s-1-ksz-Isz^3
+\right),
+\\
+s'
+&=
+s
+\left(
+3-3s
++3ksz
++sz^2
++3Isz^3
++ks^2z^3
+-s^2z^5
+\right).
+\end{aligned}}
+\end{equation}
+
+The exceptional divisor is $z=0$, and on it
+\[
+z'=0,
+\qquad
+s'=3s(1-s).
+\]
+Consequently, two singular points appear:
+\[
+R_0=(0,0),
+\qquad
+R_1=(0,1).
+\]
+
+At $R_0=(0,0)$,
+\[
+D X_3(R_0)
+=
+\begin{pmatrix}
+-1&0\\
+0&3
+\end{pmatrix},
+\]
+so that
+\[
+\lambda_1=-1,
+\qquad
+\lambda_2=3.
+\]
+Therefore,
+\[
+\boxed{R_0\text{ is a hyperbolic saddle}.}
+\]
+
+At $R_1=(0,1)$, the Jacobian has eigenvalues
+\[
+\boxed{0,\,-3}.
+\]
+Hence $R_1$ is semi-hyperbolic and its local behavior must be
+determined from the dynamics on its center manifold.
+
+%---------------------------------------------------------
+%=========================================================
+%---------------------------------------------------------
+\subsubsection{Complementary chart of the third blow-up}
+\label{subsubsec:third-complementary}
+%---------------------------------------------------------
+
+The preceding chart
+\[
+r=zs
+\]
+resolves the characteristic directions $r=0$ and $r=z$, but it does
+not represent the remaining direction $z=0$. To complete the third
+blow-up, we therefore introduce the complementary chart
+\begin{equation}
+\label{eq:third-complementary}
+z=rq.
+\end{equation}
+
+Recall that, before this third blow-up, the desingularized vector field
+is
+\begin{equation}
+\label{eq:second-desing-chart2}
+\begin{aligned}
+z'
+&=
+z\left(
+r-z-kzr-Iz^3r
+\right),
+\\
+r'
+&=
+r\left(
+2Iz^3r
++kz^2r^2
++2kzr
+-z^4r^2
++z^2r
++2z
+-2r
+\right).
+\end{aligned}
+\end{equation}
+
+Since
+\[
+z=rq,
+\]
+we have
+\[
+z'=q r'+r q'.
+\]
+Substituting $z=rq$ into \eqref{eq:second-desing-chart2} and cancelling
+the common factor $r$ gives
+\begin{equation}
+\label{eq:third-complementary-desing}
+\begin{aligned}
+q'
+&=
+q\Big(
+3-3q
+-3krq
+-r^2q^2
+-kr^3q^2
+-3Ir^3q^3
++r^5q^4
+\Big),
+\\
+r'
+&=
+r\Big(
+-2+2q
++2krq
++r^2q^2
++kr^3q^2
++2Ir^3q^3
+-r^5q^4
+\Big).
+\end{aligned}
+\end{equation}
+
+The exceptional divisor in this chart is
+\[
+r=0.
+\]
+Restricting \eqref{eq:third-complementary-desing} to $r=0$ yields
+\[
+q'=3q(1-q),
+\qquad
+r'=0.
+\]
+Hence the singular points on the exceptional divisor are
+\[
+Q_0=(0,0),
+\qquad
+Q_1=(1,0).
+\]
+
+At $Q_0$,
+\[
+D X(Q_0)
+=
+\begin{pmatrix}
+3&0\\
+0&-2
+\end{pmatrix},
+\]
+and therefore
+\[
+\lambda_1=3,
+\qquad
+\lambda_2=-2.
+\]
+Thus
+\[
+\boxed{Q_0\text{ is a hyperbolic saddle}.}
+\]
+
+The point $Q_1$ does not represent a new singular direction. Indeed,
+on the overlap of the two third blow-up charts
+\[
+r=zs,
+\qquad
+z=rq,
+\]
+we obtain
+\[
+sq=1.
+\]
+Therefore
+\[
+q=1
+\quad\Longleftrightarrow\quad
+s=1,
+\]
+so $Q_1=(1,0)$ corresponds precisely to the semi-hyperbolic point
+\[
+R_1=(0,1)
+\]
+already obtained in the chart $r=zs$.
+
+Consequently, the two third-blow-up charts together cover all three
+characteristic directions
+\[
+z=0,\qquad r=0,\qquad r=z.
+\]
+The direction $z=0$ gives the hyperbolic saddle $Q_0$, while the
+directions represented in the first chart give the hyperbolic saddle
+$R_0$ and the semi-hyperbolic point $R_1$. The latter is analyzed
+below by a center-manifold reduction.
+
+%=========================================================
+\subsubsection{Center-manifold reduction at $R_1=(0,1)$}
+\label{subsubsec:center-R1}
+%=========================================================
+
+We now analyze the remaining nonhyperbolic point
+\[
+R_1=(0,1)
+\]
+of \eqref{eq:third-desing}. Introduce
+\[
+s=1+h,
+\]
+so that $R_1$ is translated to $(z,h)=(0,0)$. System
+\eqref{eq:third-desing} becomes
+\begin{equation}
+\label{eq:R1-translated}
+\begin{aligned}
+z'
+&=
+z\Big[
+h-k(1+h)z-I(1+h)z^3
+\Big],
+\\
+h'
+&=
+(1+h)\Big[
+-3h
++3k(1+h)z
++(1+h)z^2
+\\
+&\hspace{30mm}
++3I(1+h)z^3
++k(1+h)^2z^3
+-(1+h)^2z^5
+\Big].
+\end{aligned}
+\end{equation}
+
+The Jacobian matrix at the origin is
+\[
+D X(0,0)
+=
+\begin{pmatrix}
+0&0\\
+3k&-3
+\end{pmatrix}.
+\]
+Its eigenvalues are
+\[
+\lambda_1=0,
+\qquad
+\lambda_2=-3.
+\]
+Thus $R_1$ is semi-hyperbolic.
+
+For the zero eigenvalue, an eigenvector $(a,b)^T$ satisfies
+\[
+3ka-3b=0,
+\]
+and hence
+\[
+b=ka.
+\]
+Therefore the center eigenspace is
+\[
+E^c=\{(z,h):h=kz\}.
+\]
+Consequently, a local center manifold may be represented as
+\[
+h=H(z),
+\]
+where
+\begin{equation}
+\label{eq:center-tangency}
+H(0)=0,
+\qquad
+H'(0)=k.
+\end{equation}
+Notice that $H'(0)$ is not zero in the present coordinates.
+
+We seek an expansion
+\begin{equation}
+\label{eq:center-expansion-assumption}
+H(z)
+=
+a_1z+a_2z^2+a_3z^3+O(z^4).
+\end{equation}
+The invariance equation is
+\begin{equation}
+\label{eq:center-invariance}
+H'(z)\,z'
+=
+h'
+\qquad\text{on }h=H(z).
+\end{equation}
+Substitution of \eqref{eq:center-expansion-assumption} into
+\eqref{eq:center-invariance} and comparison of like powers of $z$
+gives, at first order,
+\[
+3a_1-3k=0,
+\]
+and hence
+\[
+a_1=k.
+\]
+At second order,
+\[
+4a_1^2-7ka_1+3a_2-1=0.
+\]
+Using $a_1=k$, this becomes
+\[
+3a_2-3k^2-1=0,
+\]
+so
+\[
+a_2=k^2+\frac13.
+\]
+At third order,
+\[
+-3I
+-4a_1^2k
++9a_1a_2
+-2a_1
+-8ka_2
++3a_3-k
+=0.
+\]
+Substituting the preceding values of $a_1$ and $a_2$ yields
+\[
+3a_3
+-3I
+-3k^3
+-\frac{8k}{3}
+=0.
+\]
+Therefore,
+\[
+a_3
+=
+I+k^3+\frac{8k}{9}.
+\]
+
+Hence the center manifold through $R_1$ is
+\begin{equation}
+\label{eq:center-manifold-R1}
+\boxed{
+H(z)
+=
+kz
++
+\left(k^2+\frac13\right)z^2
++
+\left(
+I+k^3+\frac{8k}{9}
+\right)z^3
++
+O(z^4).
+}
+\end{equation}
+Equivalently, in the $(z,s)$ coordinates,
+\[
+s
+=
+1+kz
++
+\left(k^2+\frac13\right)z^2
++
+\left(
+I+k^3+\frac{8k}{9}
+\right)z^3
++
+O(z^4).
+\]
+
+Substituting \eqref{eq:center-manifold-R1} into the first equation of
+\eqref{eq:R1-translated} gives the reduced equation on the center
+manifold:
+\begin{equation}
+\label{eq:reduced-R1}
+\boxed{
+z'
+=
+\frac13z^3
++
+\frac{5k}{9}z^4
++
+O(z^5).
+}
+\end{equation}
+In particular, the first nonvanishing term is
+\[
+\frac13z^3.
+\]
+Therefore, for $|z|$ sufficiently small,
+\[
+z'>0
+\quad\text{if }z>0,
+\qquad
+z'<0
+\quad\text{if }z<0.
+\]
+Thus the flow on the center manifold is repelling from $R_1$ on both
+sides. On the other hand, the transverse eigenvalue is
+\[
+-3<0,
+\]
+and therefore the transverse direction is attracting.
+
+Consequently, $R_1$ has saddle-type local behavior for the
+desingularized vector field: the center manifold provides the
+unstable direction, while the transverse direction is stable.
+
+%=========================================================
+\subsubsection{Geometric interpretation of the repeated blow-ups}
+\label{subsubsec:blowup-geometry}
+%=========================================================
+
+The transformations leading to the chart containing $R_1$ are
+\[
+v=uz,
+\qquad
+u=zr,
+\qquad
+r=zs.
+\]
+Combining them gives the exact blow-down relations
+\begin{equation}
+\label{eq:combined-blowdown}
+\boxed{
+u=z^2s,
+\qquad
+v=z^3s.
+}
+\end{equation}
+These relations hold throughout the third blow-up chart.
+
+For trajectories approaching $R_1=(0,1)$ we have
+\[
+s\longrightarrow1.
+\]
+Hence, specifically near $R_1$,
+\[
+u\sim z^2,
+\qquad
+v\sim z^3.
+\]
+It follows that
+\[
+\frac{v^2}{u^3}
+=
+\frac{z^6s^2}{z^6s^3}
+=
+\frac1s
+\longrightarrow1,
+\]
+and consequently
+\begin{equation}
+\label{eq:cusp-balance}
+\boxed{
+v^2\sim u^3
+\qquad
+\text{along trajectories approaching }R_1.
+}
+\end{equation}
+
+This weighted balance is already suggested by the leading terms of
+the original $U_2$ equation,
+\[
+\dot u
+=
+v^2-u^3+\text{higher-order terms}.
+\]
+The monomials $v^2$ and $u^3$ have equal weighted degree if
+\[
+\operatorname{wt}(u)=2,
+\qquad
+\operatorname{wt}(v)=3.
+\]
+This motivates a quasi-homogeneous blow-up of weight $(2,3)$.
+
+
+\subsubsection{Alternative quasi-homogeneous $(2,3)$-blow-up}
+\label{subsubsec:weighted-blowup}
+%=========================================================
+
+The repeated ordinary blow-ups above already provide a complete local
+desingularization. Nevertheless, the asymptotic balance
+\[
+v^2\sim u^3
+\]
+shows that the singularity has a natural quasi-homogeneous structure.
+Following the standard quasi-homogeneous desingularization procedure
+\cite{DumortierLlibreArtes2006,BrunellaMiari1990,Pelletier1995},Doi: 10.1016/0022-0396(90)90120-E
+we assign the weights
+\[
+\operatorname{wt}(u)=2,
+\qquad
+\operatorname{wt}(v)=3.
+\]
+Indeed, the dominant monomials $u^3$ and $v^2$ then have the same
+weighted degree,
+\[
+3\,\operatorname{wt}(u)
+=
+2\,\operatorname{wt}(v)
+=
+6.
+\]
+Accordingly, in the positive-$u$ weighted chart we introduce
+\begin{equation}
+\label{eq:weighted-blowup}
+u=r^2,
+\qquad
+v=r^3w,
+\qquad r\geq0.
+\end{equation}
+Then
+\[
+u^3=r^6,
+\qquad
+v^2=r^6,
+\]
+so the two dominant monomials are balanced at the same order.
+
+Differentiating gives
+\[
+\dot u=2r\dot r,
+\qquad
+\dot v=3r^2w\dot r+r^3\dot w.
+\]
+Substitution into the original $U_2$ vector field yields
+\[
+\dot r
+=
+\frac{r^5}{2}
+\left[
+w^2-1
++krw
++r^2w^2
++kr^3w
++Ir^3w^3
+-r^5w^3
+\right]
+\]
+and
+\[
+\dot w
+=
+\frac{r^4w}{2}
+\left[
+3-3w^2
+-3krw
+-r^2w^2
+-kr^3w
+-3Ir^3w^3
++r^5w^3
+\right].
+\]
+After division by the common factor $r^4$, the desingularized system
+is
+\begin{equation}
+\label{eq:weighted-desing}
+\boxed{
+\begin{aligned}
+r'
+&=
+\frac{r}{2}
+\left[
+w^2-1
++krw
++r^2w^2
++kr^3w
++Ir^3w^3
+-r^5w^3
+\right],
+\\
+w'
+&=
+\frac{w}{2}
+\left[
+3-3w^2
+-3krw
+-r^2w^2
+-kr^3w
+-3Ir^3w^3
++r^5w^3
+\right].
+\end{aligned}}
+\end{equation}
+
+On the exceptional divisor $r=0$,
+\[
+r'=0,
+\qquad
+w'=\frac32w(1-w^2).
+\]
+Hence
+\[
+W_0=(0,0),
+\qquad
+W_+=(0,1),
+\qquad
+W_-=(0,-1)
+\]
+are the singular points in this chart.
+
+At $W_0$,
+\[
+D X_W(W_0)
+=
+\begin{pmatrix}
+-\frac12&0\\
+0&\frac32
+\end{pmatrix},
+\]
+and therefore $W_0$ is a hyperbolic saddle.
+
+At both $W_+$ and $W_-$ the eigenvalues are
+\[
+0,\qquad -3.
+\]
+Thus these two points are semi-hyperbolic. Their center-manifold
+reductions may be obtained explicitly. Writing
+\[
+w=\varepsilon+\eta,
+\qquad
+\varepsilon\in\{1,-1\},
+\]
+one finds
+\[
+\eta
+=
+-\frac{k}{2}r
++
+\varepsilon
+\left(
+\frac{k^2}{8}-\frac16
+\right)r^2
++
+\left(
+-\frac I2+\frac{k}{18}
+\right)r^3
++
+O(r^4),
+\]
+and the reduced radial equation is
+\begin{equation}
+\label{eq:weighted-reduced}
+\boxed{
+r'
+=
+\frac13r^3
++
+\varepsilon\frac{k}{18}r^4
++
+O(r^5).
+}
+\end{equation}
+Thus the leading center dynamics is again repelling from the
+exceptional divisor, whereas the transverse eigenvalue $-3$ is
+attracting.
+
+Moreover, since
+\[
+u=r^2,
+\qquad
+v=r^3w,
+\]
+we have
+\[
+\frac{v}{u^{3/2}}=w.
+\]
+Consequently,
+\[
+W_+:\quad v\sim u^{3/2},
+\qquad
+W_-:\quad v\sim -u^{3/2}.
+\]
+The weighted blow-up therefore separates directly the two real
+branches associated with the balance
+\[
+v^2\sim u^3.
+\]
+
+The chart \eqref{eq:weighted-blowup} covers only the sector $u\geq0$.
+For completeness, the negative-$u$ weighted chart is
+\[
+u=-r^2,
+\qquad
+v=r^3w,
+\qquad r\geq0.
+\]
+After the same desingularization, one obtains
+\begin{equation}
+\label{eq:weighted-negative-u}
+\begin{aligned}
+r'
+&=
+\frac r2
+\left[
+-1-w^2
+-krw
++r^2w^2
++kr^3w
+-Ir^3w^3
+-r^5w^3
+\right],
+\\
+w'
+&=
+\frac w2
+\left[
+3+3w^2
++3krw
+-r^2w^2
+-kr^3w
++3Ir^3w^3
++r^5w^3
+\right].
+\end{aligned}
+\end{equation}
+On $r=0$,
+\[
+r'=0,
+\qquad
+w'=\frac32w(1+w^2),
+\]
+so the only real singular point is
+\[
+W_0^-=(0,0).
+\]
+Its Jacobian is
+\[
+D X(W_0^-)
+=
+\begin{pmatrix}
+-\frac12&0\\
+0&\frac32
+\end{pmatrix},
+\]
+and hence $W_0^-$ is again a hyperbolic saddle.
+
+The remaining $v$-dominant weighted charts do not generate additional
+singular directions. Indeed, using
+\[
+u=\rho^2\xi,
+\qquad
+v=\pm\rho^3,
+\]
+the restriction of the corresponding desingularized vector field to
+$\rho=0$ gives
+\[
+\xi'=1-\xi^3.
+\]
+Thus the only real singular value is
+\[
+\xi=1,
+\]
+which corresponds, on the overlaps, precisely to $W_+$ or $W_-$.
+Hence no additional singular points arise from the missing weighted
+directions.
+
+%=========================================================
+\subsubsection{Conclusion of the blow-up analysis}
+\label{subsubsec:blowup-conclusion}
+%=========================================================
+
+The point $P_2=(0,0)$ in the compactified chart $U_2$ is completely
+degenerate at the linear level. Ordinary directional blow-ups resolve
+the characteristic directions into hyperbolic saddles together with
+a single semi-hyperbolic point $R_1$. The center-manifold reduction at
+$R_1$ gives
+\[
+z'
+=
+\frac13z^3
++
+O(z^4),
+\]
+so the center direction is repelling, while the nonzero transverse
+eigenvalue is negative. Thus $R_1$ has saddle-type local behavior in
+the desingularized vector field.
+
+The exact blow-down relation near this point is
+\[
+u=z^2s,
+\qquad
+v=z^3s,
+\]
+and, since $s\to1$ along trajectories tending to $R_1$,
+\[
+v^2\sim u^3.
+\]
+This explains naturally the weight assignment
+\[
+\operatorname{wt}(u)=2,
+\qquad
+\operatorname{wt}(v)=3.
+\]
+The corresponding quasi-homogeneous blow-up provides an alternative
+and more direct description of this weighted cusp-type scaling,
+separating the two real branches
+\[
+v\sim\pm u^{3/2}
+\]
+in the positive-$u$ sector.
+
+Therefore the degeneracy of $P_2$ is associated with a genuine
+higher-order directional structure at infinity. Both the repeated
+ordinary blow-up and the $(2,3)$-weighted blow-up reveal the same
+underlying scaling, while the ordinary blow-up atlas together with
+the center-manifold reduction provides a complete local
+desingularization of the singular point.
+
+
+
+%\section*{Acknowledgments}
+%[Funding, collaborations]
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
+%\printbibliography
+
+
+
+
+\end{document}
