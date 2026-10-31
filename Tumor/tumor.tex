@@ -83,150 +83,340 @@ abbbaaaaaaaa
 \section{Model}
 \label{sec:model}
 
-Sun et al.~\cite{sun2024spatiotemporal} investigated a cancer growth model
-incorporating a strong Allee effect, tumor--immune interactions,
-and self- and cross-diffusion, with particular emphasis on its
-discrete space--time dynamics. We consider the spatially
-homogeneous continuous-time kinetics underlying their model.
-Writing
-\[
-r=r_1,\qquad b=b_1,\qquad k=c_2,\qquad
-c=c_1,\qquad d=d_1
-\]
-in the notation of~\cite{sun2024spatiotemporal}, these kinetics take the form
+% Required packages:
+% \usepackage{amsmath,amssymb}
+% \usepackage{hyperref}
+
+\section{Introduction and model formulation}
+\label{sec:introduction}
+
+Understanding the interaction between electrical excitation and
+recovery is a central problem in mathematical cardiac
+electrophysiology. Reduced models describe this interaction using
+a small number of variables, making it possible to investigate
+the mechanisms governing resting states, excitation thresholds,
+repolarization, and sustained oscillations. Their relatively
+simple structure also provides a setting in which qualitative
+properties can be established analytically.
+
+Rogers and McCulloch~\cite{RogersMcCulloch1994} introduced a
+modification of FitzHugh--Nagumo-type kinetics in a computational
+study of cardiac action-potential propagation. Their formulation
+couples a voltage-dependent cubic excitation term to a recovery
+variable through a bilinear interaction. Although originally
+studied in a spatial propagation framework, its reaction terms
+also define a two-dimensional ordinary differential equation
+describing spatially homogeneous kinetics.
+
+The present work concerns this autonomous planar system.
+The purpose is to investigate its qualitative dynamics as an
+established cardiac excitation model, rather than to introduce
+additional phenomenological interactions.
+
+\subsection{The autonomous Rogers--McCulloch system}
+\label{subsec:model}
+
+Let $V_m$ denote the transmembrane potential, and introduce the
+normalized voltage
 \begin{equation}
-\label{eq:tumor-original}
+\label{eq:normalized-voltage}
+u=\frac{V_m-V_r}{V_p-V_r},
+\end{equation}
+where $V_r$ is a reference resting potential and $V_p>V_r$ is
+a reference excited potential. Let $v$ be a dimensionless
+recovery variable representing the aggregate processes
+responsible for repolarization and recovery of excitability.
+
+After absorbing the constant voltage and capacitance factors
+into the coefficients of the voltage equation, the
+spatially homogeneous Rogers--McCulloch kinetics can be written as
+\begin{equation}
+\label{eq:RM-general}
 \begin{aligned}
-\frac{dT}{dt}
-&=rT(1-bT)(T-m)-kTI,\\
-\frac{dI}{dt}
-&=\frac{\rho TI}{\alpha+T}-cTI-dI.
+\frac{du}{dt}
+&=c_1u(u-a)(1-u)-c_2uv+I(t),\\
+\frac{dv}{dt}
+&=b(u-dv).
 \end{aligned}
 \end{equation}
-Here $T$ and $I$ denote the tumor and immune cell populations,
-respectively, and $t$ denotes physical time. Throughout,
+The parameter assumptions are
 \begin{equation}
-\label{eq:tumor-parameters}
-r,b,k,\rho,\alpha,c,d>0,
-\qquad 0<m<\frac{1}{b}.
+\label{eq:parameters}
+0<a<1,
+\qquad c_1,c_2,b,d>0.
 \end{equation}
+Here $t$ denotes time in the chosen physical unit. No
+state-dependent change of time is required to obtain
+the polynomial vector field.
 
-The coefficient $r$ sets the scale of tumor growth,
-$b^{-1}$ is the tumor carrying capacity, and $m$ is the
-strong Allee threshold. The parameter $k$ measures
-immune-mediated tumor killing. In the immune equation,
-$\rho$ is the maximal per-capita stimulation rate and
-$\alpha$ is the tumor population at half-maximal stimulation.
-The coefficients $c$ and $d$ describe tumor-induced immune
-inactivation and natural immune loss, respectively.
-No external immune-cell influx is included.
-
-The biological meaning of the Allee assumption follows from
-the tumor per-capita growth function
+To study autonomous phase portraits and limit cycles,
+we take a constant applied input,
 \[
-g(T)=r(1-bT)(T-m).
+I(t)\equiv I_0,\qquad I_0\geq 0.
 \]
-In the absence of immune cells, this function is negative for
-$0<T<m$, positive for $m<T<b^{-1}$, and negative for
-$T>b^{-1}$. Thus, the model assumes that sufficiently small
-tumor populations cannot sustain positive net growth.
-This is a phenomenological assumption about the tumor
-population under consideration, rather than a universal
-property of cancer growth. Moreover, $m$ is the threshold
-for the immune-free subsystem; in the coupled system,
-tumor decline is determined by $g(T)-kI$.
-
-The immune per-capita growth function is
-\[
-h(T)=\frac{\rho T}{\alpha+T}-cT-d.
-\]
-Its stimulation component increases with tumor abundance
-and saturates, whereas the inactivation component grows
-linearly. Consequently, increased tumor abundance need not
-produce increased net immune growth. The variable $I$
-represents the immune population described by these
-assumptions, rather than the entire immune system:
-when $T=0$, it satisfies $dI/dt=-dI$.
-
-To obtain a polynomial vector field, introduce the time
-variable $\tau$ by
+Thus, the system under consideration is
 \begin{equation}
-\label{eq:tumor-time}
-\frac{dt}{d\tau}=\alpha+T.
-\end{equation}
-The chain rule transforms~\eqref{eq:tumor-original} into
-\begin{equation}
-\label{eq:tumor-polynomial}
+\label{eq:RM-autonomous}
 \boxed{
 \begin{aligned}
-T'
-&=T(\alpha+T)
-  \left[r(1-bT)(T-m)-kI\right],\\
-I'
-&=I\left[-cT^2+(\rho-c\alpha-d)T-d\alpha\right],
+\dot u
+&=c_1u(u-a)(1-u)-c_2uv+I_0,\\
+\dot v
+&=b(u-dv).
 \end{aligned}}
 \end{equation}
-where prime denotes differentiation with respect to $\tau$.
-System~\eqref{eq:tumor-polynomial} is an autonomous planar
-polynomial system of degree four. This transformation is
-exact and involves no approximation of the saturating
-response.
+A dot denotes differentiation with respect to $t$.
+System~\eqref{eq:RM-autonomous} is an autonomous planar
+polynomial system of degree three. The case $I_0=0$
+describes unforced kinetics, whereas $I_0>0$ represents
+a sustained depolarizing input.
 
-The biologically relevant phase space is
-\[
-\mathcal Q=\{(T,I)\in\mathbb R^2:T\geq0,\ I\geq0\}.
-\]
-Both coordinate axes are invariant, and uniqueness of
-solutions implies that $\mathcal Q$ is positively invariant.
-Since $\alpha+T>0$ on $\mathcal Q$, the original and
-polynomial systems are orbitally equivalent there, with
-the same time orientation. In particular, their equilibria,
-local stability types, periodic orbits, separatrices, and
-basins of attraction coincide.
+The coefficients in~\eqref{eq:RM-autonomous} refer to this
+normalized formulation. Numerical parameter values taken
+from a dimensional formulation must therefore be converted
+using the same voltage, current, capacitance, and time
+conventions.
 
-The correspondence also preserves the forward asymptotic
-interpretation of trajectories. Indeed, the tumor equation
-gives
-\[
-0\leq T\leq M,\qquad
-M=\max\{T(0),b^{-1}\},
-\]
-because the tumor component cannot increase above its
-carrying capacity. Hence, along each forward trajectory,
-\[
-\alpha\leq\frac{dt}{d\tau}\leq\alpha+M.
-\]
-The immune component has at most exponential growth on
-finite time intervals, so both formulations are forward
-complete, and $t\to\infty$ if and only if $\tau\to\infty$.
+\subsection{Interpretation of the variables and parameters}
+\label{subsec:interpretation}
 
-The rescaled time $\tau$ is an analytical variable.
-Physical time is recovered through
+The parameter $a$ specifies the intermediate zero of the
+cubic excitation term. In voltage coordinates it corresponds
+to the reference level
+\[
+V_{\mathrm{th}}=V_r+a(V_p-V_r).
+\]
+It is a parameter controlling excitability, rather than a
+universal firing threshold independent of the recovery
+state and applied input.
+
+The coefficient $c_1$ determines the strength of the intrinsic
+voltage kinetics. In the absence of recovery feedback and
+applied input, the cubic term is negative for $0<u<a$,
+positive for $a<u<1$, and negative for $u>1$. This sign
+structure describes a competition between relaxation
+toward rest and regenerative excitation.
+
+The coefficient $c_2$ determines the strength of the
+voltage--recovery interaction. For $u,v>0$, the term
+$-c_2uv$ opposes depolarization. Its dependence on both
+variables distinguishes this formulation from the usual
+additive recovery term in the standard FitzHugh--Nagumo
+equations.
+
+The recovery equation can be expressed as
 \begin{equation}
-\label{eq:tumor-time-recovery}
-t(\tau)-t(0)
-=\int_0^\tau \bigl[\alpha+T(s)\bigr]\,ds.
+\label{eq:recovery-relaxation}
+\dot v=bd\left(\frac{u}{d}-v\right).
 \end{equation}
-Therefore, quantitative statements about growth rates,
-transient durations, or oscillation periods must be
-expressed in the original time variable.
+Consequently, for a fixed voltage, the recovery variable
+relaxes toward $u/d$ with relaxation time $(bd)^{-1}$.
+The parameter $d$ determines the recovery nullcline,
+whereas $b$ controls the recovery rate for a fixed value
+of $d$. A slow--fast interpretation requires an explicit
+comparison of this rate with the voltage kinetics; it
+does not follow from positivity of the parameters alone.
 
-We study~\eqref{eq:tumor-polynomial} as a polynomial
-representation of the established tumor--immune kinetics.
-Its higher-degree terms arise from the common time
-rescaling and do not represent additional biological
-interactions. This formulation permits the use of
-polynomial dynamical-systems methods while retaining the
-biological interpretation of trajectories in $\mathcal Q$.
-The equivalence asserted here is restricted to this domain;
-an extension of the polynomial vector field outside
-$\mathcal Q$ requires separate mathematical interpretation.
+Finally, $I_0$ is the applied current expressed in normalized
+voltage-rate units. With dimensionless $u$ and $v$, the
+parameters $c_1$, $c_2$, and $b$, together with $I_0$,
+have units of inverse time, while $a$ and $d$ are
+dimensionless.
 
+The variable $v$ is a phenomenological recovery variable.
+It should not be identified with a specific ionic
+concentration or individual channel-gating probability
+without additional justification. Similarly, the model
+describes electrical excitation and recovery, rather
+than the progression of a particular cardiac disease.
 
+\subsection{Phase space and elementary geometric properties}
+\label{subsec:phase-space}
 
+For nonnegative initial conditions, a natural domain is
+\[
+\mathcal Q=\{(u,v)\in\mathbb R^2:u\geq0,\ v\geq0\}.
+\]
+Since
+\[
+\left.\dot u\right|_{u=0}=I_0\geq0,
+\qquad
+\left.\dot v\right|_{v=0}=bu\geq0,
+\]
+the quadrant $\mathcal Q$ is positively invariant.
+When $I_0=0$, the boundary $u=0$ is invariant;
+when $I_0>0$, the vector field points into $\mathcal Q$
+along that boundary.
 
+The normalization of voltage does not imply that
+$0\leq u\leq1$ is invariant under every applied input.
+In particular, at $u=1$,
+\[
+\dot u=I_0-c_2v,
+\]
+which can be positive. Physiological interpretation
+must therefore account for the voltage range associated
+with a chosen parameter set and stimulation protocol.
 
+Forward trajectories in $\mathcal Q$ are bounded.
+Indeed, because
+\[
+c_1u(u-a)(1-u)+I_0\longrightarrow-\infty
+\quad\text{as }u\longrightarrow+\infty,
+\]
+one can choose $U>1$ such that this expression is negative
+for every $u\geq U$. Since $-c_2uv\leq0$ in $\mathcal Q$,
+\[
+u(t)\leq M:=\max\{u(0),U\}.
+\]
+The recovery equation then gives
+\[
+v(t)\leq \max\left\{v(0),\frac{M}{d}\right\}.
+\]
+These bounds also ensure forward completeness for
+nonnegative initial conditions.
 
+The equilibria satisfy
+\begin{equation}
+\label{eq:equilibrium-equation}
+v_*=\frac{u_*}{d},
+\qquad
+c_1u_*(u_*-a)(1-u_*)
+-\frac{c_2}{d}u_*^2+I_0=0.
+\end{equation}
+Thus, there are at most three distinct finite equilibria.
+Their number, admissibility, and stability depend on the
+parameters.
+
+A global analysis on $\mathcal Q$ concerns the dynamics
+of nonnegative states. A classification on the entire
+Poincare compactification is a broader mathematical
+problem and also includes regions without an immediate
+physiological interpretation. These two meanings of
+``global phase portrait'' should be distinguished.
+
+\subsection{Related work and research questions}
+\label{subsec:related-work}
+
+The original study of Rogers and McCulloch
+\cite{RogersMcCulloch1994} emphasized numerical cardiac
+impulse propagation and the influence of tissue geometry
+and structure. More recently, L\'opez-Zazueta,
+Soto-Bajo, and Fraguela Collar
+\cite{LopezZazueta2024} investigated numerically the
+response of an isolated cell under periodic pulse
+stimulation using the Rogers--McCulloch model.
+
+At the analytical level, Hieber et al.~\cite{Hieber2020}
+established the existence and uniqueness of strong
+time-periodic solutions near stable equilibria for
+periodically forced bidomain equations, including
+Rogers--McCulloch ionic transport.
+
+These studies motivate, but do not by themselves resolve,
+the global classification problem for
+\eqref{eq:RM-autonomous}. A periodic response to a
+time-dependent stimulus is a different mathematical
+object from an isolated periodic orbit of an autonomous
+planar vector field. Likewise, a local existence theorem
+near a stable equilibrium does not determine the total
+number of autonomous limit cycles or the global
+configuration of separatrices.
+
+The main questions for the autonomous system are therefore
+the following:
+\begin{enumerate}
+\item
+How does parameter space divide according to the number
+and stability of equilibria, including nonhyperbolic
+configurations?
+
+\item
+For which parameter regimes do limit cycles exist or
+fail to exist? When they exist, what can be proved about
+their number, multiplicity, and stability?
+
+\item
+Which local and global bifurcations organize transitions
+between the admissible phase portraits, and which
+candidate bifurcations are excluded by the parameter
+restrictions?
+
+\item
+How do separatrices and basin boundaries organize
+resting, excited, and oscillatory behavior in
+$\mathcal Q$?
+
+\item
+If the analysis is extended to the whole plane, which
+singularities at infinity occur, and how do their
+separatrices connect with the finite dynamics?
+\end{enumerate}
+
+These questions specify a research programme rather than
+a claim that each problem is absent from the existing
+literature. Establishing novelty requires comparison
+with previous analyses of the Rogers--McCulloch equations
+and with results for broader polynomial or generalized
+Li\'enard families that may contain equivalent systems.
+
+In particular, the bilinear recovery coupling prevents
+a direct identification with the usual additive-recovery
+FitzHugh--Nagumo formulation. However, a different
+appearance of the equations is not sufficient evidence
+of mathematical novelty: coordinate transformations,
+time rescalings, and existing general theorems must also
+be examined.
+
+A substantial contribution would consist of rigorous
+results beyond numerical examples or a routine local
+stability calculation, such as a sharp limit-cycle
+bound, a complete bifurcation classification on a
+specified parameter domain, or a global description
+of separatrix configurations and attraction basins.
+Any claim of completeness must specify the phase space,
+parameter domain, and treatment of degenerate cases.
+
+Finally, autonomous oscillations in this reduced model
+describe repetitive electrical activity at the level
+of homogeneous kinetics. Their existence alone does
+not establish a mechanism for tissue-level reentry or
+a diagnosis of cardiac arrhythmia, which require
+additional spatial and physiological information.
+
+\begin{thebibliography}{99}
+
+\bibitem{RogersMcCulloch1994}
+J.~M. Rogers and A.~D. McCulloch,
+A collocation--Galerkin finite element model of cardiac
+action potential propagation,
+\emph{IEEE Transactions on Biomedical Engineering}
+\textbf{41}(8) (1994), 743--757.
+\href{https://doi.org/10.1109/10.310090}
+{doi:10.1109/10.310090}.
+
+\bibitem{LopezZazueta2024}
+A. L\'opez-Zazueta, M. Soto-Bajo, and A. Fraguela Collar,
+A numerical study of a single isolated human ventricular
+cell response to a periodic pulse stimulus current using
+the Rogers--McCulloch model,
+\emph{Communications in Nonlinear Science and
+Numerical Simulation}
+\textbf{132} (2024), 107912.
+\href{https://doi.org/10.1016/j.cnsns.2024.107912}
+{doi:10.1016/j.cnsns.2024.107912}.
+
+\bibitem{Hieber2020}
+M. Hieber, N. Kajiwara, K. Kress, and P. Tolksdorf,
+The periodic version of the Da Prato--Grisvard theorem
+and applications to the bidomain equations with
+FitzHugh--Nagumo transport,
+\emph{Annali di Matematica Pura ed Applicata}
+\textbf{199} (2020), 2435--2457.
+\href{https://doi.org/10.1007/s10231-020-00975-6}
+{doi:10.1007/s10231-020-00975-6}.
+
+\end{thebibliography}
 
 
 

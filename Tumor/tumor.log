@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.8.3)  30 OCT 2026 20:31
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.11.22)  31 OCT 2026 14:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -473,17 +473,17 @@ s; reported on input line 75.
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 
 ) [1]
-(./tumor.bbl) [2] [3] (./tumor.aux)
+[2] [3] (./tumor.bbl) [4] (./tumor.aux)
 Package rerunfilecheck Info: File `tumor.out' has not changed.
-(rerunfilecheck)             Checksum: 8CB63FD344300AEF899C947AB979D03A;145.
+(rerunfilecheck)             Checksum: E7B85939412BCE4CD4BBF0F43C7806A1;903.
  ) 
 Here is how much of TeX's memory you used:
- 12694 strings out of 476642
- 190073 string characters out of 5806642
+ 12711 strings out of 476642
+ 190348 string characters out of 5806640
  1856382 words of memory out of 5000000
- 32670 multiletter control sequences out of 15000+600000
- 542747 words of font info for 72 fonts, out of 8000000 for 9000
+ 32685 multiletter control sequences out of 15000+600000
+ 548731 words of font info for 74 fonts, out of 8000000 for 9000
  1509 hyphenation exceptions out of 8191
- 72i,9n,76p,594b,1915s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,10n,76p,594b,2033s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on tumor.pdf (3 pages).
+Output written on tumor.pdf (4 pages).
