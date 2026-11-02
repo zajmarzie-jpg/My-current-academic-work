@@ -1,0 +1,360 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{geometry}
+\usepackage{microtype}
+\usepackage{booktabs,tabularx,array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\geometry{margin=1in}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Hopf}{\mathrm{H}}
+\title{Research Prospects for Global Bifurcations and Limit Cycles\\
+       in Genuine Planar Polynomial Models}
+\author{}
+\date{November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We compare three planar polynomial systems motivated by pipe-flow turbulence and cardiac electrophysiology as possible subjects for rigorous studies of limit cycles, global bifurcations, and Poincar\'e-disc phase portraits. Each model has a documented applied origin. We distinguish established literature from preliminary algebraic calculations and unresolved research questions. In particular, explicit parameter selections demonstrate transversal crossings of simple purely imaginary eigenvalues in the homogeneous Barkley--Song pipe-flow model, the Rogers--McCulloch cardiac model, and a recent modified FitzHugh--Nagumo cardiac model. These local observations motivate, but do not establish, the existence of new global results. A bibliography with verified source publications and DOI links is included.
+\end{abstract}
+
+\section{Selection criteria and existing literature}
+
+A useful project in the qualitative theory of planar polynomial differential equations should satisfy the following requirements:
+\begin{enumerate}
+\item \textbf{Authentic applied origin.} The differential equations should arise from a published physical, biological, chemical, or engineering model, rather than being designed merely to produce a prescribed bifurcation.
+\item \textbf{Nontrivial global dynamics.} The equations should allow mathematically plausible mechanisms for limit cycles, multiple finite equilibria, homoclinic connections, or degenerate bifurcations.
+\item \textbf{A demonstrable research gap.} The proposed theorems should not merely recover results already available for an equivalent polynomial family.
+\item \textbf{Analytical tractability.} The degree, invariant regions, nullcline geometry, and algebraic dependence on parameters should be suitable for rigorous global analysis.
+\end{enumerate}
+
+Several familiar applications are already covered by substantial global results. In 2026, de Abreu and Llibre obtained a classification of global phase portraits for the classical Brusselator \cite{AbreuLlibre2026}. Chen, Li, and Llibre classified the Poincar\'e-disc phase portraits and bifurcation diagram of a cubic Gray--Scott chemical model \cite{ChenLiLlibre2021}. Arakaki, Mello, and Ribeiro investigated stability and generic and degenerate Hopf bifurcations of the Lengyel--Epstein systems, including parameter regimes with two limit cycles \cite{ArakakiMelloRibeiro2025}. A recent complete global investigation of a classical FitzHugh--Nagumo family obtains a sharp bound of three limit cycles and addresses separatrix connections at infinity \cite{ChenLiXiao2026}.
+
+Consequently, the mere presence of a Hopf bifurcation in another cubic model would not constitute substantial novelty. A stronger paper should establish new global theorems and explain why established normal-form or Li\'enard classifications do not already imply them.
+
+\paragraph{Source accuracy.}
+The pipe-flow kinetics analyzed in Section~\ref{sec:barkley} are those of the \emph{later Barkley--Song et al. model} \cite{BarkleyEtAl2015}, not the different continuous equations published in Barkley's 2011 paper \cite{Barkley2011}. Likewise, the modern cardiac model in Section~\ref{sec:modified} is reproduced with the recovery equation given in the 2023 publication \cite{RheaumeEtAl2023}. These distinctions matter when formulating a defensible research proposal.
+
+\section{Homogeneous Barkley--Song polynomial model for pipe-flow turbulence}
+\label{sec:barkley}
+
+\subsection{Physical origin and governing equations}
+
+The transition from laminar to turbulent pipe flow has been investigated by Barkley and collaborators using a reduced model coupling turbulence intensity to local centerline velocity. The original program was initiated in \cite{Barkley2011} and developed into the model used to describe the rise of fully turbulent flow in \cite{BarkleyEtAl2015}; see also \cite{Barkley2016}.
+
+The spatially homogeneous reaction dynamics associated with the later model are
+\begin{equation}
+\boxed{\begin{aligned}
+\dot q &=q\bigl[r+u-2-(r+0.1)(q-1)^2\bigr],\\
+\dot u &=\varepsilon\bigl[2-u+2q(1-u)\bigr],
+\end{aligned}}
+\label{eq:barkley}
+\end{equation}
+where $q\ge0$ represents turbulence intensity, $u$ is the centerline-velocity variable, $r>0$ is a Reynolds-number-related model parameter, and $\varepsilon>0$ is a timescale parameter. Equations~\eqref{eq:barkley} arise by suppressing the spatial-derivative terms in the published reaction--diffusion--advection model; they are not a new artificial modification \cite{BarkleyEtAl2015,KuehnSedlmeier2025}.
+
+The system is cubic and admits the laminar equilibrium
+\[
+E_0=(0,2).
+\]
+Additional finite equilibria are determined by the intersections of
+\[
+q=0\quad\text{or}\quad
+u=2-r+(r+0.1)(q-1)^2,
+\qquad
+u=\frac{2+2q}{1+2q},
+\]
+where $\nu$ denotes the value of $u$ along the respective nullcline. Depending on parameters, the nonzero equilibria can organize bistability and excitability.
+
+\subsection{An explicit local bifurcation calculation}
+
+The polynomial system~\eqref{eq:barkley} has a parameter choice
+\begin{equation}
+q_* = \frac{9}{10},\quad
+u_* = \frac{19}{14},\quad
+r_* = \frac{4507}{6930},\quad
+\varepsilon_* = \frac{26}{539},
+\label{eq:barkley-values}
+\end{equation}
+for which direct substitution gives $\dot q=\dot u=0$ and
+\begin{equation}
+J(q_*,\nu_*)=
+\begin{pmatrix}
+ 52/385 & 9/10\\
+ -130/3773 & -52/385
+\end{pmatrix}.
+\label{eq:barkley-J}
+\end{equation}
+Consequently,
+\[
+\operatorname{tr}J=0,\qquad
+\det J=\frac{13247}{1037575}>0.
+\]
+As the equilibrium position is independent of $\varepsilon$ for fixed $r$, varying $\varepsilon$ gives
+\begin{equation}
+\frac{\partial}{\partial\varepsilon}
+\operatorname{tr}J(q_*,\nu_*)
+=-(1+2q_*)=-\frac{14}{5}\ne0.
+\end{equation}
+Thus the linearization has a simple transversal imaginary-eigenvalue crossing. A separate preliminary normal-form computation gives a positive first-Lyapunov-coefficient sign in the standard Hopf convention, indicating a \emph{subcritical} Hopf point. This last assertion requires independent exact symbolic verification before it is cited as a theorem.
+
+\subsection{Questions suitable for a global study}
+
+The following issues could form the core of a research program:
+\begin{enumerate}
+\item Determine all finite equilibria and classify their saddle-node and stability transitions in the physically admissible parameter region.
+\item Derive exact Hopf conditions and classify their criticality, including any degenerate Hopf loci.
+\item Investigate the existence, number, and stability of periodic orbits and establish rigorous bounds or uniqueness criteria.
+\item Determine whether homoclinic and heteroclinic connections occur and identify their parameter dependence.
+\item Classify singular points at infinity and global separatrix configurations using Poincar\'e compactification.
+\item Relate any unstable cycles or separatrices to thresholds separating laminar and turbulent states, without identifying purely homogeneous oscillations with spatial turbulence itself.
+\end{enumerate}
+
+\paragraph{Status of the research gap.}
+The established literature includes spatial traveling-wave existence and stability results \cite{KuehnSedlmeier2025} and periodic behavior in finite-domain versions of the pipe model \cite{Short2019}. These do not, by themselves, amount to a complete classification of limit cycles for the autonomous homogeneous planar system~\eqref{eq:barkley}. Nevertheless, absence of a complete study has \emph{not} been proven by an exhaustive bibliographic audit, and the spatial literature must be examined carefully before making a novelty claim.
+
+\section{Rogers--McCulloch polynomial cardiac model}
+\label{sec:rogers}
+
+\subsection{Applied origin}
+
+Rogers and McCulloch introduced a modified FitzHugh--Nagumo-type excitation--recovery description in computational studies of cardiac impulse propagation \cite{RogersMcCulloch1994}. A commonly used, unforced, appropriately scaled polynomial form is
+\begin{equation}
+\boxed{\begin{aligned}
+\dot v &=v(v-a)(1-v)-vw,\\
+\dot w &=\varepsilon(\beta v-\gamma w),
+\end{aligned}}
+\label{eq:rm}
+\end{equation}
+where $v$ describes excitation, $w$ represents recovery, and the parameters are positive in the standard excitable setting. The coupling term $vw$ is a meaningful difference from the simplest FitzHugh--Nagumo model with additive recovery feedback. A model implementation associated with the original study is also recorded in the Physiome Model Repository \cite{PhysiomeRM}.
+
+\subsection{An explicit local bifurcation calculation}
+
+Consider
+\[
+a=\frac15,\quad
+\beta=\frac3{10},\quad
+\gamma=1,\quad
+\varepsilon=\frac1{10}.
+\]
+The equilibria are
+\[
+E_0=(0,0),\qquad
+E_1=\left(\frac25,\frac3{25}\right),\qquad
+E_2=\left(\frac12,\frac3{20}\right).
+\]
+At $E_2$ the Jacobian is
+\[
+J(E_2)=\begin{pmatrix}
+ 1/10 & -1/2\\
+ 3/100 & -1/10
+\end{pmatrix},
+\]
+so
+\[
+\operatorname{tr}J(E_2)=0,\qquad
+\det J(E_2)=\frac1{200}>0.
+\]
+For fixed $a,\beta,\gamma$, the nonzero equilibrium location does not depend on $\varepsilon$ and the trace derivative is
+\[
+\frac{\partial}{\partial\varepsilon}\operatorname{tr}J(E_2)=-\gamma=-1\ne0.
+\]
+The first-Lyapunov-coefficient sign is positive in a preliminary independent calculation, suggesting a subcritical Hopf bifurcation. The precise coefficient and nondegeneracy should be established rigorously before inclusion as a main result.
+
+\subsection{Possible novelty and limitations}
+
+Potential contributions include explicit cycle-count bounds, rigorous delineation of excitable and oscillatory regimes, unstable-cycle basin boundaries, homoclinic bifurcations, and Poincar\'e-disc global portraits. The biological region and the full algebraic plane must be considered separately.
+
+The cardiac literature is extensive. In particular, L\'opez-Zazueta, Soto-Bajo, and Fraguela Collar studied periodically stimulated Rogers--McCulloch dynamics, including stimulus-dependent bifurcations \cite{LopezZazueta2024}. Such nonautonomous results differ from a global classification of the \emph{unforced} planar kinetics, but they limit the scope of claims that the system has not previously been studied. Moreover, the recent sharp global classification for a broader classical FitzHugh--Nagumo family \cite{ChenLiXiao2026} raises an important equivalence question that must be settled before beginning a full paper.
+
+\section{Recent modified FitzHugh--Nagumo cardiac model of Rheaume and collaborators}
+\label{sec:modified}
+
+\subsection{Model and provenance}
+
+Rheaume, Velasco-Perez, Fenton, and their coauthors proposed a modified cardiac excitation model designed to reproduce features of a detailed ventricular model, including cardiac action-potential restitution and more complex responses \cite{RheaumeEtAl2023}. The published equations feature a cubic voltage activation term, multiplicative recovery feedback, and a quadratic recovery nullcline. With spatial diffusion and external stimulation suppressed, their autonomous planar polynomial kinetics can be written
+\begin{equation}
+\boxed{\begin{aligned}
+\dot x &=\mu x(1-x)(x-\alpha)-xy,\\
+\dot y &=\varepsilon\bigl[(\beta-x)(x-\gamma)
+                          -\delta y-\theta\bigr].
+\end{aligned}}
+\label{eq:rheaume}
+\end{equation}
+The notation $x,y$ is used in place of the original activation/recovery variables. The system~\eqref{eq:rheaume} is genuinely cubic and is directly associated with the published cardiac modeling work, rather than an arbitrary cubic oscillator. Its recovery nullcline is quadratic, unlike the linear recovery nullcline of the standard FitzHugh--Nagumo model.
+
+\subsection{An illustrative Hopf calculation}
+
+Choose the mathematical parameter values
+\[
+\alpha=\frac15,\quad \mu=1,\quad
+\beta=2,\quad\gamma=0,\quad
+\delta=1,\quad\theta=\frac35,\quad
+\varepsilon=\frac1{10}.
+\]
+At
+\[
+(x_*,y_*)=\left(\frac12,\frac3{20}\right)
+\]
+the vector field vanishes. Its Jacobian is
+\begin{equation}
+J(x_*,y_*)=\begin{pmatrix}
+ 1/10 & -1/2\\
+ 1/10 & -1/10
+\end{pmatrix},
+\qquad
+\operatorname{tr}J=0,\quad
+\det J=\frac1{25}>0.
+\end{equation}
+Furthermore,
+\[
+\frac{\partial}{\partial\varepsilon}\operatorname{tr}J
+=-\delta=-1\ne0.
+\]
+A preliminary first-Lyapunov-coefficient calculation gives a negative sign, suggesting a \emph{supercritical} Hopf point for this illustrative system. Unlike the parameter set of a calibrated cardiac-cell model, the above values are chosen for mathematical clarity; their physiological validity has not been established.
+
+\subsection{Research opportunities}
+
+The quadratic recovery term may permit an analysis of finite equilibrium multiplicity, local and global cycle bifurcations, excitable thresholds, global separatrices, and singularities at infinity. It is essential, however, to verify whether the kinetics can be reduced by affine transformations, orbital equivalence, or a Li\'enard transformation to a family whose global dynamics are already classified. The recent global FitzHugh--Nagumo paper \cite{ChenLiXiao2026} is especially relevant. The 2025 work of Welch and Cherry on identification of polynomial cardiac-action-potential models \cite{WelchCherry2025} and the CardioFit methodology \cite{CairnsEtAl2025} provide additional applied context, but do not by themselves constitute a complete classification of the autonomous planar dynamics.
+
+\section{Comparative assessment and publication potential}
+
+\begin{table}[ht]
+\centering
+\small
+\caption{Qualitative research assessment. These ratings are judgments about possible projects, not established bibliographic uniqueness claims.}
+\label{tab:comparison}
+\begin{tabularx}{\textwidth}{@{}p{0.28\textwidth}p{0.19\textwidth}p{0.20\textwidth}X@{}}
+\toprule
+\textbf{Model} & \textbf{Analytical richness} & \textbf{Potential originality} & \textbf{Principal risk}\\
+\midrule
+Homogeneous Barkley--Song model & High & High, subject to audit & Strong pre-existing literature on spatial turbulence and traveling waves\\[2pt]
+Rogers--McCulloch & High & Moderate--high & Extensive cardiac and excitable-system bifurcation literature\\[2pt]
+Rheaume et al. modified cardiac model & High & Moderate--high & Possible equivalence to previously classified generalized FitzHugh--Nagumo or Li\'enard systems\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{Research priority.}
+Among these candidates, the Barkley--Song homogeneous kinetics are a particularly attractive starting point because they combine an authentic application outside the heavily studied neuronal/predator--prey settings, cubic polynomial structure, and a preliminary Hopf mechanism. The Rogers--McCulloch model is an alternative when cardiac electrophysiology is preferred. Neither preference implies a guarantee of a new theorem or journal acceptance.
+
+\section{A proposed program for the Barkley--Song model}
+
+A possible working title is
+\begin{quote}
+\emph{Global Bifurcations, Limit Cycles, and Phase Portraits of a Polynomial Model for Transitional Pipe Turbulence.}
+\end{quote}
+
+A publication-oriented program should proceed through the following stages:
+\begin{enumerate}
+\item Establish the complete finite-equilibrium structure, discriminant conditions, and bifurcation curves, together with forward-invariant regions of physical relevance.
+\item Derive exact Hopf conditions, prove the nonvanishing of the first Lyapunov coefficient in selected regimes, and investigate possible generalized Hopf points.
+\item Determine whether genuine Bogdanov--Takens degeneracies occur and, if so, derive the associated nondegeneracy and transversality coefficients.
+\item Prove rigorous existence, stability, uniqueness, or upper bounds for limit cycles in explicit parameter regions. Numerical continuation should guide conjectures but should not replace global arguments.
+\item Use Poincar\'e compactification, chart analysis, and global separatrix arguments to classify the phase portraits, including any homoclinic connections.
+\item Explain the physical implications of the deterministic thresholds, clearly distinguishing homogeneous ordinary-differential-equation behavior from the dynamics of the spatial pipe-flow model.
+\end{enumerate}
+
+\paragraph{Final recommendation.}
+The principal intellectual contribution should be a new global theorem, such as a sharp cycle-count result, a rigorously characterized homoclinic locus, or a complete parameter-dependent phase-portrait classification. Before writing a full manuscript, the top priorities are (i) a focused MathSciNet/Scopus/zbMATH literature audit, (ii) exact normal-form calculations, (iii) numerical continuation of nonlocal bifurcations, and (iv) proof that the parameter ranges under study are consistent with the model's applied interpretation.
+
+\begin{thebibliography}{99}
+\bibitem{AbreuLlibre2026}
+T.~M.~P. de Abreu and J.~Llibre,
+\emph{Classification of global phase portraits for the Brusselator system},
+Journal of Dynamical and Control Systems \textbf{32} (2026), Article 21.
+\url{https://doi.org/10.1007/s10883-026-09780-5}.
+
+\bibitem{ArakakiMelloRibeiro2025}
+L.~Q. Arakaki, L.~F. Mello, and R.~M. Ribeiro,
+\emph{Global stability of the Lengyel--Epstein systems},
+International Journal of Bifurcation and Chaos \textbf{35} (2025), 2550175.
+\url{https://doi.org/10.1142/S0218127425501755}.
+
+\bibitem{Barkley2011}
+D.~Barkley,
+\emph{Simplifying the complexity of pipe flow},
+Physical Review E \textbf{84} (2011), 016309.
+\url{https://doi.org/10.1103/PhysRevE.84.016309}.
+
+\bibitem{BarkleyEtAl2015}
+D.~Barkley, B.~Song, V.~Mukund, G.~Lemoult, M.~Avila, and B.~Hof,
+\emph{The rise of fully turbulent flow},
+Nature \textbf{526} (2015), 550--553.
+\url{https://doi.org/10.1038/nature15701}.
+
+\bibitem{Barkley2016}
+D.~Barkley,
+\emph{Theoretical perspective on the route to turbulence in a pipe},
+Journal of Fluid Mechanics \textbf{803} (2016), P1.
+\url{https://doi.org/10.1017/jfm.2016.465}.
+
+\bibitem{CairnsEtAl2025}
+D.~I. Cairns, M.~R. Comstock, F.~H. Fenton, and E.~M. Cherry,
+\emph{CardioFit: A WebGL-based tool for fast and efficient parametrization of cardiac action potential models to fit user-provided data},
+Royal Society Open Science \textbf{12} (2025), 250048.
+\url{https://doi.org/10.1098/rsos.250048}.
+
+\bibitem{ChenLiLlibre2021}
+T.~Chen, S.~Li, and J.~Llibre,
+\emph{Phase portraits and bifurcation diagram of the Gray--Scott model},
+Journal of Mathematical Analysis and Applications \textbf{496} (2021), 124840.
+\url{https://doi.org/10.1016/j.jmaa.2020.124840}.
+
+\bibitem{ChenLiXiao2026}
+H.~Chen, S.~Li, and Y.~Xiao,
+\emph{Global dynamics of the FitzHugh--Nagumo neuronal model},
+Communications in Nonlinear Science and Numerical Simulation \textbf{161} (2026), 110095.
+\url{https://doi.org/10.1016/j.cnsns.2026.110095}.
+
+\bibitem{KuehnSedlmeier2025}
+C.~Kuehn and P.~Sedlmeier,
+\emph{Stability of $N$-front and $N$-back solutions in the Barkley model},
+GAMM-Mitteilungen \textbf{48} (2025), e70001.
+\url{https://doi.org/10.1002/gamm.70001}.
+
+\bibitem{LopezZazueta2024}
+A.~L\'opez-Zazueta, M.~Soto-Bajo, and A.~Fraguela Collar,
+\emph{A numerical study of a single isolated human ventricular cell response to a periodic pulse stimulus current using the Rogers--McCulloch model},
+Communications in Nonlinear Science and Numerical Simulation \textbf{132} (2024), 107912.
+\url{https://doi.org/10.1016/j.cnsns.2024.107912}.
+
+\bibitem{PhysiomeRM}
+Physiome Model Repository,
+\emph{Rogers--McCulloch (1994) model implementation},
+\url{https://models.physiomeproject.org/exposure/079a731916583e4919d0d59cf4c433b2/rogers_mcculloch_1994.cellml/view}.
+
+\bibitem{RheaumeEtAl2023}
+E.~Rheaume, H.~Velasco-Perez, D.~Cairns, M.~Comstock, E.~Rheaume,
+A.~Kaboudian, I.~Uzelac, E.~M. Cherry, and F.~H. Fenton,
+\emph{A modified FitzHugh--Nagumo model that reproduces the action potential and dynamics of the Ten Tusscher et al. cardiac model in tissue},
+Computing in Cardiology \textbf{50} (2023).
+\url{https://doi.org/10.22489/CinC.2023.424}.
+
+\bibitem{RogersMcCulloch1994}
+J.~M. Rogers and A.~D. McCulloch,
+\emph{A collocation--Galerkin finite element model of cardiac action potential propagation},
+IEEE Transactions on Biomedical Engineering \textbf{41} (1994), 743--757.
+\url{https://doi.org/10.1109/10.310090}.
+
+\bibitem{Short2019}
+K.~Y. Short,
+\emph{Periodic solutions and chaos in the Barkley pipe model on a finite domain},
+Physical Review E \textbf{100} (2019), 023116.
+\url{https://doi.org/10.1103/PhysRevE.100.023116}.
+
+\bibitem{WelchCherry2025}
+C.~S. Welch and E.~M. Cherry,
+\emph{Discovering cardiac action potential model equations using sparse identification of nonlinear dynamics},
+Computing in Cardiology \textbf{52} (2025).
+\url{https://doi.org/10.22489/CinC.2025.426}.
+
+\end{thebibliography}
+
+\end{document}
