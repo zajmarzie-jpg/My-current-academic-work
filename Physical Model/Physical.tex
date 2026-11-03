@@ -1,0 +1,132 @@
+\documentclass[11pt,reqno]{amsart}
+
+% --- Encoding / fonts ---
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% --- Core AMS packages ---
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+
+% --- Graphics and lists ---
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+% --- Page layout ---
+\usepackage[a4paper,margin=3cm]{geometry}
+
+% --- Theorem environments ---
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{assertion}[theorem]{Assertion}
+\newtheorem{notations}[theorem]{Notations}
+
+\newtheorem{assumption}{Assumption}
+\newtheorem{hypothesis}{Hypothesis}
+
+\newtheorem*{theoremA}{Theorem A}
+\newtheorem*{theoremB}{Theorem B}
+\newtheorem*{theoremC}{Theorem C}
+
+% --- Operators ---
+\DeclareMathOperator{\IFS}{IFS}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\vol}{vol}
+
+% --- Hyperref: load late ---
+\usepackage[pdfencoding=auto,psdextra]{hyperref}
+
+% --- TOC depth ---
+\setcounter{tocdepth}{3}
+
+% --- Title & Authors ---
+\title[T]{TransTitle}
+
+\author[A1]{B1}
+\address{Department of Pure Mathematics, Ferdowsi University of Mashhad, Mashhad, Iran}
+\email{htina@um.ac.ir}
+
+\author[A2]{B2}
+\address{Department of Pure Mathematics, Ferdowsi University of Mashhad, Mashhad, Iran}
+\email{zaj@ferdowsi.um.ac.ir}
+
+\thanks{Corresponding author: F. H. Ghane (\texttt{htina@um.ac.ir})}
+
+\keywords{Monotone}
+\subjclass[2020]{Primary 37D25; Secondary 37A35, 37C40, 37A60.}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{abstract}
+abbbaaaaaaaa
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+
+\section{Model}
+\label{sec:model}
+
+% Required packages:
+% \usepackage{amsmath,amssymb}
+% \usepackage{hyperref}
+
+\section{Introduction and model formulation}
+\label{sec:introduction}
+
+\subsection{Physical origin and governing equations}
+
+The transition from laminar to turbulent pipe flow has been investigated by Barkley and collaborators using a reduced model coupling turbulence intensity to local centerline velocity. The original program was initiated in \cite{barkley2011simplifying} and developed into the model used to describe the rise of fully turbulent flow in \cite{barkley2015rise, barkley2016theoretical}.
+
+The spatially homogeneous reaction dynamics associated with the later model are
+\begin{equation}
+\begin{aligned}
+\dot q &=q\bigl[r+u-2-(r+0.1)(q-1)^2\bigr],\\
+\dot u &=\varepsilon\bigl[2-u+2q(1-u)\bigr],
+\end{aligned}
+\label{eq:barkley}
+\end{equation}
+where $q\ge0$ represents turbulence intensity, $u$ is the centerline-velocity variable, $r>0$ is a Reynolds-number-related model parameter, and $\varepsilon>0$ is a timescale parameter. Equations~\eqref{eq:barkley} arise by suppressing the spatial-derivative terms in the published reaction--diffusion--advection model; they are not a new artificial modification \cite{barkley2015rise}.
+
+%\begin{thebibliography}{99}
+
+
+
+%\end{thebibliography}
+
+
+
+
+
+
+
+
+
+
+%\section*{Acknowledgments}
+%[Funding, collaborations]
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
+%\printbibliography
+
+
+
+
+\end{document}
