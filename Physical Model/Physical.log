@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.11.22)  3 NOV 2026 10:47
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.8.3)  6 NOV 2026 13:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -381,7 +381,14 @@ File: l3backend-xetex.def 2023-04-19 L3 backend support: XeTeX
 \g__pdf_backend_annotation_int=\count296
 \g__pdf_backend_link_int=\count297
 )
-(./Physical.aux)
+(./Physical.aux
+
+LaTeX Warning: Label `sec:model' multiply defined.
+
+
+LaTeX Warning: Label `eq:barkley' multiply defined.
+
+)
 \openout1 = `Physical.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
@@ -473,20 +480,45 @@ s; reported on input line 75.
 (c:/texlive/2023/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 
-)
-(./Physical.bbl
+) [1]
+[2]
+! Missing number, treated as zero.
+<to be read again> 
+                   \r@tocindent4 
+l.270 S
+       etting $\dot q=\dot u=0$ gives the laminar equilibrium
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \r@tocindent4 
+l.270 S
+       etting $\dot q=\dot u=0$ gives the laminar equilibrium
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+[3] [4] [5] [6] [7] (./Physical.bbl
 Missing character: There is no — ("2014) in font ec-lmri9!
-) [1] (./Physical.aux)
+) [8] (./Physical.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `Physical.out' has not changed.
-(rerunfilecheck)             Checksum: 352C090F4880263330B79114DFC8BE18;337.
+(rerunfilecheck)             Checksum: 9F5911CC2C79C9CFD02C9AC2427AFB33;1422.
  ) 
 Here is how much of TeX's memory you used:
- 12695 strings out of 476642
- 190139 string characters out of 5806640
- 1855382 words of memory out of 5000000
- 32671 multiletter control sequences out of 15000+600000
- 542747 words of font info for 72 fonts, out of 8000000 for 9000
+ 12742 strings out of 476642
+ 191011 string characters out of 5806642
+ 1859382 words of memory out of 5000000
+ 32717 multiletter control sequences out of 15000+600000
+ 545735 words of font info for 73 fonts, out of 8000000 for 9000
  1509 hyphenation exceptions out of 8191
- 72i,11n,76p,597b,1916s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,11n,76p,597b,1925s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Physical.pdf (1 page).
+Output written on Physical.pdf (8 pages).

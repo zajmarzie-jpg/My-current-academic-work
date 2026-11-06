@@ -83,16 +83,12 @@ abbbaaaaaaaa
 \section{Model}
 \label{sec:model}
 
-% Required packages:
-% \usepackage{amsmath,amssymb}
-% \usepackage{hyperref}
-
 \section{Introduction and model formulation}
 \label{sec:introduction}
 
 \subsection{Physical origin and governing equations}
 
-The transition from laminar to turbulent pipe flow has been investigated by Barkley and collaborators using a reduced model coupling turbulence intensity to local centerline velocity. The original program was initiated in \cite{barkley2011simplifying} and developed into the model used to describe the rise of fully turbulent flow in \cite{barkley2015rise, barkley2016theoretical}.
+The transition from laminar to turbulent pipe flow has been investigated by Barkley and collaborators using a reduced model coupling turbulence intensity to local centerline velocity. The original program was initiated in \cite{barkley2011simplifying} and developed into the model used to describe the rise of fully turbulent flow in \cite{barkley2015rise, barkley2016theoretical,frishman2022dynamical}.
 
 The spatially homogeneous reaction dynamics associated with the later model are
 \begin{equation}
@@ -104,14 +100,744 @@ The spatially homogeneous reaction dynamics associated with the later model are
 \end{equation}
 where $q\ge0$ represents turbulence intensity, $u$ is the centerline-velocity variable, $r>0$ is a Reynolds-number-related model parameter, and $\varepsilon>0$ is a timescale parameter. Equations~\eqref{eq:barkley} arise by suppressing the spatial-derivative terms in the published reaction--diffusion--advection model; they are not a new artificial modification \cite{barkley2015rise}.
 
-%\begin{thebibliography}{99}
+\section{Model formulation}
+\label{sec:model}
+
+Barkley's reduced description of transitional pipe flow couples
+turbulence intensity to the local centerline velocity
+\cite{barkley2011simplifying,barkley2015rise,barkley2016theoretical}.
+Suppressing the spatial-derivative terms gives the homogeneous
+reaction system
+\begin{equation}
+\begin{aligned}
+\dot q
+&=q\left[r+u-2-(r+\delta)(q-1)^2\right],\\
+\dot u
+&=\varepsilon\left[2-u+\kappa q(1-u)\right],
+\end{aligned}
+\qquad
+r,\delta,\varepsilon,\kappa>0.
+\label{eq:barkley-general}
+\end{equation}
+Here $q\geq0$ measures turbulence intensity, $u$ denotes the
+normalized centerline velocity, and $r$ is a Reynolds-number-related
+control parameter. The velocity normalization assigns the value
+$u=2$ to the laminar state, while the turbulence-dependent term
+drives $u$ toward the reference level $u=1$.
+The parameter $\varepsilon$ controls the relative timescale of
+velocity relaxation, and $\kappa$ measures the strength of its
+coupling to turbulence.
+
+The parameter $\delta$ controls the linear decay of turbulence
+near the laminar equilibrium $(q,u)=(0,2)$: the corresponding
+eigenvalues are $-\delta$ and $-\varepsilon$. Thus $\delta>0$
+preserves the local stability of the laminar state, while
+$\kappa>0$ represents the reduction of centerline velocity
+associated with increasing turbulence.
+
+In this investigation, we adopt the parameter choices
+$\delta=0.1$ and $\kappa=2$, obtaining
+\begin{equation}
+\begin{aligned}
+\dot q
+&=q\bigl[r+u-2-(r+0.1)(q-1)^2\bigr],\\
+\dot u
+&=\varepsilon\bigl[2-u+2q(1-u)\bigr],
+\end{aligned}
+\qquad r,\varepsilon>0.
+\label{eq:barkley}
+\end{equation}
+These choices fix the laminar decay rate and the
+turbulence--velocity coupling strength, leaving $r$ and
+$\varepsilon$ as the bifurcation parameters.
+System~\eqref{eq:barkley} is a cubic polynomial differential
+system. Our aim is to investigate the existence, stability,
+and number of its limit cycles in the physical half-plane
+$q\geq0$. Such cycles describe spatially homogeneous temporal
+oscillations of the reduced model; they should be distinguished
+from traveling or spatially localized structures of the
+full pipe-flow equations.
+
+The nonzero equilibria satisfy
+\[
+2(r+0.1)q^3-3(r+0.1)q^2+2(1-r)q+0.1=0.
+\]
+Dividing by $2(r+0.1)$ and substituting $q=z+\tfrac12$
+reduces this algebraic equation to
+\[
+z^3+p(r)z+b(r)=0,
+\]
+where
+\[
+p(r)=\frac{37-70r}{40(r+0.1)},
+\qquad
+b(r)=\frac{21-30r}{40(r+0.1)}.
+\]
+This substitution is used only to solve the equilibrium
+equation; it does not change the variables of the
+differential system.
+
+For $r>r_c\approx0.645189835$, define
+\begin{equation}
+s(r)=\sqrt{\frac{70r-37}{120(r+0.1)}},
+\qquad
+\theta(r)=\frac13\arccos\left(
+\frac{30r-21}{80(r+0.1)s(r)^3}
+\right).
+\label{eq:cubic-auxiliary}
+\end{equation}
+Here $\arccos$ takes its principal value in $[0,\pi]$.
+The two positive roots are explicitly
+\begin{equation}
+\boxed{
+\begin{aligned}
+q_-(r)
+&=\frac12+2s(r)
+\cos\left(\theta(r)-\frac{2\pi}{3}\right),\\
+q_+(r)
+&=\frac12+2s(r)\cos\theta(r).
+\end{aligned}}
+\label{eq:explicit-positive-roots}
+\end{equation}
+They satisfy
+\[
+0<q_-(r)<q_+(r)<2.
+\]
+Consequently, the two positive equilibria are
+\begin{equation}
+\boxed{
+E_\pm(r)=
+\left(
+q_\pm(r),
+\frac{2[1+q_\pm(r)]}{1+2q_\pm(r)}
+\right).
+}
+\label{eq:explicit-positive-equilibria}
+\end{equation}
+
+The remaining root is
+\[
+q_{\mathrm n}(r)=
+\frac12+2s(r)
+\cos\left(\theta(r)+\frac{2\pi}{3}\right),
+\]
+and satisfies $-\tfrac12<q_{\mathrm n}(r)<0$.
+Its equilibrium is outside the physical half-plane.
+
+At $r=r_c$, the same formulas hold by continuity:
+$\theta(r_c)=\pi/3$ and
+\[
+q_-(r_c)=q_+(r_c)=q_c.
+\]
+For $0<r<r_c$, there are no positive roots.
+
+For example, at $r=0.65$ these exact expressions give
+\[
+\begin{aligned}
+E_-&\approx(0.708427852,\;1.413760738),\\
+E_+&\approx(0.896537216,\;1.358028411).
+\end{aligned}
+\]
+Together with $E_0=(0,2)$, these are all physical
+equilibria for this parameter value.
 
 
 
-%\end{thebibliography}
 
 
 
+
+
+
+
+
+
+ooooooooooooooooooooooooo
+
+\subsection{Equilibria and conditions for limit-cycle existence}
+
+Consider
+\begin{equation}
+\begin{aligned}
+\dot q&=q\left[r+u-2-(r+0.1)(q-1)^2\right],\\
+\dot u&=\varepsilon\left[2-u+2q(1-u)\right],
+\end{aligned}
+\qquad r,\varepsilon>0.
+\label{eq:model}
+\end{equation}
+
+\paragraph{Equilibria.}
+Setting $\dot q=\dot u=0$ gives the laminar equilibrium
+\[
+E_0=(0,2).
+\]
+Every other equilibrium has the form
+\begin{equation}
+E_*=\left(q_*,\frac{2(1+q_*)}{1+2q_*}\right),
+\label{eq:nonzero-equilibrium}
+\end{equation}
+where $q_*$ is a real root of
+\begin{equation}
+2(r+0.1)q^3-3(r+0.1)q^2
++2(1-r)q+0.1=0.
+\label{eq:equilibrium-cubic}
+\end{equation}
+Thus \eqref{eq:equilibrium-cubic}, together with
+\eqref{eq:nonzero-equilibrium}, specifies all nonzero
+equilibria exactly.
+
+There is always exactly one negative root
+$q_{\mathrm n}\in(-1/2,0)$. Its equilibrium lies outside
+the physical region $q\geq0$.
+
+To count the positive roots, let $q_c$ be the unique
+positive root of
+\[
+44q_c^3-30q_c^2-3q_c-1=0,
+\]
+and define
+\[
+r_c=
+\frac{1+22q_c}{10q_c(2-q_c)(1+2q_c)}-\frac1{10}.
+\]
+Numerically,
+\[
+q_c\approx0.802140182,
+\qquad r_c\approx0.645189835.
+\]
+The physical equilibria are therefore:
+\[
+\begin{array}{c|c}
+\text{Parameter range} & \text{Equilibria in }q\geq0\\ \hline
+0<r<r_c & E_0\\
+r=r_c & E_0,\ E_c\text{ (a double positive equilibrium)}\\
+r>r_c & E_0,\ E_-,\ E_+
+\end{array}
+\]
+where
+\[
+E_\pm=
+\left(q_\pm,\frac{2(1+q_\pm)}{1+2q_\pm}\right),
+\qquad 0<q_-<q_+<2.
+\]
+The equilibrium coordinates do not depend on $\varepsilon$.
+
+\paragraph{Linear stability.}
+At $E_0$, the eigenvalues are
+\[
+\lambda_1=-0.1,\qquad \lambda_2=-\varepsilon,
+\]
+so the laminar equilibrium is always locally
+asymptotically stable.
+
+At a nonzero equilibrium, the Jacobian is
+\begin{equation}
+J_*=
+\begin{pmatrix}
+2(r+0.1)q_*(1-q_*) & q_*\\[1mm]
+-\dfrac{2\varepsilon}{1+2q_*}
+&-\varepsilon(1+2q_*)
+\end{pmatrix}.
+\label{eq:jacobian}
+\end{equation}
+Its trace and determinant are
+\begin{align}
+T_*&=
+2(r+0.1)q_*(1-q_*)-\varepsilon(1+2q_*),
+\label{eq:trace}\\
+\Delta_*&=
+2\varepsilon q_*
+\left[
+(r+0.1)(q_*-1)(1+2q_*)
++\frac1{1+2q_*}
+\right].
+\label{eq:determinant}
+\end{align}
+The negative equilibrium and the lower positive
+equilibrium $E_-$ are saddles. At the upper equilibrium
+$E_+$, one has $\Delta_+>0$; hence it is asymptotically
+stable when $T_+<0$ and unstable when $T_+>0$.
+
+\paragraph{Test for a Hopf bifurcation.}
+The relevant equilibrium for the birth of small limit
+cycles is $E_+$. The necessary spectral conditions are
+\[
+T_+=0,\qquad \Delta_+>0.
+\]
+The trace condition gives
+\begin{equation}
+\boxed{
+\varepsilon_H=
+\frac{2(r+0.1)q_+(1-q_+)}{1+2q_+}.
+}
+\label{eq:hopf}
+\end{equation}
+This threshold is positive precisely when
+\[
+\boxed{r_c<r<\frac23.}
+\]
+For each fixed $r$ in this interval,
+$\Delta_+>0$ at $\varepsilon=\varepsilon_H$, and
+\[
+\left.
+\frac{d\,\operatorname{Re}\lambda}
+{d\varepsilon}
+\right|_{\varepsilon=\varepsilon_H}
+=-\frac{1+2q_+}{2}\neq0.
+\]
+Thus the spectral and transversality conditions hold.
+
+To conclude that a nondegenerate Hopf bifurcation
+actually produces a limit cycle, one must additionally
+verify that the first Lyapunov coefficient is nonzero.
+Its sign determines the stability of the cycle and
+the side of $\varepsilon_H$ on which it exists.
+The condition $T_+=0$ alone is not sufficient.
+
+For example, when $r=0.65$,
+\[
+q_+\approx0.896537216,
+\qquad
+u_+\approx1.358028411,
+\qquad
+\varepsilon_H\approx0.049815126.
+\]
+This is a concrete parameter point at which to perform
+the Hopf nondegeneracy test.
+
+\paragraph{A direct nonexistence test.}
+For the vector field $(P,Q)$ in \eqref{eq:model},
+the Dulac function $B(q,u)=1/q$ on $q>0$ gives
+\[
+\frac{\partial(BP)}{\partial q}
++\frac{\partial(BQ)}{\partial u}
+=
+2(r+0.1)(1-q)-\frac{\varepsilon(1+2q)}q.
+\]
+This expression is nonpositive throughout $q>0$ if
+\[
+\boxed{
+\varepsilon\geq(2-\sqrt3)(r+0.1).
+}
+\]
+The Bendixson--Dulac criterion then excludes all
+physical limit cycles. There are also no physical
+limit cycles for $r\leq r_c$.
+
+Therefore, the Hopf test identifies where small cycles
+can arise, while the Dulac test excludes a region of
+parameter space. Neither test by itself determines
+the global number of limit cycles.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ppppppppppppppppppppppppp
+
+\section{Preliminary analysis of limit cycles}
+\label{sec:preliminaries}
+
+Throughout this section, let
+\begin{equation}
+A=r+\frac{1}{10},
+\qquad
+h(q)=\frac{21}{10}-2Aq+Aq^2,
+\label{eq:A-h}
+\end{equation}
+and define the polynomials
+\begin{equation}
+\begin{aligned}
+H(q)
+&=(1+2q)h(q)-2-2q\\
+&=2Aq^3-3Aq^2+
+  \left(\frac{11}{5}-2A\right)q+\frac{1}{10},\\
+D(q)
+&=\varepsilon(1+2q)+qh'(q)\\
+&=2Aq^2+2(\varepsilon-A)q+\varepsilon.
+\end{aligned}
+\label{eq:H-D}
+\end{equation}
+The original equations can then be written as
+\begin{equation}
+\dot q=q[u-h(q)],
+\qquad
+\dot u=\varepsilon[2+2q-(1+2q)u].
+\label{eq:barkley-polynomial}
+\end{equation}
+
+\subsection{Invariant region and boundedness}
+\label{subsec:invariance}
+
+The half-plane $q\geq0$ is positively invariant because
+$q=0$ is an invariant line. Moreover, every solution with
+$q(0)>0$ remains in $q>0$ throughout its interval of existence.
+
+The strip
+\begin{equation}
+\mathcal S=\{(q,u):q\geq0,\ 1\leq u\leq2\}
+\label{eq:physical-strip}
+\end{equation}
+is positively invariant. Indeed,
+\[
+\left.\dot u\right|_{u=1}=\varepsilon>0,
+\qquad
+\left.\dot u\right|_{u=2}=-2\varepsilon q\leq0.
+\]
+More generally, if $q(0)\geq0$, comparison at the horizontal
+boundaries gives
+\[
+\min\{u(0),1\}\leq u(t)\leq\max\{u(0),2\}.
+\]
+Since $u$ is bounded and the leading term of $\dot q$ is
+$-Aq^3$, the component $q$ also remains bounded.
+Consequently, every solution starting in $q\geq0$ exists
+for all forward time.
+
+Every nonconstant periodic orbit in the physical half-plane
+lies in
+\begin{equation}
+q>0,\qquad 1<u<2.
+\label{eq:cycle-strip}
+\end{equation}
+To see this, first note that a periodic orbit cannot intersect
+the invariant line $q=0$, on which
+$\dot u=\varepsilon(2-u)$.
+At a maximum or minimum of $u$ on a periodic orbit,
+\[
+u=\frac{2(1+q)}{1+2q}
+  =1+\frac{1}{1+2q},
+\]
+which belongs to $(1,2)$ when $q>0$.
+
+
+\subsection{Equilibria and their stability}
+\label{subsec:equilibria}
+
+The laminar equilibrium
+\[
+E_0=(0,2)
+\]
+exists for all $r,\varepsilon>0$. Its Jacobian is
+\[
+J(E_0)=
+\begin{pmatrix}
+-\frac{1}{10}&0\\
+-2\varepsilon&-\varepsilon
+\end{pmatrix},
+\]
+so $E_0$ is locally asymptotically stable.
+
+A positive equilibrium $E_*=(q_*,u_*)$ satisfies
+\begin{equation}
+u_*=\frac{2(1+q_*)}{1+2q_*},
+\qquad H(q_*)=0.
+\label{eq:positive-equilibrium}
+\end{equation}
+Equivalently, the positive-equilibrium branch is parameterized by
+\begin{equation}
+r=R(q):=
+\frac{1+22q}{10q(2-q)(1+2q)}-\frac{1}{10},
+\qquad 0<q<2.
+\label{eq:equilibrium-curve}
+\end{equation}
+Differentiation yields
+\begin{equation}
+R'(q)=
+\frac{C(q)}
+{5q^2(q-2)^2(2q+1)^2},
+\qquad
+C(q)=44q^3-30q^2-3q-1.
+\label{eq:R-derivative}
+\end{equation}
+By Descartes' rule of signs, $C$ has exactly one positive
+root. Denote it by $q_{\mathrm{SN}}$. Since
+$C(0)<0<C(1)$, this root lies in $(0,1)$.
+Thus $R$ decreases on $(0,q_{\mathrm{SN}})$ and increases
+on $(q_{\mathrm{SN}},2)$, with
+$R(q)\to+\infty$ at both endpoints.
+
+Define
+\begin{equation}
+r_{\mathrm{SN}}=R(q_{\mathrm{SN}}).
+\label{eq:rSN}
+\end{equation}
+Numerically,
+\[
+q_{\mathrm{SN}}\approx0.802140182,
+\qquad
+r_{\mathrm{SN}}\approx0.645189835.
+\]
+It follows that there are no positive equilibria for
+$r<r_{\mathrm{SN}}$, one double positive equilibrium for
+$r=r_{\mathrm{SN}}$, and two positive equilibria
+\[
+E_\pm=
+\left(q_\pm,\frac{2(1+q_\pm)}{1+2q_\pm}\right),
+\qquad q_-<q_+,
+\]
+for $r>r_{\mathrm{SN}}$.
+
+At a positive equilibrium, the Jacobian is
+\begin{equation}
+J_*=
+\begin{pmatrix}
+2Aq_*(1-q_*)&q_*\\[1mm]
+-\dfrac{2\varepsilon}{1+2q_*}&-\varepsilon(1+2q_*)
+\end{pmatrix}.
+\label{eq:positive-jacobian}
+\end{equation}
+In particular,
+\begin{equation}
+\operatorname{tr}J_*=-D(q_*),
+\qquad
+\det J_*=\varepsilon q_*H'(q_*).
+\label{eq:trace-determinant}
+\end{equation}
+For $r>r_{\mathrm{SN}}$,
+\[
+H'(q_-)<0,
+\qquad H'(q_+)>0.
+\]
+Hence $E_-$ is a saddle, whereas $E_+$ is asymptotically
+stable when $D(q_+)>0$ and unstable when $D(q_+)<0$.
+
+Since $R(1)=2/3$, the upper equilibrium satisfies
+\[
+q_+<1
+\quad\Longleftrightarrow\quad
+r_{\mathrm{SN}}<r<\frac23.
+\]
+For $r\geq2/3$, one has $q_+\geq1$ and therefore
+$D(q_+)>0$ for every $\varepsilon>0$.
+
+
+\subsection{Hopf bifurcation and local limit cycles}
+\label{subsec:hopf}
+
+A positive Hopf threshold exists precisely on the upper branch
+with $r_{\mathrm{SN}}<r<2/3$. It is given by
+\begin{equation}
+\varepsilon_H(r)
+=
+\frac{2Aq_+(1-q_+)}{1+2q_+}.
+\label{eq:hopf-threshold}
+\end{equation}
+At this threshold,
+\[
+D(q_+)=0,
+\qquad
+\omega^2:=\varepsilon_Hq_+H'(q_+)>0.
+\]
+The equilibrium coordinates are independent of $\varepsilon$,
+and
+\begin{equation}
+\left.
+\frac{\partial\,\operatorname{Re}\lambda}
+{\partial\varepsilon}
+\right|_{\varepsilon=\varepsilon_H}
+=-\frac{1+2q_+}{2}<0.
+\label{eq:hopf-transversality}
+\end{equation}
+Thus the transversality condition holds.
+
+For the calculation of the Hopf coefficient, the polynomial
+substitution
+\[
+v=u-h(q)
+\]
+gives
+\begin{equation}
+\dot q=qv,
+\qquad
+\dot v=-D(q)v-\varepsilon H(q).
+\label{eq:polynomial-auxiliary}
+\end{equation}
+This auxiliary system remains cubic polynomial and uses
+the original time variable.
+
+At the Hopf point, set $s=q_+$ and introduce the linear
+coordinates
+\[
+X=q-s,\qquad Y=-\frac{s}{\omega}v.
+\]
+The linear part becomes
+$\dot X=-\omega Y$, $\dot Y=\omega X$.
+The cubic coefficient in the corresponding radial normal
+form is
+\begin{equation}
+\ell=
+\frac{D'(s)H''(s)-D''(s)H'(s)}
+{16H'(s)},
+\label{eq:hopf-coefficient-derivatives}
+\end{equation}
+where $D$ is evaluated at $\varepsilon=\varepsilon_H$.
+Using $H(s)=0$ and \eqref{eq:hopf-threshold}, this simplifies to
+\begin{equation}
+\ell=
+\frac{
+(22s+1)
+\left(88s^4+176s^3-186s^2+64s+5\right)
+}{
+80s(2-s)(2s+1)^2C(s)
+}.
+\label{eq:hopf-coefficient}
+\end{equation}
+For $q_{\mathrm{SN}}<s<1$, the denominator is positive.
+Moreover,
+\[
+88s^4+176s^3-186s^2+64s+5
+=
+88s^4+s(176s^2-186s+64)+5>0,
+\]
+because the quadratic $176s^2-186s+64$ has positive
+leading coefficient and negative discriminant.
+Consequently,
+\begin{equation}
+\ell>0.
+\label{eq:hopf-positive}
+\end{equation}
+
+Therefore, for every fixed
+$r\in(r_{\mathrm{SN}},2/3)$, the Hopf bifurcation is
+nondegenerate and subcritical. A unique small-amplitude
+unstable limit cycle bifurcates from $E_+$ for
+$\varepsilon>\varepsilon_H(r)$ sufficiently close to
+$\varepsilon_H(r)$. The equilibrium inside this cycle
+is asymptotically stable.
+
+This uniqueness is local: it concerns cycles sufficiently
+close to the Hopf equilibrium and does not exclude additional
+cycles elsewhere in the phase plane.
+
+
+\subsection{Restrictions on the location of periodic orbits}
+\label{subsec:cycle-location}
+
+At an extremum of $q$ on a nonconstant periodic orbit,
+$\dot q=0$ and hence $u=h(q)$. Differentiating the first
+equation of \eqref{eq:barkley-polynomial} gives, at such a point,
+\begin{equation}
+\ddot q=-\varepsilon qH(q).
+\label{eq:q-extremum}
+\end{equation}
+The extremum cannot satisfy $H(q)=0$, since it would then
+be an equilibrium point.
+
+If $r\leq r_{\mathrm{SN}}$, one has $H(q)\geq0$ for all
+$q>0$. Equation~\eqref{eq:q-extremum} then excludes the
+minimum required by any nonconstant periodic orbit.
+Thus
+\begin{equation}
+0<r\leq r_{\mathrm{SN}}
+\quad\Longrightarrow\quad
+\text{no limit cycles in }q\geq0.
+\label{eq:no-cycles-small-r}
+\end{equation}
+
+Suppose now that $r>r_{\mathrm{SN}}$. Since $H$ is negative
+precisely between its positive roots, the minimum and maximum
+of $q$ along any periodic orbit satisfy
+\begin{equation}
+q_-<q_{\min}<q_+<q_{\max}<2.
+\label{eq:cycle-location}
+\end{equation}
+For the final inequality, recall that $u<2$ along the orbit,
+whereas
+\[
+h(q)=\frac{21}{10}+Aq(q-2)\geq\frac{21}{10}
+\qquad\text{for }q\geq2.
+\]
+Hence a $q$-maximum cannot occur at $q\geq2$.
+
+In particular, every physical limit cycle excludes the saddle
+$E_-$ and the boundary equilibrium $E_0$. By the index
+theorem for planar periodic orbits, it surrounds $E_+$.
+
+
+\subsection{A Bendixson--Dulac exclusion region}
+\label{subsec:dulac}
+
+Let $P$ and $Q$ denote the right-hand sides of
+\eqref{eq:barkley}. On the simply connected half-plane
+$q>0$, choose the Dulac function
+\[
+B(q,u)=\frac1q.
+\]
+A direct calculation gives
+\begin{equation}
+\frac{\partial(BP)}{\partial q}
++
+\frac{\partial(BQ)}{\partial u}
+=
+2A(1-q)-\frac{\varepsilon(1+2q)}q
+=
+-\frac{D(q)}q.
+\label{eq:dulac-divergence}
+\end{equation}
+The quadratic polynomial $D$ is nonnegative for all $q>0$
+if
+\begin{equation}
+\varepsilon\geq(2-\sqrt3)A.
+\label{eq:dulac-condition}
+\end{equation}
+Indeed, for $\varepsilon\geq A$ all its coefficients are
+nonnegative. For $0<\varepsilon<A$, its minimum is
+\[
+\min_{q>0}D(q)
+=
+\varepsilon-\frac{(A-\varepsilon)^2}{2A},
+\]
+which is nonnegative precisely when
+$\varepsilon\geq(2-\sqrt3)A$.
+
+The Bendixson--Dulac criterion therefore yields
+\begin{equation}
+\boxed{
+\varepsilon\geq
+(2-\sqrt3)\left(r+\frac1{10}\right)
+\quad\Longrightarrow\quad
+\text{no limit cycles in }q\geq0.
+}
+\label{eq:no-cycles-large-epsilon}
+\end{equation}
+At equality, the Dulac divergence vanishes only on one
+vertical line, which does not affect the conclusion.
+
+
+\subsection{Consequences for the global cycle problem}
+\label{subsec:global-cycle-problem}
+
+The preceding results restrict the search for physical
+limit cycles to
+\[
+r>r_{\mathrm{SN}},
+\qquad
+0<\varepsilon<
+(2-\sqrt3)\left(r+\frac1{10}\right).
+\]
+Every such cycle surrounds the upper positive equilibrium
+and remains in the region specified by
+\eqref{eq:cycle-strip} and \eqref{eq:cycle-location}.
+Furthermore, a small unstable cycle is known to exist on
+the subcritical side of the Hopf curve
+\eqref{eq:hopf-threshold}.
+
+These conclusions establish local existence and explicit
+global exclusion regions. They do not yet determine the
+total number of limit cycles or the global continuation
+of the Hopf branch. In particular, uniqueness away from
+the Hopf point and possible termination in a saddle
+homoclinic loop require additional analysis.
 
 
 
