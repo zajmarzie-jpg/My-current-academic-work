@@ -1,0 +1,218 @@
+\begin{thebibliography}{10}
+
+\bibitem{alber1997principle}
+Ya~I Alber and Sylvie Guerre-Delabriere.
+\newblock Principle of weakly contractive maps in hilbert spaces.
+\newblock In {\em New Results in Operator Theory and Its Applications: The
+  Israel M. Glazman Memorial Volume}, pages 7--22. Springer, 1997.
+
+\bibitem{alves2000srb}
+Jos{\'e}~F Alves, Christian Bonatti, and Marcelo Viana.
+\newblock Srb measures for partially hyperbolic systems whose central direction
+  is mostly expanding.
+\newblock {\em Inventiones mathematicae}, 140(2):351--398, 2000.
+
+\bibitem{arnold1995random}
+Ludwig Arnold, Christopher~KRT Jones, Konstantin Mischaikow, Genevi{\`e}ve
+  Raugel, and Ludwig Arnold.
+\newblock {\em Random dynamical systems}.
+\newblock Springer, 1995.
+
+\bibitem{barrientos2024historical}
+Pablo~G Barrientos and Raul~R Chavez.
+\newblock Historical behavior of skew products and arcsine laws.
+\newblock {\em arXiv preprint arXiv:2501.00266}, 2024.
+
+\bibitem{barrientos2024zero}
+Pablo~G Barrientos and Joel~Angel Cisneros.
+\newblock Zero lyapunov exponents in transitive skew-products of iterated
+  function systems.
+\newblock {\em arXiv preprint arXiv:2403.11040}, 2024.
+
+\bibitem{beyn2022angular}
+Wolf-Jürgen Beyn, Gary Froyland, and Thorsten Hüls.
+\newblock Angular values of nonautonomous and random linear dynamical systems:
+  Part i---fundamentals.
+\newblock {\em SIAM Journal on Applied Dynamical Systems}, 21(2):1245--1286,
+  2022.
+
+\bibitem{beyn2023angular}
+Wolf-J{"u}rgen Beyn and Thorsten H{"u}ls.
+\newblock Angular values of nonautonomous linear dynamical systems: Part
+  ii--reduction theory and algorithm.
+\newblock {\em SIAM Journal on Applied Dynamical Systems}, 22(1):162--198,
+  2023.
+
+\bibitem{bielecki1995iterated}
+Andrzej Bielecki.
+\newblock Iterated function systems analogues on compact metric spaces and
+  their attractors.
+\newblock {\em Univ. Iagel. Acta Math}, 32:187--192, 1995.
+
+\bibitem{bonatti2004dynamics}
+Christian Bonatti, Lorenzo~J D{\'\i}az, and Marcelo Viana.
+\newblock {\em Dynamics beyond uniform hyperbolicity: A global geometric and
+  probabilistic perspective}, volume~3.
+\newblock Springer Science \& Business Media, 2004.
+
+\bibitem{brin1974partially}
+Michael~I Brin and Ja~B Pesin.
+\newblock Partially hyperbolic dynamical systems.
+\newblock {\em Mathematics of the USSR-Izvestiya}, 8(1):177, 1974.
+
+\bibitem{chueshov2020stochastic}
+Igor Chueshov and Bj{"o}rn Schmalfu{\ss}.
+\newblock Stochastic synchronization of random pullback attractors.
+\newblock In {\em Synchronization in Infinite-Dimensional Deterministic and
+  Stochastic Systems}, pages 181--268. Springer, 2020.
+
+\bibitem{conradisometries}
+Keith Conrad.
+\newblock Isometries of rn.
+
+\bibitem{crauel1990extremal}
+Hans Crauel.
+\newblock Extremal exponents of random dynamical systems do not vanish.
+\newblock {\em Journal of Dynamics and Differential Equations}, 2:245--291,
+  1990.
+
+\bibitem{crovisier2020empirical}
+Sylvain Crovisier, Dawei Yang, and Jinhua Zhang.
+\newblock Empirical measures of partially hyperbolic attractors.
+\newblock {\em Communications in Mathematical Physics}, 375(1):725--764, 2020.
+
+\bibitem{cui2024skew}
+Hongyong Cui and Peter~E Kloeden.
+\newblock Skew-product attractors of non-autonomous caputo fractional
+  differential equations.
+\newblock {\em Chaos: An Interdisciplinary Journal of Nonlinear Science},
+  34(8), 2024.
+
+\bibitem{diaz2010porcupine}
+Lorenzo~J D{\'\i}az and Katrin Gelfert.
+\newblock Porcupine-like horseshoes: transitivity, lyapunov spectrum, and phase
+  transitions.
+\newblock {\em arXiv preprint arXiv:1011.6294}, 2010.
+
+\bibitem{diaz2022variational}
+Lorenzo~J D{'\i}az, Katrin Gelfert, and Micha{\l} Rams.
+\newblock Variational principle for nonhyperbolic ergodic measures: skew
+  products and elliptic cocycles.
+\newblock {\em Communications in Mathematical Physics}, 394(1):73--141, 2022.
+
+\bibitem{gourmelon2007adapted}
+Nikolaz Gourmelon.
+\newblock Adapted metrics for dominated splittings.
+\newblock {\em Ergodic Theory and Dynamical Systems}, 27(6):1839--1849, 2007.
+
+\bibitem{hirsch1977invariant}
+M~Hirsch, C~Pugh, and Michael Shub.
+\newblock Invariant manifolds (lecture notes in mathematics, 583), 1977.
+
+\bibitem{homburg2012circle}
+Ale~Jan Homburg.
+\newblock Circle diffeomorphisms forced by expanding circle maps.
+\newblock {\em Ergodic theory and dynamical systems}, 32(6):2011--2024, 2012.
+
+\bibitem{jager2003quasiperiodically}
+Tobias~H J{\"a}ger.
+\newblock Quasiperiodically forced interval maps with negative schwarzian
+  derivative.
+\newblock {\em Nonlinearity}, 16(4):1239, 2003.
+
+\bibitem{jardon2024persistent}
+Hildeberto Jard{'o}n-Kojakhmetov, Christian Kuehn, and Iacopo~P Longo.
+\newblock Persistent synchronization of heterogeneous networks with
+  time-dependent linear diffusive coupling.
+\newblock {\em SIAM Journal on Applied Dynamical Systems}, 23(2):1540--1578,
+  2024.
+
+\bibitem{krengel2011ergodic}
+Ulrich Krengel.
+\newblock {\em Ergodic theorems}, volume~6.
+\newblock Walter de Gruyter, 2011.
+
+\bibitem{krzyzewski2004invariant}
+Karol Krzy{\.z}ewski and Wies{\l}aw Szlenk.
+\newblock On invariant measures for expanding differentiable mappings.
+\newblock {\em The Theory of Chaotic Attractors}, pages 37--46, 2004.
+
+\bibitem{kudryashov2010bony}
+Yu~G Kudryashov.
+\newblock Bony attractors.
+\newblock {\em Functional Analysis and Its Applications}, 44(3):219--222, 2010.
+
+\bibitem{magal2005global}
+Pierre Magal and Xiao-Qiang Zhao.
+\newblock Global attractors and steady states for uniformly persistent
+  dynamical systems.
+\newblock {\em SIAM journal on mathematical analysis}, 37(1):251--275, 2005.
+
+\bibitem{mane2012ergodic}
+Ricardo Man{\'e}.
+\newblock {\em Ergodic theory and differentiable dynamics}, volume~8.
+\newblock Springer Science \& Business Media, 2012.
+
+\bibitem{milnor1985concept}
+John Milnor.
+\newblock On the concept of attractor.
+\newblock {\em Communications in Mathematical Physics}, 99:177--195, 1985.
+
+\bibitem{nassiri2012robust}
+Meysam Nassiri and Enrique~R Pujals.
+\newblock Robust transitivity in hamiltonian dynamics.
+\newblock In {\em Annales scientifiques de l'{\'E}cole normale sup{\'e}rieure},
+  volume~45, pages 191--239, 2012.
+
+\bibitem{oseledets1965markov}
+Valery~Iustinovich Oseledets.
+\newblock Markov chains, skew products and ergodic theorems for “general”
+  dynamic systems.
+\newblock {\em Theory of Probability & Its Applications}, 10(3):499--504, 1965.
+
+\bibitem{rabiee2022open}
+M~Rabiee, FH~Ghane, and Marzie Zaj.
+\newblock An open set of skew products with invariant multi-graphs and bony
+  multi-graphs.
+\newblock {\em Qualitative theory of dynamical systems}, 21(4):147, 2022.
+
+\bibitem{robinson1998dynamical}
+Clark Robinson.
+\newblock {\em Dynamical systems: stability, symbolic dynamics, and chaos}.
+\newblock CRC press, 1998.
+
+\bibitem{stark1999regularity}
+Jaroslav Stark.
+\newblock Regularity of invariant graphs for forced systems.
+\newblock {\em Ergodic theory and dynamical systems}, 19(1):155--199, 1999.
+
+\bibitem{tsujii2001fat}
+Masato Tsujii.
+\newblock Fat solenoidal attractors.
+\newblock {\em Nonlinearity}, 14(5):1011, 2001.
+
+\bibitem{walkden2018invariant}
+CP~Walkden and Thomas Withers.
+\newblock Invariant graphs of a family of non-uniformly expanding skew products
+  over markov maps.
+\newblock {\em Nonlinearity}, 31(6):2726, 2018.
+
+\bibitem{williams1974expanding}
+Robert~F Williams.
+\newblock Expanding attractors.
+\newblock {\em Publications Math{\'e}matiques de l'IH{\'E}S}, 43:169--203,
+  1974.
+
+\bibitem{xu2024invariant}
+Disheng Xu and Jiesong Zhang.
+\newblock Invariant distributions of partially hyperbolic systems: fractal
+  graphs, excessive regularity, and rigidity.
+\newblock {\em arXiv preprint arXiv:2411.19665}, 2024.
+
+\bibitem{zaj2018physical}
+Marzie Zaj, Abbas Fakhari, Fatemeh~Helen Ghane, and Azam Ehsani.
+\newblock Physical measures for certain class of non-uniformly hyperbolic
+  endomorphisms on the solid torus.
+\newblock {\em Discrete \& Continuous Dynamical Systems}, 38(4):1777, 2018.
+
+\end{thebibliography}
